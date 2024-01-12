@@ -28,7 +28,7 @@
 
 
 
-        <div style=" padding: 0 40px; height: 168px;" class="space-between relative">
+        <div style=" padding: 0 40px; height: 168px;" class="space-between relative grey-border">
             <!-- airbnb 로고 div -->
             <div style="height: 80px; flex-grow: 1; flex-shrink: 0;" class="flex-start z-index1">
                 <a href="https://www.airbnb.co.kr/" class="flex-vertical-column-align">
@@ -47,8 +47,8 @@
 
             <!-- 1-2번째 div -->
             <div style="min-width: 348px; flex-grow: 0; flex-shrink: 1;" class="z-index0">
-                <div style="width: 100%; position: absolute; top: 0px; left: 0px; text-align: left;">
-                    <div style="padding: 0px 80px;" class="flex-vertical-column-align">
+                <div style="width: 100%; padding: 0px 80px; position: absolute; top: 0px; left: 0px; text-align: left; " class="flex-center">
+                    <div style="width: 100%;">
                         <!-- 위에거 -->
                         <div class="flex-center">
                             <div style="height: 80px;" class="flex-vertical-row-align flex-end">
@@ -82,63 +82,74 @@
 
                         <!-- 아래거 -->
                         <div style="width: 100%;" class="flex-center">
-                            <div style="width: 100%; padding-bottom: 16px; margin: 0 36.5px;">
-                                <div style="height: 66px; border: 1px solid rgb(211, 211, 211); border-radius: 32px; width: 100%;"
-                                    class="display-flex">
-                                    <div style="flex-basis: 0%; padding: 14px 32px; border: 1px; flex-grow: 1; flex-shrink: 0;"
-                                        class="highlight-grey">
-                                        <div>
-                                            <span>여행지</span>
-                                        </div>
-                                        <div>
-                                            <span>여행지 검색</span>
+                            <div style="width: 100%; padding-bottom: 16px; margin: 0 36.5px;" class="flex-center">
+                                <div style=" max-width: 850px; height: 66px; border: 1px solid rgb(211, 211, 211); border-radius: 32px; width: 100%;"
+                                    class="display-flex search-shadow">
+                                    <div style="flex-basis: 0%; flex-grow: 1; flex-shrink: 0;"
+                                        class="highlight-grey-tall">
+                                        <div style="padding: 14px 32px; border: 1px;">
+                                            <div class="search-upper-text">
+                                                <span>여행지</span>
+                                            </div>
+                                            <div class="search-below-text">
+                                                <span>여행지 검색</span>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <div class="grey-boundary"></div>
+
                                     <div style="flex-basis: 0%; flex-grow: 1; flex-shrink: 0;" class="display-flex">
-                                        <div style="padding: 14px 32px; border: 1px; flex-grow: 1; flex-shrink: 0;"
-                                            class="highlight-grey">
-                                            <div>
+                                        <div style="padding: 14px 32px; border: 1px; flex-basis: 0%; flex-grow: 1; flex-shrink: 0;"
+                                            class="highlight-grey-tall">
+                                            <div class="search-upper-text">
                                                 <span>체크인</span>
                                             </div>
-                                            <div>
+                                            <div class="search-below-text">
                                                 <span>날짜 추가</span>
                                             </div>
                                         </div>
+                                        <div class="grey-boundary"></div>
                                         <div style="padding: 14px 32px; border: 1px; flex-basis: 0%; flex-grow: 1; flex-shrink: 0;"
-                                            class="highlight-grey">
-                                            <div>
+                                            class="highlight-grey-tall">
+                                            <div class="search-upper-text">
                                                 <span>체크아웃</span>
                                             </div>
-                                            <div>
+                                            <div class="search-below-text">
                                                 <span>날짜 추가</span>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="grey-boundary"></div>
                                     <div style="flex-basis: 0%; flex-grow: 1; flex-shrink: 0;"
-                                        class="highlight-grey flex-vertical-row-align">
-                                        <div style="padding: 14px 32px; border: 1px;">
-                                            <div>
-                                                <span>여행자</span>
-                                            </div>
-                                            <div>
-                                                <span>게스트 추가</span>
+                                        class="highlight-grey-tall flex-vertical-row-align">
+                                        <div style="flex-basis: 0%; flex-grow: 1; flex-shrink: 0;">
+                                            <div style="padding: 14px 32px; border: 1px;">
+                                                <div class="search-upper-text">
+                                                    <span>여행자</span>
+                                                </div>
+                                                <div class="search-below-text">
+                                                    <span>게스트 추가</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <button style="background-color: rgb(255, 56, 92);">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                                    aria-hidden="true" role="presentation" focusable="false"
-                                                    style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
-                                                    <path fill="none"
-                                                        d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9">
-                                                    </path>
-                                                </svg>
+
+                                        <div style="flex-basis: 0%; flex-grow: 0; flex-shrink: 0;">
+                                            <button class="search-button">
+                                                <div style="padding: 16px;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                        aria-hidden="true" role="presentation" focusable="false"
+                                                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                                        <path fill="none"
+                                                            d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9">
+                                                        </path>
+                                                    </svg>
+                                                </div>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -200,9 +211,9 @@
     </div>
 
     <!-- 2번째 div -->
-    <div>
-        <div>
-            <nav>
+    <div style="padding: 12px 40px 0px 40px;">
+        <div class="flex-vertical-row-align">
+            <nav class="space-between">
                 <div>
                     <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt=""
                         width="24" height="24">
@@ -280,33 +291,28 @@
                     <div>초소형 주택</div>
                 </div>
             </nav>
-        </div>
-        <div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                    style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
-                    aria-hidden="true" role="presentation" focusable="false">
-                    <path fill="none"
-                        d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3">
-                    </path>
-                </svg>
+            <div class="flex-vertical-row-align">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                        style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
+                        aria-hidden="true" role="presentation" focusable="false">
+                        <path fill="none"
+                            d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <span>필터</span>
+                </div>
+                
             </div>
-            <div>필터</div>
         </div>
+        
     </div>
 
     <!-- 3번째 div -->
     <div>
         <div>
-            <span><img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
-                    src="https://a0.muscache.com/im/pictures/1a36a508-034a-441f-83e5-1d01aa54923a.jpg?im_w=720"
-                    data-original-uri="https://a0.muscache.com/im/pictures/1a36a508-034a-441f-83e5-1d01aa54923a.jpg?im_w=720"
-                    style="--dls-liteimage-object-fit: cover;"></span>
-            <div>일본 Oku</div>
-            <span>4.67</span>
-            <div>607km 거리</div>
-            <div>1월 7일~12일</div>
-            <div>$62,325/박</div>
         </div>
     </div>
 
