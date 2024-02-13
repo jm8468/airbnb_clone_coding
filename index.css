@@ -1,3 +1,4 @@
+/* 기본 태그 */
 body {
     margin: 0;
     padding: 0;
@@ -76,43 +77,15 @@ span {
 button {
     cursor: pointer;
 }
+/*  */
 
-.display-flex {
-    display: flex;
-}
-
-.flex-vertical-column-align {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-
-
-.flex-vertical-row-align {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* button 관련 */
 .experience-button {
     font-size: 16px;
     color: rgb(113, 113, 113);
     transition-property: box-shadow, transform;
     font-weight: 400;
     height: 44px;
-}
-
-.highlight-grey:hover {
-    border-radius: 22px;
-    background-color: rgb(247, 247, 247);
-    color: rgb(34, 34, 34);
-}
-
-.highlight-grey-tall:hover {
-    border-radius: 32px;
-    background-color: rgb(247, 247, 247);
 }
 
 .login-button {
@@ -123,72 +96,17 @@ button {
     border: 1px solid rgb(211, 211, 211);
 }
 
+.filter-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(221, 221, 221);
+    border-top-left-radius: 12px;
+    border-radius: 12px;
+}
+
 .transparent-button {
     background-color: transparent;
     border: none;
     outline: none;
-}
-
-.head-text {
-    color: rgb(34, 34, 34);
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.sub-text {
-    color: rgb(34, 34, 34);
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.block-row-center {
-    margin: 0 auto;
-}
-
-.space-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.flex-start {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.flex-end {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-}
-
-.relative {
-    position: relative;
-}
-
-.z-index0 {
-    z-index: 0
-}
-
-.z-index1 {
-    z-index: 1
-}
-
-.search-upper-text {
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 2px;
-}
-
-.search-below-text {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgb(113, 113, 113);
 }
 
 .search-button {
@@ -200,19 +118,45 @@ button {
     margin-right: 8px;
 }
 
-.grey-boundary {
-    height: 32px;
-    border-right: 1px solid rgb(221, 221, 221);
-    align-self: center;
+
+/*  */
+
+
+/* flex 관련 */
+.display-flex {
+    display: flex;
 }
 
-.grey-border {
-    border-top: 0.2px solid rgb(211, 211, 211);
-    border-bottom: 0.2px solid rgb(211, 211, 211);
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
 
-.search-shadow {
-    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-vertical-column-align {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-vertical-row-align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .flex-grow-shrink-10 {
@@ -229,6 +173,93 @@ button {
     flex-grow: 0;
     flex-shrink: 0;
 }
+/*  */
+
+/* text 관련 */
+
+.head-text {
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sub-text {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.filter-text {
+    color: rgb(34, 34, 34);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.search-upper-text {
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.search-below-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(113, 113, 113);
+}
+/*  */
+
+
+
+.highlight-grey:hover {
+    border-radius: 22px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(34, 34, 34);
+}
+
+.highlight-grey-tall:hover {
+    border-radius: 32px;
+    background-color: rgb(247, 247, 247);
+}
+
+.block-row-center {
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-index0 {
+    z-index: 0
+}
+
+.z-index1 {
+    z-index: 1
+}
+
+
+
+
+
+.grey-boundary {
+    height: 32px;
+    border-right: 1px solid rgb(221, 221, 221);
+    align-self: center;
+}
+
+.grey-border {
+    border-top: 0.2px solid rgb(211, 211, 211);
+    border-bottom: 0.2px solid rgb(211, 211, 211);
+}
+
+.search-shadow {
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+
 
 .nav-item-frame {
     display: flex;
