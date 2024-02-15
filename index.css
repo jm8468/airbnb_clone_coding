@@ -186,6 +186,18 @@ button {
 
 /*  */
 
+/* grid 관련 */
+
+.grid-container {
+    padding: 12px 40px 0px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+/*  */
+
 /* text 관련 */
 
 .text-16px {
