@@ -55,6 +55,7 @@ span {
     word-spacing: 0px;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
 
@@ -123,8 +124,8 @@ button {
 .heart-button {
     width: fit-content;
     position: absolute;
-    top: 35px;
-    left: 300px;
+    top: 15px;
+    right: 15px;
     z-index: 1;
 }
 
@@ -188,12 +189,34 @@ button {
 
 /* grid 관련 */
 
-.grid-container {
+.list-grid-container {
     padding: 12px 40px 0px 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    column-gap: 24px;
     row-gap: 40px;
+}
+
+.list-explanation-grid-container {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+}
+
+.list-explanation-grid-item:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.list-explanation-grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.list-explanation-grid-item:nth-child(4) {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
 }
 
 /*  */
@@ -204,6 +227,20 @@ button {
     color: rgb(34, 34, 34);
     font-size: 16px;
     font-weight: 600;
+    text-align: center;
+}
+
+.text-15px {
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-15px-400 {
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -222,14 +259,20 @@ button {
 }
 
 .text-16px-grey {
-    color: #717171;
+    color: rgb(113, 113, 113);
     font-size: 16px;
     font-weight: 400;
     text-align: center;
 }
 
+.text-15px-grey {
+    color: rgb(113, 113, 113);
+    font-size: 15px;
+    text-align: center;
+}
+
 .text-14px-grey {
-    color: #717171;
+    color: rgb(113, 113, 113);
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -327,4 +370,20 @@ button {
 .round-image {
     border-radius: 12px;
     border: 1px solid transparent;
+    object-fit: cover;
+}
+
+.img-wrapper {
+    position: relative;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
