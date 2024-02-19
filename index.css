@@ -48,6 +48,9 @@ li {
     list-style: none;
 }
 
+svg {
+    pointer-events: none;
+}
 
 input:focus {
     outline: none;
@@ -153,7 +156,14 @@ button {
     position: absolute;
     top: 16px;
     right: 13px;
-    z-index: 1;
+}
+
+.heart-button svg {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.heart-button:active svg {
+    fill: rgb(255, 56, 92);
 }
 
 
@@ -225,13 +235,16 @@ button {
 
 .list-explanation-grid-container {
     display: grid;
-    grid-template-columns: auto min-content;
+    grid-template-columns: auto auto;
     grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column;
+    align-items: center;
+    margin-top: 8px;
+    overflow: hidden;
 }
 
 .list-explanation-grid-item {
-    height: fit-content;
+    text-align: left;
 }
 
 .list-explanation-grid-item:nth-child(2) {
@@ -253,18 +266,25 @@ button {
 
 /* text 관련 */
 
-.text-16px {
+.text-16px-600 {
     color: rgb(34, 34, 34);
     font-size: 16px;
     font-weight: 600;
     text-align: center;
 }
 
-.text-15px {
+.text-15px-600 {
     color: rgb(34, 34, 34);
     font-size: 15px;
     font-weight: 600;
     text-align: center;
+}
+
+.text-15px-400-grey {
+    color: rgb(113, 113, 113);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
 }
 
 .text-15px-400 {
@@ -274,37 +294,17 @@ button {
     text-align: center;
 }
 
-.text-14px {
+.text-14px-600 {
     color: rgb(34, 34, 34);
     font-size: 14px;
     font-weight: 600;
     text-align: center;
 }
 
-.text-12px {
+.text-12px-600 {
     color: rgb(34, 34, 34);
     font-size: 12px;
     font-weight: 600;
-    text-align: center;
-}
-
-.text-16px-grey {
-    color: rgb(113, 113, 113);
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.text-15px-grey {
-    color: rgb(113, 113, 113);
-    font-size: 15px;
-    text-align: center;
-}
-
-.text-14px-grey {
-    color: rgb(113, 113, 113);
-    font-size: 14px;
-    font-weight: 400;
     text-align: center;
 }
 
