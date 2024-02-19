@@ -1,4 +1,32 @@
 /* 기본 태그 */
+@media screen and (min-width: 0px) {
+    .list-grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .list-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: 950px) {
+    .list-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    
+}
+
+@media screen and (min-width: 1128px) {
+    .list-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -72,7 +100,6 @@ span {
     font-size: 16px;
     background-color: rgb(247, 247, 247);
     display: inline-block;
-    align-items: center;
 }
 
 button {
@@ -124,8 +151,8 @@ button {
 .heart-button {
     width: fit-content;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 16px;
+    right: 13px;
     z-index: 1;
 }
 
@@ -192,7 +219,6 @@ button {
 .list-grid-container {
     padding: 12px 40px 0px 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
     column-gap: 24px;
     row-gap: 40px;
 }
@@ -202,6 +228,10 @@ button {
     grid-template-columns: auto min-content;
     grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column;
+}
+
+.list-explanation-grid-item {
+    height: fit-content;
 }
 
 .list-explanation-grid-item:nth-child(2) {
@@ -290,11 +320,12 @@ button {
     color: rgb(113, 113, 113);
 }
 
-/*  */
-
 .text-align-left {
     text-align: left;
 }
+/*  */
+
+
 
 .highlight-grey:hover {
     border-radius: 22px;
@@ -344,8 +375,6 @@ button {
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
 }
 
-
-
 .nav-item-frame {
     display: flex;
     flex-direction: column;
@@ -378,6 +407,7 @@ button {
     width: auto;
     aspect-ratio: 1/1;
 }
+
 .img-wrapper img {
     position: absolute;
     top: 0;
