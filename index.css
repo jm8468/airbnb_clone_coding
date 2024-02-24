@@ -3,6 +3,11 @@
     .list-grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .page-padding {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
 }
 
 @media screen and (min-width: 550px) {
@@ -23,6 +28,20 @@
 @media screen and (min-width: 1128px) {
     .list-grid-container {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 양 옆 패딩 40px */
+@media screen and (min-width: 1440px) {
+    .page-padding {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .list-grid-container {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
@@ -235,7 +254,7 @@ button {
 /* grid 관련 */
 
 .list-grid-container {
-    padding: 12px 40px 0px 40px;
+    padding-top: 12px;
     display: grid;
     column-gap: 24px;
     row-gap: 40px;
