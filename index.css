@@ -8,6 +8,10 @@
         padding-right: 40px;
         padding-left: 40px;
     }
+
+    .recommand-list-grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media screen and (min-width: 550px) {
@@ -22,12 +26,20 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .recommand-list-grid-container {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
 
 }
 
 @media screen and (min-width: 1128px) {
     .list-grid-container {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .recommand-list-grid-container {
+        grid-template-columns: repeat(6, minmax(0,1fr));
     }
 }
 
@@ -62,6 +74,14 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+
+
 
 li {
     list-style: none;
@@ -336,7 +356,6 @@ button {
 
 .recommand-list-grid-container {
     display: grid;
-    grid-auto-flow: column;
     padding-top: 32px;
     column-gap: 8px;
     row-gap: 24px;
@@ -511,4 +530,23 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+ul[class="recommand-list-grid-container"]>li>a {
+    display: flex;
+    flex-direction: column;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:first-child {
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:last-child {
+    color: #717171;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
 }
