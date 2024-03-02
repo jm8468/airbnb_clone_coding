@@ -12,6 +12,14 @@
     .recommand-list-grid-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .footer-upper-grid-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .footer-upper-grid-container > section {
+        padding: 24px 0px;
+    }
 }
 
 @media screen and (min-width: 550px) {
@@ -30,7 +38,13 @@
         grid-template-columns: repeat(3, minmax(0,1fr));
     }
 
+    .footer-upper-grid-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
+    .footer-upper-grid-container > section {
+        padding: 48px 0px;
+    }
 }
 
 @media screen and (min-width: 1128px) {
@@ -39,7 +53,7 @@
     }
 
     .recommand-list-grid-container {
-        grid-template-columns: repeat(6, minmax(0,1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 }
 
@@ -361,6 +375,17 @@ button {
     row-gap: 24px;
 }
 
+.footer-upper-grid-container {
+    display: grid;
+    column-gap: 8px;
+}
+
+.footer-upper-list-grid-container {
+    display: grid;
+    row-gap: 12px;
+}
+
+
 /*  */
 
 /* text 관련 */
@@ -405,6 +430,13 @@ button {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
+}
+
+.text-14px-400 {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
 }
 
 .text-12px-600 {
@@ -474,10 +506,7 @@ button {
 }
 
 .short-grey-boundary {
-    background-color: rgb(221, 221, 221);
-    box-sizing: border-box;
-    color: rgb(34, 34, 34);
-    height: 1px
+    border-top: 0.727273px solid rgb(221, 221, 221);
 }
 
 .grey-border {
@@ -550,3 +579,8 @@ ul[class="recommand-list-grid-container"]>li>a>span:last-child {
     font-size: 14px;
     text-align: left;
 }
+
+.footer-upper-list-grid-container > li > a:hover {
+    text-decoration: underline;
+}
+
