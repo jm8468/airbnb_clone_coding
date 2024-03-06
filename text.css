@@ -1,0 +1,71 @@
+.text-18px-600 {
+    color: rgb(34, 34, 34);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-16px-600 {
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-15px-600 {
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-15px-400-grey {
+    color: rgb(113, 113, 113);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.text-15px-400 {
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.text-14px-600 {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-14px-400 {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.text-12px-600 {
+    color: rgb(34, 34, 34);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.search-upper-text {
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.search-below-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(113, 113, 113);
+}
+
+.text-align-left {
+    text-align: left;
+}

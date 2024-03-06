@@ -1,0 +1,90 @@
+#head {
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    height: 64px;
+    box-sizing: border-box;
+}
+
+
+.block-row-center {
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-index0 {
+    z-index: 0
+}
+
+.z-index1 {
+    z-index: 1
+}
+
+.grey-boundary {
+    height: 32px;
+    border-right: 1px solid rgb(221, 221, 221);
+    align-self: center;
+}
+
+.short-grey-boundary {
+    border-top: 0.727273px solid rgb(221, 221, 221);
+}
+
+.grey-border {
+    border-top: 0.2px solid rgb(211, 211, 211);
+    border-bottom: 0.2px solid rgb(211, 211, 211);
+}
+
+.search-shadow {
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+
+.round-image {
+    border-radius: 12px;
+    border: 1px solid transparent;
+    object-fit: cover;
+}
+
+.img-wrapper {
+    position: relative;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul[class="recommand-list-grid-container"]>li>a {
+    display: flex;
+    flex-direction: column;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:first-child {
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:last-child {
+    color: #717171;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-upper-list-grid-container > li > a:hover {
+    text-decoration: underline;
+}
+

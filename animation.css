@@ -1,0 +1,20 @@
+.highlight-grey:hover {
+    border-radius: 22px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(34, 34, 34);
+}
+
+.highlight-grey-tall:hover {
+    border-radius: 32px;
+    background-color: rgb(240, 240, 240);
+}
+
+.hide-right-boundary:hover {
+    height: 32px;
+    border-right: 22px solid white;
+    align-self: center;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
