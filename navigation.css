@@ -12,6 +12,9 @@
     transition-timing-function: cubic-bezier(0.2, 0, 0, 1), cubic-bezier(0.2, 0, 0, 1);
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(113, 113, 113);
 }
 
 .nav-item-frame:hover {
