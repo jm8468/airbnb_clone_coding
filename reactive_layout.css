@@ -1,23 +1,45 @@
 @media screen and (min-width: 0px) {
+    .page-padding {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    
     .list-grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .page-padding {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-
     .recommand-list-grid-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
     .footer-upper-grid-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-
     .footer-upper-grid-container > section {
         padding: 24px 0px;
+    }
+
+    .reactive-footer {
+        display: block;
+        justify-content: none;
+        align-items: none;
+        flex-direction: none;
+    }
+    .reactive-footer > div:first-child {
+        justify-content: start;
+        margin-bottom: 22px;
+    }
+
+    .reactive-footer > div:first-child ul {
+        visibility: hidden;
+    }
+    
+    .reactive-footer > div:last-child > div:first-child > span:last-child {
+        visibility: hidden;
+    }
+    .reactive-footer > div:last-child {
+        display: block;
+    }
+    .reactive-footer > div:last-child div {
+        margin-bottom: 2px;
     }
 }
 
@@ -26,6 +48,28 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+}
+
+@media screen and (min-width: 744px) {
+    .page-padding {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+
+    .reactive-footer > div:first-child {
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+    .reactive-footer > div:first-child ul {
+        visibility: visible;
+    }
+    
+    .reactive-footer > div:last-child {
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 @media screen and (min-width: 950px) {
@@ -54,6 +98,28 @@
     .recommand-list-grid-container {
         grid-template-columns: repeat(6, minmax(0, 1fr));
     }
+
+    .reactive-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .reactive-footer > div:first-child {
+        margin-bottom: 0px;
+    }
+    .reactive-footer > div:last-child > div:first-child > span:last-child {
+        visibility: visible;
+    }
+    .reactive-footer > div:last-child {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .reactive-footer > div:last-child div {
+        margin-bottom: 0px;
+    }
+    
 }
 
 @media screen and (min-width: 1440px) {

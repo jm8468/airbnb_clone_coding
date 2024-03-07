@@ -1,3 +1,11 @@
+/* display */
+.block {
+    display: block;
+}
+.block-inline {
+    display: inline-block;
+}
+
 /* height */
 .height-30 {
     height: 30px;
@@ -16,8 +24,11 @@
 }
 
 /* width */
-.width-parent {
+.width-full {
     width: 100%;
+}
+.width-auto {
+    width: auto;
 }
 
 /* padding */

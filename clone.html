@@ -55,8 +55,8 @@
 
             <!-- 1-2번째 div -->
             <div style="min-width: 348px; flex-basis: auto;" class="z-index-0 flex-grow-0 flex-shrink-1">
-                <div class="padding-0px-80px flex-container justify-content-center width-parent text-left absolute-00 ">
-                    <div class="width-parent">
+                <div class="padding-0px-80px flex-container justify-content-center width-full text-left absolute-00 ">
+                    <div class="width-full">
                         <!-- 위에거 -->
                         <div class="flex-container justify-content-center">
                             <div class="height-80 flex-container align-items-center">
@@ -91,9 +91,9 @@
                         <!-- 아래거 -->
                         <div style="width: 100%;" class="flex-container justify-content-center">
                             <div style="margin: 0 36.5px;"
-                                class="flex-container justify-content-center width-parent padding-bottom-16px">
+                                class="flex-container justify-content-center width-full padding-bottom-16px">
                                 <div style=" max-width: 850px; height: 66px; border: 1px solid rgb(211, 211, 211); border-radius: 32px;"
-                                    class="flex-container search-shadow width-parent">
+                                    class="flex-container search-shadow width-full">
                                     <div style="flex-basis: 0%;"
                                         class="highlight-grey-tall flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
                                         <div style="padding: 14px 32px; border: 1px;">
@@ -220,7 +220,7 @@
 
     <!-- 2번째 div -->
     <div class="page-padding padding-top-12px">
-        <div class="height-78 flex-container justify-content-between align-items-center width-parent">
+        <div class="height-78 flex-container justify-content-between align-items-center width-full">
             <div class="flex-container justify-content-between column-gap-32px">
                 <div class="nav-item-frame">
                     <div>
@@ -359,7 +359,7 @@
     <div class="list-grid-container page-padding">
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/26300485?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1610140890&search_mode=flex_destinations_search&check_in=2024-02-16&check_out=2024-02-21&source_impression_id=p3_1708063150_hLtFDqlHTxn5eE8i&previous_page_section_name=1000&federated_search_id=630ee33b-d0f4-4ee5-b2ee-085d05d7d5be"
-                style="padding: none; display: inline-block;" class="transparent-button width-parent">
+                style="padding: none; display: inline-block;" class="transparent-button width-full">
                 <div class="flex-explanation-container">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
@@ -1006,42 +1006,12 @@
     </div>
 
     <div style="background-color: rgb(247, 247, 247); padding-top: 24px; padding-bottom: 24px;" class="page-padding">
-        <div class="flex-container justify-content-between align-items-center">
-            <div>
-                <div style="display: inline-block;" class="font-black font-14px font-400 text-left">
-                    <span>© 2024 Airbnb, Inc.</span>
-                    <span>·</span>
-                </div>
-                <ul style="display: inline-flex; flex-direction: row;"
-                    class="font-black font-14px font-400 text-left align-items-center">
-                    <li>
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
-                        <span style="margin-right: 5px;">·</span>
-                    </li>
-                    <li>
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
-                        <span style="margin-right: 5px;">·</span>
-                    </li>
-                    <li>
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
-                        <span style="margin-right: 5px;">·</span>
-                    </li>
-                    <li>
-                        <a class="hover-underline"
-                            href="https://www.airbnb.co.kr/home/updated_cancellation_policies?korean_strict_policy=true#strict">한국의
-                            변경된 환불 정책</a>
-                        <span style="margin-right: 5px;">·</span>
-                    </li>
-                    <li>
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div style="display: inline-block;">
-                    <button style="display: inline-flex; margin-right: 24px;"
+        <div class="reactive-footer">
+            <div class="flex-container">
+                <div class="flex-container">
+                    <button style="margin-right: 24px;"
                         class="transparent-button flex-container justify-content-between align-items-center">
-                        <span style="width: fit-content; margin-right: 8px; vertical-align: center;">
+                        <span style="width: fit-content; margin-right: 8px;" class="text-vertical-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
                                 role="presentation" focusable="false"
                                 style="display: block; height: 16px; width: 16px; fill: currentcolor;">
@@ -1052,12 +1022,13 @@
                         </span>
                         <span class="font-black font-14px font-600 text-center hover-underline">한국어(KR)</span>
                     </button>
-                    <button class="transparent-button">
-                        <span class="font-black font-16px font-600 text-center">₩</span>
-                        <span class="hover-underline font-black font-14px font-600 text-center">KRW</span>
+                    <button class="transparent-button flex-container">
+                        <span style="margin-right: 5px;"
+                            class="font-black font-16px font-600 text-center block=">₩</span>
+                        <span class="hover-underline font-black font-14px font-600 text-center block">KRW</span>
                     </button>
                 </div>
-                <ul style="display: inline-flex; margin-left: 24px; vertical-align: center;">
+                <ul style="margin-left: 24px;" class="align-items-center inline-flex-container">
                     <li style="margin-right: 16px;">
                         <a href="https://www.facebook.com/AirbnbKorea">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="페이스북으로 이동하기"
@@ -1126,6 +1097,35 @@
                                 </path>
                             </svg>
                         </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-container justify-content-center align-items-center">
+                <div class="font-black font-14px font-400 text-left block-inline">
+                    <span>© 2024 Airbnb, Inc.</span>
+                    <span style="margin-right: 5px;">·</span>
+                </div>
+                <ul class="font-black font-14px font-400 text-left">
+                    <li class="block-inline">
+                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
+                        <span>·</span>
+                    </li>
+                    <li class="block-inline">
+                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
+                        <span>·</span>
+                    </li>
+                    <li class="block-inline">
+                        <a class="hover-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
+                        <span>·</span>
+                    </li>
+                    <li class="block-inline">
+                        <a class="hover-underline"
+                            href="https://www.airbnb.co.kr/home/updated_cancellation_policies?korean_strict_policy=true#strict">한국의
+                            변경된 환불 정책</a>
+                        <span>·</span>
+                    </li>
+                    <li class="block-inline">
+                        <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
                     </li>
                 </ul>
             </div>
