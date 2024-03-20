@@ -1,3 +1,28 @@
+.nav-grid-container {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    column-gap: 16px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    max-width: 100%;
+}
+
+.nav-grid-container>div:first-child {
+    display: grid;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    column-gap: 32px;
+    contain: none;
+    justify-content: flex-start;
+    flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
 .list-grid-container {
     padding-top: 12px;
     display: grid;
