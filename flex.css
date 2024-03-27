@@ -78,17 +78,3 @@
     flex-direction: column;
 }
 
-.recommand-travel-list>button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 10px;
-    margin: 6px 6px 6px 0px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #717171;
-}
-
-.recommand-travel-list>button:first-child {
-    margin-left: -10px;
-}
