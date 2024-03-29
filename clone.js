@@ -1,7 +1,7 @@
 const tabsSeo = document.querySelectorAll('#tab-seo button');
-const panelsSeo = document.querySelectorAll('#panel-seo div');
 
 function tabSeoButton(event) {
+    const panelsSeo = document.querySelectorAll('#panel-seo div');
     const button = event.target;
     // 선택한 aria-selected만 true가 되게 하는 기능
     tabsSeo.forEach(tab => {
@@ -11,7 +11,7 @@ function tabSeoButton(event) {
 
     // aria-selected가 true인 버튼만 검은색 폰트 적용하는 기능
     tabsSeo.forEach((tab, index) => {
-        if(tab.getAttribute("aria-selected") === "false") {
+        if (tab.getAttribute("aria-selected") === "false") {
             tab.classList.remove("font-black");
             tab.classList.remove("selected-button-highlight");
             tab.classList.add("font-grey");
@@ -24,10 +24,10 @@ function tabSeoButton(event) {
             panelsSeo[index].removeAttribute("hidden");
         }
     });
-    
+
 }
 
 tabsSeo.forEach(tabSeo => {
     tabSeo.addEventListener("click", tabSeoButton);
-  });
+});
 
