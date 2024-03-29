@@ -13,12 +13,12 @@
     text-decoration: underline;
 }
 
-.selected-button-highlight {
+.selected-button-highlight::after {
     position: absolute;
-    border-top: solid 1px rgb(34, 34, 34);
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    bottom: -8px;
-    right: 0px;
+    height: 2px;
+    width: calc(100% - 20px);
+    bottom: -6px;
+    left: 10px;
+    background-color: rgb(34, 34, 34);
+    content: "";
 }

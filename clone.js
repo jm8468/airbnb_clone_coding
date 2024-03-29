@@ -8,16 +8,19 @@ function tabSeoButton(event) {
         tab.setAttribute("aria-selected", "false");
     });
     button.setAttribute("aria-selected", "true");
+
     // aria-selected가 true인 버튼만 검은색 폰트 적용하는 기능
     tabsSeo.forEach((tab, index) => {
-        if(tab !== button) {
+        if(tab.getAttribute("aria-selected") === "false") {
             tab.classList.remove("font-black");
+            tab.classList.remove("selected-button-highlight");
             tab.classList.add("font-grey");
             panelsSeo[index].setAttribute("hidden", true);
         }
         else {
             tab.classList.remove("font-grey");
             tab.classList.add("font-black");
+            tab.classList.add("selected-button-highlight");
             panelsSeo[index].removeAttribute("hidden");
         }
     });
