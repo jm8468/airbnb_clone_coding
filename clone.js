@@ -9,8 +9,7 @@ function tabSeoButton(event) {
         tab.setAttribute("aria-selected", "false");
     });
     button.setAttribute("aria-selected", "true");
-    console.log(button);
-    // aria-selected가 true인 버튼만 검은색 폰트 적용하는 기능
+    
     tabsSeo.forEach(tab => {
         if(tab !== button) {
             tab.classList.remove("font-black");
@@ -28,3 +27,4 @@ function tabSeoButton(event) {
 tabsSeo.forEach(tabSeo => {
     tabSeo.addEventListener("click", tabSeoButton);
   });
+

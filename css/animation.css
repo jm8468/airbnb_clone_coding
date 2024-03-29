@@ -12,3 +12,13 @@
 .hover-underline:hover {
     text-decoration: underline;
 }
+
+.selected-button-highlight {
+    position: absolute;
+    border-top: solid 1px rgb(34, 34, 34);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    bottom: -8px;
+    right: 0px;
+}
