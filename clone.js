@@ -1,4 +1,7 @@
 const tabsSeo = document.querySelectorAll('#tab-seo button');
+let experiences = document.querySelectorAll('.experience-button');
+let experiencesDiv = document.querySelectorAll('.experience-button > div');
+experiences = Array.from(experiences).slice(0, 2);
 
 function tabSeoButton(event) {
     const panelsSeo = document.querySelectorAll('#panel-seo div');
@@ -16,7 +19,7 @@ function tabSeoButton(event) {
             tab.classList.remove("selected-button-highlight");
             tab.classList.add("font-grey");
             panelsSeo[index].setAttribute("hidden", true);
-        } 
+        }
         else {
             tab.classList.remove("font-grey");
             tab.classList.add("font-black");
@@ -27,7 +30,14 @@ function tabSeoButton(event) {
 
 }
 
+function highlightToggle(event) {
+    const btn = event.target;
+}
+
 tabsSeo.forEach(tabSeo => {
     tabSeo.addEventListener("click", tabSeoButton);
+});
+experiences.forEach(experience => {
+    experience.addEventListener("click", highlightToggle);
 });
 

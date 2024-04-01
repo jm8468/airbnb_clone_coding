@@ -1,8 +1,5 @@
 .experience-button {
     font-size: 16px;
-    color: rgb(113, 113, 113);
-    transition-property: box-shadow, transform;
-    font-weight: 400;
     height: 44px;
 }
 

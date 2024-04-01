@@ -4,6 +4,10 @@
     color: rgb(34, 34, 34);
 }
 
+.experience-link:hover {
+    color: rgb(34, 34, 34);
+}
+
 .highlight-grey-tall:hover {
     border-radius: 32px;
     background-color: rgb(240, 240, 240);

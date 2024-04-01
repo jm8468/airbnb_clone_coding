@@ -6,9 +6,13 @@
     display: inline-block;
 }
 
+
 /* height */
 .height-30 {
     height: 30px;
+}
+.height-44 {
+    height: 44px;
 }
 .height-64 {
     height: 64px;
@@ -21,6 +25,9 @@
 }
 .height-168 {
     height: 168px;
+}
+.height-full {
+    height: 100%;
 }
 
 /* width */
@@ -114,7 +121,6 @@
 }
 
 .grey-border {
-    border-top: 0.2px solid rgb(211, 211, 211);
     border-bottom: 0.2px solid rgb(211, 211, 211);
 }
 

@@ -41,6 +41,13 @@
     .reactive-footer > div:last-child div {
         margin-bottom: 2px;
     }
+
+    .short-logo-display {
+        display: block;
+    }
+    .long-logo-display {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 550px) {
@@ -118,6 +125,13 @@
     }
     .reactive-footer > div:last-child div {
         margin-bottom: 0px;
+    }
+
+    .short-logo-display {
+        display: none;
+    }
+    .long-logo-display {
+        display: block;
     }
     
 }
