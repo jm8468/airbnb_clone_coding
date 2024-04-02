@@ -69,4 +69,6 @@ span {
 
 button {
     cursor: pointer;
+    border-width: 0px;
+    padding: 0px;
 }
