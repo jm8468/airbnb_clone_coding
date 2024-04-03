@@ -1,3 +1,12 @@
+.search-by-region-grid-container {
+    display: grid;
+    grid-auto-rows: 0px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    row-gap: 6px;
+    overflow: hidden;
+}
+
 .nav-grid-container {
     display: grid;
     grid-auto-columns: max-content;

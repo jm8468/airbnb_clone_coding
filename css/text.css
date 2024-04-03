@@ -10,6 +10,9 @@
 .text-vertical-center {
     vertical-align: center;
 }
+.text-vertical-middle {
+    vertical-align: middle;
+}
 
 /* font 사이즈 */
 .font-10px {
@@ -41,6 +44,9 @@
 .font-600 {
     font-weight: 600;
 }
+.font-700 {
+    font-weight: 700;
+}
 
 /* font 색상 */
 .font-black {
@@ -48,4 +54,9 @@
 }
 .font-grey {
     color: rgb(113, 113, 113);
+}
+
+/* font 높이 */
+.line-height-basic {
+    line-height: 20.02px;
 }

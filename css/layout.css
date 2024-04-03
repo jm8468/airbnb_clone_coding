@@ -39,54 +39,49 @@
 }
 
 /* padding */
-.padding-top-12px {
+.padding-0 {
+    padding: 0px;
+}
+.padding-top-12 {
     padding-top: 12px;
 }
-.padding-bottom-2px {
-    padding-bottom: 2px;
-}
-.padding-bottom-16px{
-    padding-bottom: 16px;
-}
-.padding-0px-80px {
-    padding: 0px 80px;
-}
-.padding-11px-32px {
+.padding-11-32 {
     padding: 11px 32px;
 }
-.padding-14px-32px {
+.padding-14-32 {
     padding: 14px 32px;
 }
-.padding-48px-0px {
+.padding-48-0 {
     padding-top: 48px;
     padding-bottom: 48px;
 }
-.padding-12px {
+.padding-12 {
     padding: 12px;
 }
-.padding-16px {
+.padding-16 {
     padding: 16px;
 }
 
 /* margin */
-.margin-8px {
-    margin: 8px;
+.margin-top-12 {
+    margin-top: 12px;
 }
-.margin-bottom-12px {
+.margin-bottom-12 {
     margin-bottom: 12px;
 }
-.margin-8px-0px {
+.margin-8-0 {
     margin-top: 8px;
     margin-bottom: 8px;
 }
 
 /* gap */
-.column-gap-32px {
-    column-gap: 32px;
-}
-.column-gap-8px {
+.column-gap-8 {
     column-gap: 8px;
 }
+.row-gap-8 {
+    row-gap: 8px;
+}
+
 /* z-index */
 .z-index-0 {
     z-index: 0
@@ -102,13 +97,42 @@
 .absolute {
     position: absolute;
 }
+.sticky {
+    position: sticky;
+}
 .absolute-00 {
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
+/* border */
+.radius-32 {
+    border-radius: 32px;
+}
+.radius-12 {
+    border-radius: 12px;
+}
 
+.grey-border-211 {
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.grey-border-221 {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.transparent-border {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.no-border {
+    border: none;
+}
+
+.grey-border-bottom {
+    border-bottom: 0.2px solid rgb(211, 211, 211);
+}
 
 .grey-dividing-line {
     height: 32px;
@@ -120,10 +144,16 @@
     border-top: 0.727273px solid rgb(221, 221, 221);
 }
 
-.grey-border {
-    border-bottom: 0.2px solid rgb(211, 211, 211);
+/* background 색 */
+.background-color-basic {
+    background-color: rgb(255, 255, 255);
 }
 
+.background-color-221 {
+    background-color: rgb(221, 221, 221);
+}
+
+/*  */
 .search-shadow {
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
 }
