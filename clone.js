@@ -1,5 +1,5 @@
 const tabsSeo = document.querySelectorAll('#tab-seo button');
-const pressEffectBtns = document.querySelectorAll('.press-effect')
+const mapImgPressEffects = document.querySelectorAll('.press-effect')
 
 function tabSeoButton(event) {
     const panelsSeo = document.querySelectorAll('#panel-seo div');
@@ -28,12 +28,12 @@ function tabSeoButton(event) {
 
 }
 
-function mouseDownEffect(event) {
+// 마우스 이벤트에 따라 세계지도 크기를 바꾸는 애니메이션 효과
+function addMapImgEffect(event) {
     event = event.currentTarget;
     event.classList.add('scale-90percent');
 }
-
-function mouseUpEffect(event) {
+function removeMapImgEffect(event) {
     event = event.currentTarget;
     event.classList.remove('scale-90percent');
 }
@@ -41,12 +41,12 @@ function mouseUpEffect(event) {
 tabsSeo.forEach(tabSeo => {
     tabSeo.addEventListener("click", tabSeoButton);
 });
-pressEffectBtns.forEach(effect => {
-    effect.addEventListener("mousedown", mouseDownEffect);
+mapImgPressEffects.forEach(effect => {
+    effect.addEventListener("mousedown", addMapImgEffect);
 });
-pressEffectBtns.forEach(effect => {
-    effect.addEventListener("mouseup", mouseUpEffect);
+mapImgPressEffects.forEach(effect => {
+    effect.addEventListener("mouseup", removeMapImgEffect);
 });
-pressEffectBtns.forEach(effect => {
-    effect.addEventListener("mouseleave", mouseUpEffect);
+mapImgPressEffects.forEach(effect => {
+    effect.addEventListener("mouseleave", removeMapImgEffect);
 });
