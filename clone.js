@@ -1,7 +1,5 @@
 const tabsSeo = document.querySelectorAll('#tab-seo button');
-let experiences = document.querySelectorAll('.experience-button');
-let experiencesDiv = document.querySelectorAll('.experience-button > div');
-experiences = Array.from(experiences).slice(0, 2);
+const pressEffectBtns = document.querySelectorAll('.press-effect')
 
 function tabSeoButton(event) {
     const panelsSeo = document.querySelectorAll('#panel-seo div');
@@ -30,14 +28,25 @@ function tabSeoButton(event) {
 
 }
 
-function highlightToggle(event) {
-    const btn = event.target;
+function mouseDownEffect(event) {
+    event = event.currentTarget;
+    event.classList.add('scale-90percent');
+}
+
+function mouseUpEffect(event) {
+    event = event.currentTarget;
+    event.classList.remove('scale-90percent');
 }
 
 tabsSeo.forEach(tabSeo => {
     tabSeo.addEventListener("click", tabSeoButton);
 });
-experiences.forEach(experience => {
-    experience.addEventListener("click", highlightToggle);
+pressEffectBtns.forEach(effect => {
+    effect.addEventListener("mousedown", mouseDownEffect);
 });
-
+pressEffectBtns.forEach(effect => {
+    effect.addEventListener("mouseup", mouseUpEffect);
+});
+pressEffectBtns.forEach(effect => {
+    effect.addEventListener("mouseleave", mouseUpEffect);
+});

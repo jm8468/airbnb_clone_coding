@@ -26,3 +26,11 @@
     background-color: rgb(34, 34, 34);
     content: "";
 }
+
+.press-effect {
+    transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.scale-90percent {
+    transform: scale(.9);
+}

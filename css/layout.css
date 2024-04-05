@@ -113,6 +113,9 @@
 .radius-12 {
     border-radius: 12px;
 }
+.radius-20 {
+    border-radius: 20px;
+}
 
 .grey-border-211 {
     border: 1px solid rgb(211, 211, 211);
@@ -158,24 +161,5 @@
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
 }
 
-.round-image {
-    border-radius: 12px;
-    border: 1px solid transparent;
-    object-fit: cover;
-}
 
-.img-wrapper {
-    position: relative;
-    width: auto;
-    aspect-ratio: 1/1;
-}
 
-.img-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(50, 50);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}

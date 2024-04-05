@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/transition.css">
+    <link rel="stylesheet" href="css/img.css">
 </head>
 
 <body>
@@ -115,7 +116,7 @@
                                         </div>
 
                                         <div
-                                            style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: rgba(0, 0, 0, 0.15); width: 475px; max-height: 137px; overflow-x: hidden; background-color: rgb(255, 255, 255);"
+                                            style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 150px); overflow-x: hidden; background-color: rgb(255, 255, 255);"
                                             class="absolute margin-top-12 radius-32">
                                             <div style="overflow-y: hidden; text-align: left; row-gap: 24px;"
                                                 class="flex-container flex-column">
@@ -127,19 +128,107 @@
                                                         <div style="padding: 8px;"
                                                             class="flex-container flex-column row-gap-8">
                                                             <button
-                                                                style="aspect-ratio: 1/1; overflow: clip;"
-                                                                class="align-items-start radius-12 grey-border-221 background-color-221">
-                                                                <img alt=""
+                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                <img class="world-map-img" alt=""
                                                                     src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg?im_w=320">
                                                             </button>
+                                                            <div style="margin: 0px 2px;" class="font-14px">유연한 검색</div>
                                                         </div>
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
+                                                        <div style="padding: 8px;"
+                                                            class="flex-container flex-column row-gap-8">
+                                                            <button
+                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                <img class="world-map-img" alt=""
+                                                                    src="https://a0.muscache.com/im/pictures/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg?im_w=320">
+                                                            </button>
+                                                            <div style="margin: 0px 2px;" class="font-14px">유럽</div>
+                                                        </div>
+                                                        <div style="padding: 8px;"
+                                                            class="flex-container flex-column row-gap-8">
+                                                            <button
+                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                <img class="world-map-img" alt=""
+                                                                    src="https://a0.muscache.com/im/pictures/26891a81-b9db-4a9c-8aab-63486b7e627c.jpg?im_w=320">
+                                                            </button>
+                                                            <div style="margin: 0px 2px;" class="font-14px">일본</div>
+                                                        </div>
+                                                        <div style="padding: 8px;"
+                                                            class="flex-container flex-column row-gap-8">
+                                                            <button
+                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                <img class="world-map-img" alt=""
+                                                                    src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320">
+                                                            </button>
+                                                            <div style="margin: 0px 2px;" class="font-14px">동남아시아</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div>
-
+                                                    <div style="padding: 8px 0px; margin-bottom: 20px;" class="font-14px font-700">한국</div>
+                                                    <div role="radiogroup" id="placeChips">
+                                                        <div style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">서울</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">부산</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">속초</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">강릉</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">전주</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">대구</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">경주</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">여수</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">서귀포</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">대전</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">제주도</div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
+                                                                    <div class="font-black font-400 font-size-14px">인천</div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
