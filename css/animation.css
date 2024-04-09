@@ -27,14 +27,24 @@
     content: "";
 }
 
-.press-effect {
-    transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1);
+.scale-transition { 
+    transition-property: transform, background-color, border-color;
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 }
 
-.scale-90percent {
-    transform: scale(.9);
+.scale-92:active {
+    transform: scale(.92);
 }
 
 .background-to-grey:hover {
     background-color: rgb(235, 235, 235);
+}
+
+.active-black-border-000:active {
+    border-color: rgb(0, 0, 0);
+}
+
+.active-black-border-000:hover {
+    border-color: rgb(0, 0, 0);
 }

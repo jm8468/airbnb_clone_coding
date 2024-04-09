@@ -54,7 +54,7 @@
     font-weight: 600;
 }
 
-.recommand-travel-list>button {
+.travel-tab-list>button {
     background-color: transparent;
     border: none;
     outline: none;
@@ -64,6 +64,20 @@
     font-weight: 600;
 }
 
-.recommand-travel-list>button:first-child {
+.travel-tab-list>button:first-child {
+    margin-left: -10px;
+}
+
+.travel-tab-list>button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 6px 6px 6px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.travel-tab-list>button:first-child {
     margin-left: -10px;
 }

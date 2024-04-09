@@ -24,8 +24,7 @@
 <body>
     <!-- 헤더 부분 -->
     <header style="position: sticky; top: 0; left: 0; z-index: 100; background-color: rgb(255, 255, 255);">
-        <div
-            class="height-80 flex-container justify-content-between relative page-padding z-index-1">
+        <div class="height-80 flex-container justify-content-between relative page-padding z-index-1">
             <!-- airbnb 로고 -->
             <div style="flex-basis: 140px;" class="height-80 inline-flex-container flex-grow-1 flex-shrink-0">
                 <a href="https://www.airbnb.co.kr/"
@@ -55,8 +54,7 @@
             <div style="min-width: 348px; padding: 0px 24px;" class="flex-grow-0 flex-shrink-1 flex-basis-auto">
                 <div class="page-padding width-full absolute-00 grey-border-bottom background-color-basic">
                     <div style="padding-bottom: 16px;" class="relative z-index-1">
-                        <form style="margin: 0 auto; max-width: 850px;" class="block" action="/s/homes" method="get"
-                            role="search">
+                        <div style="margin: 0 auto; max-width: 850px;" class="block" role="search">
                             <!-- 여행 카테고리 검색 -->
                             <div class="flex-container height-80 align-items-center justify-content-center">
                                 <div role="tablist" class="height-44">
@@ -115,20 +113,19 @@
                                             </label>
                                         </div>
 
-                                        <div
-                                            style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 150px); overflow-x: hidden; background-color: rgb(255, 255, 255);"
+                                        <div style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 200px); overflow-x: hidden; overscroll-behavior: contain; background-color: rgb(255, 255, 255);"
                                             class="absolute margin-top-12 radius-32">
-                                            <div style="overflow-y: hidden; text-align: left; row-gap: 24px;"
+                                            <div style="overflow: hidden; text-align: left; row-gap: 24px;"
                                                 class="flex-container flex-column">
+                                                <!-- 지역으로 검색하기 -->
                                                 <div>
                                                     <div style="margin-block-end: 16px; margin-inline-start: 8px;"
                                                         class="font-14px font-700">지역으로 검색하기</div>
-                                                    <div
-                                                        class="search-by-region-grid-container">
+                                                    <div class="search-by-region-grid-container">
                                                         <div style="padding: 8px;"
                                                             class="flex-container flex-column row-gap-8 background-to-grey radius-16">
                                                             <button
-                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                class="scale-transition scale-92 world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
                                                                 <img class="world-map-img" alt=""
                                                                     src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg?im_w=320">
                                                             </button>
@@ -137,7 +134,7 @@
                                                         <div style="padding: 8px;"
                                                             class="flex-container flex-column row-gap-8 background-to-grey radius-16">
                                                             <button
-                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                class="scale-transition scale-92 world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
                                                                 <img class="world-map-img" alt=""
                                                                     src="https://a0.muscache.com/im/pictures/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg?im_w=320">
                                                             </button>
@@ -146,7 +143,7 @@
                                                         <div style="padding: 8px;"
                                                             class="flex-container flex-column row-gap-8 background-to-grey radius-16">
                                                             <button
-                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                class="scale-transition scale-92 world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
                                                                 <img class="world-map-img" alt=""
                                                                     src="https://a0.muscache.com/im/pictures/26891a81-b9db-4a9c-8aab-63486b7e627c.jpg?im_w=320">
                                                             </button>
@@ -155,7 +152,7 @@
                                                         <div style="padding: 8px;"
                                                             class="flex-container flex-column row-gap-8 background-to-grey radius-16">
                                                             <button
-                                                                class="press-effect world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
+                                                                class="scale-transition scale-92 world-map-img-wrapper align-items-start radius-12 grey-border-221 background-color-221">
                                                                 <img class="world-map-img" alt=""
                                                                     src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320">
                                                             </button>
@@ -163,71 +160,217 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div style="padding: 8px 0px; margin-bottom: 20px;" class="font-14px font-700">한국</div>
+                                                <!-- 국가 내 -->
+                                                <div style="padding: 0px 8px;">
+                                                    <div style="padding: 8px 0px; margin-bottom: 20px;"
+                                                        class="font-14px font-700">한국</div>
                                                     <div role="radiogroup" id="placeChips">
-                                                        <div style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
+                                                        <div
+                                                            style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">서울</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">서울
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">부산</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">부산
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">속초</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">속초
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">강릉</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">강릉
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">전주</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">전주
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">대구</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">대구
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">경주</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">경주
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">여수</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">여수
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">서귀포</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">서귀포
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">대전</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">대전
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">제주도</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">제주도
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button style="padding: 4px 16px; min-height: 40px;" class="grey-border-221 background-color-basic radius-20 width-full height-full">
-                                                                    <div class="font-black font-400 font-size-14px">인천</div>
+                                                                <button style="padding: 4px 16px; min-height: 40px;"
+                                                                    class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
+                                                                    aria-pressed="false">
+                                                                    <div class="font-black font-400 font-size-14px">인천
+                                                                    </div>
                                                                 </button>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 지역 별 -->
+                                                <div style="padding: 0px 8px;">
+                                                    <div>
+                                                        <!-- 탭 -->
+                                                        <div style="padding: 0px 12px; margin: 0px -12px;"
+                                                            class="relative">
+                                                            <div style="overflow: visible;"
+                                                                class="flex-container justify-content-start travel-tab-list text-left text"
+                                                                id="tab-placesByAreasTabId" role="tablist">
+                                                                <!-- 전 세계 -->
+                                                                <button id="tab-placesByAreasTabId-0"
+                                                                    aria-controls="panel-placesByAreasTabId-0"
+                                                                    aria-selected="true" role="tab"
+                                                                    class="transparent-button relative selected-button-highlight">
+                                                                    <div class="text text-center font-600 font-14px">전
+                                                                        세계
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 동아시아 -->
+                                                                <button id="tab-placesByAreasTabId-1"
+                                                                    aria-controls="panel-placesByAreasTabId-1"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">
+                                                                        동아시아
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 동남아시아 -->
+                                                                <button id="tab-placesByAreasTabId-2"
+                                                                    aria-controls="panel-placesByAreasTabId-2"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">
+                                                                        동남아시아
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 유럽 -->
+                                                                <button id="tab-placesByAreasTabId-3"
+                                                                    aria-controls="panel-placesByAreasTabId-3"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">유럽
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 북남미 -->
+                                                                <button id="tab-placesByAreasTabId-4"
+                                                                    aria-controls="panel-placesByAreasTabId-4"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">북남미
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 오세아니아 -->
+                                                                <button id="tab-placesByAreasTabId-5"
+                                                                    aria-controls="panel-placesByAreasTabId-5"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">
+                                                                        오세아니아
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 기타 아시아 지역 -->
+                                                                <button id="tab-placesByAreasTabId-6"
+                                                                    aria-controls="panel-placesByAreasTabId-6"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">기타
+                                                                        아시아 지역
+                                                                    </div>
+                                                                </button>
+                                                                <!-- 아프리카 -->
+                                                                <button id="tab-placesByAreasTabId-7"
+                                                                    aria-controls="panel-placesByAreasTabId-7"
+                                                                    aria-selected="true" role="tab">
+                                                                    <div class="text text-center font-600 font-14px">
+                                                                        아프리카
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grey-border-bottom"></div>
+                                                        <div style="width: 36px; height: 50px; top: 1px; right: -12px;"
+                                                            class="absolute">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                                aria-label="스크롤하면 오른쪽으로 이동" role="img" focusable="false"
+                                                                style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                                                                <path fill="none"
+                                                                    d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <!-- 탭 패널 -->
+                                                        <div>
+                                                            <!-- 전 세계 -->
+                                                            <div></div>
+                                                            <!-- 동아시아 -->
+                                                            <div></div>
+                                                            <!-- 동남아시아 -->
+                                                            <div></div>
+                                                            <!-- 유럽 -->
+                                                            <div></div>
+                                                            <!-- 북남미 -->
+                                                            <div></div>
+                                                            <!-- 오세아니아 -->
+                                                            <div></div>
+                                                            <!-- 기타 아시아 지역 -->
+                                                            <div></div>
+                                                            <!-- 아프리카 -->
+                                                            <div></div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,7 +430,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -343,9 +486,9 @@
                 </div>
             </div>
         </div>
-        
+
     </header>
-    
+
     <!-- 여행지 상세 메뉴 -->
     <div style="top: 310px;" class="sticky page-padding padding-top-12">
         <div class="nav-grid-container">
@@ -905,7 +1048,7 @@
         <div class="font-22px font-600">
             <span>다음 여행을 위한 추천 여행지</span>
         </div>
-        <div id="tab-seo" style="margin-top: 8px;" class="flex-container justify-content-start recommand-travel-list"
+        <div id="tab-seo" style="margin-top: 8px;" class="flex-container justify-content-start travel-tab-list"
             role="tablist">
             <button id="tab-seo-0" class="font-black relative selected-button-highlight" role="tab"
                 aria-controls="panel-seo-0" aria-selected="false">
