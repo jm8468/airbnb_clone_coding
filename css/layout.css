@@ -107,6 +107,9 @@
 }
 
 /* border */
+.radius-8 {
+    border-radius: 8px;
+}
 .radius-12 {
     border-radius: 12px;
 }
@@ -115,6 +118,9 @@
 }
 .radius-20 {
     border-radius: 20px;
+}
+.radius-22 {
+    border-radius: 22px;
 }
 .radius-32 {
     border-radius: 32px;

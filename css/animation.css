@@ -1,16 +1,15 @@
-.highlight-grey:hover {
-    border-radius: 22px;
+.highlight-grey-247:hover {
     background-color: rgb(247, 247, 247);
-    color: rgb(34, 34, 34);
+}
+.highlight-grey-240:hover {
+    background-color: rgb(240, 240, 240);
+}
+.highlight-grey-235:hover {
+    background-color: rgb(235, 235, 235);
 }
 
 .experience-link:hover {
     color: rgb(34, 34, 34);
-}
-
-.highlight-grey-tall:hover {
-    border-radius: 32px;
-    background-color: rgb(240, 240, 240);
 }
 
 .hover-underline:hover {
@@ -35,10 +34,6 @@
 
 .scale-92:active {
     transform: scale(.92);
-}
-
-.background-to-grey:hover {
-    background-color: rgb(235, 235, 235);
 }
 
 .active-black-border-000:active {
