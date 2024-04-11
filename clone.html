@@ -50,12 +50,12 @@
                 </a>
             </div>
 
-            <!-- 여행 카테고리, 여행지, 여행일정 검색 -->
+            <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
             <div style="min-width: 348px; padding: 0px 24px;" class="flex-grow-0 flex-shrink-1 flex-basis-auto">
                 <div class="page-padding width-full absolute-00 grey-border-bottom background-color-basic">
                     <div style="padding-bottom: 16px;" class="relative z-index-1">
                         <div style="margin: 0 auto; max-width: 850px;" class="block" role="search">
-                            <!-- 여행 카테고리 검색 -->
+                            <!-- 숙소 / 체험 / 온라인 체험 -->
                             <div class="flex-container height-80 align-items-center justify-content-center">
                                 <div role="tablist" class="height-44">
                                     <!-- 숙소 -->
@@ -87,23 +87,22 @@
                                         </div>
                                     </a>
                                 </div>
-
-
                             </div>
-                            <!-- 여행지, 여행일정 검색 -->
-                            <div id="search-tabpanel" role="tabpanel"
-                                class="relative flex-container search-shadow width-full radius-32 grey-border-211 background-color-basic">
-                                <div style=" max-width: 850px; height: 66px;"
-                                    class="flex-container flex-basis-zero flex-grow-1 flex-shrink-1 ">
-                                    <div class="flex-basis-zero flex-grow-1 flex-shrink-0 ">
+                            <!-- 여행지 검색 / 날짜 추가 / 게스트 추가 -->
+                            <div id="search-tabpanel" role="tabpanel" style="height: 66px;"
+                                class="relative flex-container search-shadow text-left width-full radius-32 grey-border-211 background-color-basic pointer-none">
+                                <div style="max-width: 850px;"
+                                    class="flex-container flex-basis-zero flex-grow-1 flex-shrink-1 height-full">
+                                    <div class="flex-basis-zero flex-grow-1 flex-shrink-0">
+                                        <!-- 여행지 / 여행지 검색 -->
                                         <div style="margin: -1px;"
-                                            class="relative flex-container align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
+                                            class="layer-container relative flex-container align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
                                             <label style="padding: 14px 32px;"
-                                                class="block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
+                                                class="highlight-grey-247 block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
                                                 for="bigsearch-query-location-input">
                                                 <div>
                                                     <div style="line-height: 16px;"
-                                                        class="font-black font-12px font-600 padding-bottom-2px">여행지
+                                                        class="font-black font-12px font-600 padding-bottom-2">여행지
                                                     </div>
                                                     <input style="line-height: 18px; cursor: text;"
                                                         class="block width-full no-border font-grey font-14px font-400 padding-0"
@@ -112,9 +111,9 @@
                                                 </div>
                                             </label>
                                         </div>
-
-                                        <div style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 200px); overflow-x: hidden; overscroll-behavior: contain; background-color: rgb(255, 255, 255);"
-                                            class="absolute margin-top-12 radius-32">
+                                        <!-- 여행지 검색 레이어 -->
+                                        <div style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 200px); overflow-x: hidden; overscroll-behavior: contain;"
+                                            class="layer-item absolute margin-top-12 radius-32 visibility-hidden z-index-1 background-color-basic">
                                             <div style="overflow: hidden; text-align: left; row-gap: 24px;"
                                                 class="flex-container flex-column">
                                                 <!-- 지역으로 검색하기 -->
@@ -369,9 +368,9 @@
                                                             </svg>
                                                         </div>
                                                         <!-- 탭 패널 -->
-                                                        <div style="padding-top: 24px;" id="panels-placesByAreasTabId">
+                                                        <div style="padding-top: 24px;" id="panels-placesByAreasTabId" class="text">
                                                             <!-- 전 세계 -->
-                                                            <div id="panel-placesByAreasTabId-0" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-0">
+                                                            <div id="panel-placesByAreasTabId-0" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-0" class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -381,7 +380,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     오사카
                                                                                 </div>
                                                                             </button>
@@ -392,7 +391,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     도쿄
                                                                                 </div>
                                                                             </button>
@@ -403,7 +402,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     후쿠오카
                                                                                 </div>
                                                                             </button>
@@ -414,7 +413,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     방콕
                                                                                 </div>
                                                                             </button>
@@ -425,7 +424,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     런던
                                                                                 </div>
                                                                             </button>
@@ -436,7 +435,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     치앙마이
                                                                                 </div>
                                                                             </button>
@@ -447,7 +446,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     타이베이
                                                                                 </div>
                                                                             </button>
@@ -458,7 +457,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     시드니
                                                                                 </div>
                                                                             </button>
@@ -469,7 +468,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     삿포로
                                                                                 </div>
                                                                             </button>
@@ -480,7 +479,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     그린델발트
                                                                                 </div>
                                                                             </button>
@@ -491,7 +490,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     바르셀로나
                                                                                 </div>
                                                                             </button>
@@ -502,7 +501,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     인터라켄
                                                                                 </div>
                                                                             </button>
@@ -511,7 +510,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 동아시아 -->
-                                                            <div id="panel-placesByAreasTabId-1" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-1" hidden>
+                                                            <div id="panel-placesByAreasTabId-1" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-1" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -521,7 +520,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     오사카
                                                                                 </div>
                                                                             </button>
@@ -532,7 +531,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     도쿄
                                                                                 </div>
                                                                             </button>
@@ -543,7 +542,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     후쿠오카
                                                                                 </div>
                                                                             </button>
@@ -554,7 +553,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     타이베이
                                                                                 </div>
                                                                             </button>
@@ -565,7 +564,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     삿포로
                                                                                 </div>
                                                                             </button>
@@ -576,7 +575,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     오키나와
                                                                                 </div>
                                                                             </button>
@@ -587,7 +586,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     교토
                                                                                 </div>
                                                                             </button>
@@ -598,7 +597,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     나고야
                                                                                 </div>
                                                                             </button>
@@ -609,7 +608,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     벳푸
                                                                                 </div>
                                                                             </button>
@@ -620,7 +619,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     유후
                                                                                 </div>
                                                                             </button>
@@ -631,7 +630,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     히로시마
                                                                                 </div>
                                                                             </button>
@@ -642,7 +641,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     나하
                                                                                 </div>
                                                                             </button>
@@ -651,7 +650,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 동남아시아 -->
-                                                            <div id="panel-placesByAreasTabId-2" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-2" hidden>
+                                                            <div id="panel-placesByAreasTabId-2" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-2" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -661,7 +660,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     방콕
                                                                                 </div>
                                                                             </button>
@@ -672,7 +671,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     치앙마이
                                                                                 </div>
                                                                             </button>
@@ -683,7 +682,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     하노이
                                                                                 </div>
                                                                             </button>
@@ -694,7 +693,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     파타야
                                                                                 </div>
                                                                             </button>
@@ -705,7 +704,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     냐짱
                                                                                 </div>
                                                                             </button>
@@ -716,7 +715,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     세부
                                                                                 </div>
                                                                             </button>
@@ -727,7 +726,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     호이안
                                                                                 </div>
                                                                             </button>
@@ -738,7 +737,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     달랏
                                                                                 </div>
                                                                             </button>
@@ -749,7 +748,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     다낭
                                                                                 </div>
                                                                             </button>
@@ -760,7 +759,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     마닐라
                                                                                 </div>
                                                                             </button>
@@ -771,7 +770,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     엔젤레스
                                                                                 </div>
                                                                             </button>
@@ -781,8 +780,8 @@
                                                                                 style="padding: 4px 16px; min-height: 40px;"
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
-                                                                                <div
-                                                                                    class="font-black font-400 font-11.5px">
+                                                                                <div style="overflow: hidden;"
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     코타키나발루
                                                                                 </div>
                                                                             </button>
@@ -791,7 +790,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 유럽 -->
-                                                            <div id="panel-placesByAreasTabId-3" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-3" hidden>
+                                                            <div id="panel-placesByAreasTabId-3" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-3" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -801,7 +800,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     런던
                                                                                 </div>
                                                                             </button>
@@ -812,7 +811,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     그린델발트
                                                                                 </div>
                                                                             </button>
@@ -823,7 +822,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     바르셀로나
                                                                                 </div>
                                                                             </button>
@@ -834,7 +833,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     인터라켄
                                                                                 </div>
                                                                             </button>
@@ -845,7 +844,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     프라하
                                                                                 </div>
                                                                             </button>
@@ -856,7 +855,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     세비야
                                                                                 </div>
                                                                             </button>
@@ -867,7 +866,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     파리
                                                                                 </div>
                                                                             </button>
@@ -878,7 +877,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     부다페스트
                                                                                 </div>
                                                                             </button>
@@ -889,7 +888,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     마드리드
                                                                                 </div>
                                                                             </button>
@@ -900,7 +899,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     리스본
                                                                                 </div>
                                                                             </button>
@@ -911,7 +910,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     빈
                                                                                 </div>
                                                                             </button>
@@ -922,7 +921,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     니스
                                                                                 </div>
                                                                             </button>
@@ -931,7 +930,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 북남미 -->
-                                                            <div id="panel-placesByAreasTabId-4" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-4" hidden>
+                                                            <div id="panel-placesByAreasTabId-4" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-4" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -941,7 +940,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     로스엔젤레스
                                                                                 </div>
                                                                             </button>
@@ -952,7 +951,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     호놀룰루
                                                                                 </div>
                                                                             </button>
@@ -963,7 +962,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     뉴욕
                                                                                 </div>
                                                                             </button>
@@ -974,7 +973,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     벤쿠버
                                                                                 </div>
                                                                             </button>
@@ -985,7 +984,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     라스베이거스
                                                                                 </div>
                                                                             </button>
@@ -996,7 +995,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     토론토
                                                                                 </div>
                                                                             </button>
@@ -1007,7 +1006,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     카일루아코나
                                                                                 </div>
                                                                             </button>
@@ -1018,7 +1017,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     조슈아 트리
                                                                                 </div>
                                                                             </button>
@@ -1029,7 +1028,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     샌프란시스코
                                                                                 </div>
                                                                             </button>
@@ -1040,7 +1039,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     샌디에이고
                                                                                 </div>
                                                                             </button>
@@ -1051,7 +1050,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     힐로
                                                                                 </div>
                                                                             </button>
@@ -1062,7 +1061,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     보스턴
                                                                                 </div>
                                                                             </button>
@@ -1071,7 +1070,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 오세아니아 -->
-                                                            <div id="panel-placesByAreasTabId-5" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-5" hidden>
+                                                            <div id="panel-placesByAreasTabId-5" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-5" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1081,7 +1080,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     시드니
                                                                                 </div>
                                                                             </button>
@@ -1092,7 +1091,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     멜버른
                                                                                 </div>
                                                                             </button>
@@ -1103,7 +1102,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     와나카
                                                                                 </div>
                                                                             </button>
@@ -1114,7 +1113,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     오클랜드
                                                                                 </div>
                                                                             </button>
@@ -1125,7 +1124,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     브리즈번
                                                                                 </div>
                                                                             </button>
@@ -1136,7 +1135,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     크라이스트처치
                                                                                 </div>
                                                                             </button>
@@ -1147,7 +1146,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     골드코스트
                                                                                 </div>
                                                                             </button>
@@ -1158,7 +1157,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     테아나우
                                                                                 </div>
                                                                             </button>
@@ -1169,7 +1168,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     브리즈번
                                                                                 </div>
                                                                             </button>
@@ -1180,7 +1179,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     테카포 호수
                                                                                 </div>
                                                                             </button>
@@ -1191,7 +1190,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     서리 힐스
                                                                                 </div>
                                                                             </button>
@@ -1202,7 +1201,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     해밀턴
                                                                                 </div>
                                                                             </button>
@@ -1211,7 +1210,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 기타 아시아 지역 -->
-                                                            <div id="panel-placesByAreasTabId-6" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-6" hidden>
+                                                            <div id="panel-placesByAreasTabId-6" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-6" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1221,7 +1220,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     이스탄불
                                                                                 </div>
                                                                             </button>
@@ -1232,7 +1231,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     울란바토르
                                                                                 </div>
                                                                             </button>
@@ -1243,7 +1242,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     안탈리아
                                                                                 </div>
                                                                             </button>
@@ -1254,7 +1253,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     알마티
                                                                                 </div>
                                                                             </button>
@@ -1265,7 +1264,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     트빌리
                                                                                 </div>
                                                                             </button>
@@ -1276,7 +1275,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     아부다비
                                                                                 </div>
                                                                             </button>
@@ -1287,7 +1286,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     이즈미르
                                                                                 </div>
                                                                             </button>
@@ -1298,7 +1297,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     암만
                                                                                 </div>
                                                                             </button>
@@ -1309,7 +1308,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     콜롬보
                                                                                 </div>
                                                                             </button>
@@ -1320,7 +1319,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     앙카라
                                                                                 </div>
                                                                             </button>
@@ -1331,7 +1330,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     파묵칼레
                                                                                 </div>
                                                                             </button>
@@ -1342,7 +1341,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     카스
                                                                                 </div>
                                                                             </button>
@@ -1351,7 +1350,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 아프리카 -->
-                                                            <div id="panel-placesByAreasTabId-7" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-7" hidden>
+                                                            <div id="panel-placesByAreasTabId-7" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-7" hidden class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1361,7 +1360,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     카이로
                                                                                 </div>
                                                                             </button>
@@ -1372,7 +1371,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     케이프타운
                                                                                 </div>
                                                                             </button>
@@ -1383,7 +1382,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     룩소르
                                                                                 </div>
                                                                             </button>
@@ -1394,7 +1393,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     마라케
                                                                                 </div>
                                                                             </button>
@@ -1405,7 +1404,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-11_5px text text-ellipsis">
                                                                                     카사블랑카
                                                                                 </div>
                                                                             </button>
@@ -1416,7 +1415,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-11_5px">
+                                                                                    class="font-black font-400 font-10px text text-ellipsis">
                                                                                     알렉산드리아
                                                                                 </div>
                                                                             </button>
@@ -1427,7 +1426,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     탕헤르
                                                                                 </div>
                                                                             </button>
@@ -1438,7 +1437,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     라바트
                                                                                 </div>
                                                                             </button>
@@ -1449,7 +1448,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     다합
                                                                                 </div>
                                                                             </button>
@@ -1460,7 +1459,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     나이로비
                                                                                 </div>
                                                                             </button>
@@ -1471,7 +1470,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     후르가다
                                                                                 </div>
                                                                             </button>
@@ -1482,7 +1481,7 @@
                                                                                 class="grey-border-221 background-color-basic radius-20 width-full height-full active-black-border-000 scale-transition scale-92"
                                                                                 aria-pressed="false">
                                                                                 <div
-                                                                                    class="font-black font-400 font-14px">
+                                                                                    class="font-black font-400 font-14px text text-ellipsis">
                                                                                     페스
                                                                                 </div>
                                                                             </button>
@@ -1499,11 +1498,12 @@
                                     </div>
 
                                     <div class="grey-dividing-line"></div>
+                                    <!-- 체크인·아웃 / 날짜 추가 -->
                                     <div style="flex-basis: 0%;"
-                                        class="flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
+                                        class="layer-container flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
                                         <div style="border: 1px; flex-basis: 0%;"
                                             class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32">
-                                            <div class="font-black font-12px font-600 padding-bottom-2px">
+                                            <div class="font-black font-12px font-600 padding-bottom-2">
                                                 <span>체크인</span>
                                             </div>
                                             <div class="font-grey font-14px font-400">
@@ -1513,7 +1513,7 @@
                                         <div class="grey-dividing-line"></div>
                                         <div style="border: 1px; flex-basis: 0%;"
                                             class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32">
-                                            <div class="font-black font-12px font-600 padding-bottom-2px">
+                                            <div class="font-black font-12px font-600 padding-bottom-2">
                                                 <span>체크아웃</span>
                                             </div>
                                             <div class="font-grey font-14px font-400">
@@ -1522,11 +1522,13 @@
                                         </div>
                                     </div>
                                     <div class="grey-dividing-line"></div>
+                                    <div class="layer-item"></div>
+                                    <!-- 여행자 / 게스트 추가 -->
                                     <div style="flex-basis: 0%;"
-                                        class="highlight-grey-240 radius-32 flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
+                                        class="layer-container highlight-grey-240 radius-32 flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
                                         <div style="flex-basis: 0%;" class="flex-grow-1 flex-shrink-0">
                                             <div class="padding-14-32">
-                                                <div class="font-black font-12px font-600 padding-bottom-2px">
+                                                <div class="font-black font-12px font-600 padding-bottom-2">
                                                     <span>여행자</span>
                                                 </div>
                                                 <div class="font-grey font-14px font-400">
@@ -1548,6 +1550,7 @@
                                                 </div>
                                             </button>
                                         </div>
+                                        <div class="layer-item"></div>
                                     </div>
                                 </div>
                             </div>

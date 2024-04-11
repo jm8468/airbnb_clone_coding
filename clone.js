@@ -30,9 +30,29 @@ function tabButton(event) {
 
 }
 
+function removeLayer(event) {
+    const target = event.target;
+    console.log(target);
+    const layerContainers = document.querySelectorAll('.layer-container');
+    const layerItems = document.querySelectorAll('.layer-item');
+    console.log(layerContainers);
+    console.log(layerItems);
+
+    layerContainers.forEach((container, index) => {
+        if(target === container) {
+            layerItems[index].classList.remove('visibility-hidden');
+        }
+        else {
+            layerItems[index].classList.add('visibility-hidden');
+        }
+    });
+}
+
+
 tabsSeo.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
 tabsPlacesByAreasTabId.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
+document.addEventListener("click", removeLayer);

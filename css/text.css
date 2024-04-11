@@ -69,3 +69,7 @@
 .line-height-16px {
     line-height: 16px;
 }
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+}

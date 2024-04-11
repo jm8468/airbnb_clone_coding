@@ -43,3 +43,7 @@
 .active-black-border-000:hover {
     border-color: rgb(0, 0, 0);
 }
+
+.visibility-hidden {
+    visibility: hidden;
+}
