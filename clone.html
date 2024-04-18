@@ -52,25 +52,25 @@
 
             <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
             <div style="min-width: 348px; padding: 0px 24px;" class="flex-grow-0 flex-shrink-1 flex-basis-auto">
-                <div class="page-padding width-full absolute-00 grey-border-bottom background-color-basic">
-                    <div style="padding-bottom: 16px;" class="relative z-index-1">
-                        <div style="margin: 0 auto; max-width: 850px;" class="block" role="search">
+                <div class="page-padding width-full absolute-00 grey-border-bottom relative z-index-2 pointer-none">
+                    <div style="padding-bottom: 16px;" class="pointer-none">
+                        <div style="margin: 0 auto; max-width: 850px;" class="pointer-none">
                             <!-- 숙소 / 체험 / 온라인 체험 -->
-                            <div class="flex-container height-80 align-items-center justify-content-center">
-                                <div role="tablist" class="height-44">
+                            <div class="flex-container height-80 align-items-center justify-content-center pointer-none">
+                                <div role="tablist" class="height-44 pointer-auto">
                                     <!-- 숙소 -->
-                                    <div class="block-inline z-index-0 text-center">
+                                    <div class="block-inline z-index-0 relative text-center">
                                         <button
-                                            class="experience-button transparent-button align-items-start text-center width-full height-full">
+                                            class="experience-button transparent-button align-items-start text-center width-full height-full relative">
                                             <div style="margin: 10px 16px;" class="font-black font-600 font-16px">
                                                 <span>숙소</span>
                                             </div>
                                         </button>
                                     </div>
                                     <!-- 체험 -->
-                                    <div class="block-inline z-index-0 text-center">
+                                    <div class="block-inline z-index-0 relative text-center">
                                         <button
-                                            class="transparent-button align-items-start text-center width-full height-full">
+                                            class="transparent-button align-items-start text-center width-full height-full relative">
                                             <div style="margin: 10px 16px;" class="font-grey font-400 font-16px">
                                                 <span>체험</span>
                                             </div>
@@ -78,8 +78,8 @@
                                     </div>
                                 </div>
                                 <!-- 온라인 체험 -->
-                                <div class="height-44 z-index-0">
-                                    <a href="https://www.airbnb.co.kr/s/experiences/online" class="block height-full">
+                                <div class="height-44 z-index-0 relative">
+                                    <a href="https://www.airbnb.co.kr/s/experiences/online" class="block height-full relative">
                                         <div class="block-inline height-full">
                                             <div style="margin: 12px 16px;" class="font-grey font-16px font-400 block">
                                                 <span>온라인 체험</span>
@@ -92,7 +92,7 @@
                             <div id="search-tabpanel" role="tabpanel" style="height: 66px;"
                                 class="relative flex-container search-shadow text-left width-full radius-32 grey-border-211 background-color-basic pointer-none">
                                 <div style="max-width: 850px;"
-                                    class="flex-container flex-basis-zero flex-grow-1 flex-shrink-1 height-full">
+                                    class="flex-container flex-basis-zero flex-grow-1 flex-shrink-1 height-full pointer-auto">
                                     <div class="flex-basis-zero flex-grow-1 flex-shrink-0">
                                         <!-- 여행지 / 여행지 검색 -->
                                         <div style="margin: -1px;"
@@ -100,7 +100,7 @@
                                             <label style="padding: 14px 32px;"
                                                 class="highlight-grey-247 block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
                                                 for="bigsearch-query-location-input">
-                                                <div class="">
+                                                <div class="z-index-1 relative">
                                                     <div style="line-height: 16px;"
                                                         class="font-black font-12px font-600 padding-bottom-2">여행지
                                                     </div>
@@ -113,7 +113,7 @@
                                         </div>
                                         <!-- 여행지 검색 레이어 -->
                                         <div style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 200px); overflow-x: hidden; overscroll-behavior: contain;"
-                                            class="layer-item absolute margin-top-12 radius-32 visibility-hidden z-index-1 background-color-basic">
+                                            class="layer-item absolute margin-top-12 radius-32 visibility-hidden background-color-basic">
                                             <div style="overflow: hidden; text-align: left; row-gap: 24px;"
                                                 class="flex-container flex-column">
                                                 <!-- 지역으로 검색하기 -->
@@ -1502,7 +1502,7 @@
                                     <div style="flex-basis: 0%;"
                                         class="layer-container flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
                                         <div style="border: 1px; flex-basis: 0%;"
-                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32">
+                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32 relative z-index-1">
                                             <div class="font-black font-12px font-600 padding-bottom-2">
                                                 <span>체크인</span>
                                             </div>
@@ -1512,7 +1512,7 @@
                                         </div>
                                         <div class="grey-dividing-line"></div>
                                         <div style="border: 1px; flex-basis: 0%;"
-                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32">
+                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32 relative z-index-1">
                                             <div class="font-black font-12px font-600 padding-bottom-2">
                                                 <span>체크아웃</span>
                                             </div>
@@ -1527,7 +1527,7 @@
                                     <div style="flex-basis: 0%;"
                                         class="layer-container highlight-grey-240 radius-32 flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
                                         <div style="flex-basis: 0%;" class="flex-grow-1 flex-shrink-0">
-                                            <div class="padding-14-32">
+                                            <div class="padding-14-32 relative z-index-1">
                                                 <div class="font-black font-12px font-600 padding-bottom-2">
                                                     <span>여행자</span>
                                                 </div>
@@ -1538,7 +1538,7 @@
                                         </div>
 
                                         <div style="flex-basis: 0%;" class="flex-grow-0 flex-shrink-0">
-                                            <button class="search-button">
+                                            <button class="search-button relative z-index-1">
                                                 <div class="padding-16">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                                         aria-hidden="true" role="presentation" focusable="false"
@@ -1566,13 +1566,13 @@
                 <div style="margin-right: 8px;"
                     class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
                     <!-- 호스트 링크 -->
-                    <a href="https://www.airbnb.co.kr/host/homes" class="padding-12">
+                    <a href="https://www.airbnb.co.kr/host/homes" class="padding-12 relative z-index-1">
                         <span class="font-black font-14px font-600">당신의 공간을 에어비엔비하세요</span>
                     </a>
                     <!-- 언어 설정 -->
                     <div>
                         <div class="highlight-grey-247 radius-22">
-                            <button class="transparent-button padding-12">
+                            <button class="transparent-button padding-12 relative z-index-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
                                     role="presentation" focusable="false"
                                     style="display: block; height: 16px; width: 16px; fill: currentcolor;">
@@ -1587,7 +1587,7 @@
                 </div>
                 <!-- 마이페이지 설정 -->
                 <div class="flex-container justify-content-between">
-                    <button class="flex-container justify-content-between align-items-center login-button">
+                    <button class="flex-container justify-content-between align-items-center login-button relative z-index-1">
                         <div style="height: 16px; width: 16px;">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
                                 role="presentation" focusable="false"

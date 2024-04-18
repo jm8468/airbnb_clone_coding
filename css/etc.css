@@ -24,3 +24,7 @@ ul[class="recommand-list-grid-container"]>li>a>span:last-child {
 .pointer-none {
     pointer-events: none;
 }
+
+.pointer-auto {
+    pointer-events: auto;
+}
