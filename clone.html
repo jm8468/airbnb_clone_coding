@@ -51,12 +51,14 @@
             </div>
 
             <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
-            <div style="min-width: 348px; padding: 0px 24px;" class="flex-grow-0 flex-shrink-1 flex-basis-auto">
+            <div style="min-width: 348px; padding: 0px 24px;"
+                class="flex-grow-0 flex-shrink-1 flex-basis-auto height-auto">
                 <div class="page-padding width-full absolute-00 grey-border-bottom relative z-index-2 pointer-none">
                     <div style="padding-bottom: 16px;" class="pointer-none">
                         <div style="margin: 0 auto; max-width: 850px;" class="pointer-none">
                             <!-- 숙소 / 체험 / 온라인 체험 -->
-                            <div class="flex-container height-80 align-items-center justify-content-center pointer-none">
+                            <div
+                                class="flex-container height-80 align-items-center justify-content-center pointer-none">
                                 <div role="tablist" class="height-44 pointer-auto">
                                     <!-- 숙소 -->
                                     <div class="block-inline z-index-0 relative text-center">
@@ -78,8 +80,9 @@
                                     </div>
                                 </div>
                                 <!-- 온라인 체험 -->
-                                <div class="height-44 z-index-0 relative">
-                                    <a href="https://www.airbnb.co.kr/s/experiences/online" class="block height-full relative">
+                                <div class="height-44 pointer-auto z-index-0 relative">
+                                    <a href="https://www.airbnb.co.kr/s/experiences/online"
+                                        class="block height-full relative">
                                         <div class="block-inline height-full">
                                             <div style="margin: 12px 16px;" class="font-grey font-16px font-400 block">
                                                 <span>온라인 체험</span>
@@ -97,17 +100,18 @@
                                         <!-- 여행지 / 여행지 검색 -->
                                         <div style="margin: -1px;"
                                             class="layer-container relative flex-container align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
-                                            <label style="padding: 14px 32px;"
-                                                class="highlight-grey-247 block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
+                                            <label style="padding: 14px 32px; cursor: pointer;"
+                                                class="hide-dividing-line-start block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
                                                 for="bigsearch-query-location-input">
                                                 <div class="z-index-1 relative">
                                                     <div style="line-height: 16px;"
                                                         class="font-black font-12px font-600 padding-bottom-2">여행지
                                                     </div>
                                                     <input style="line-height: 18px; cursor: text;"
-                                                        class="block width-full no-border font-grey font-14px font-400 padding-0"
+                                                        class="block width-full transparent-button font-grey font-14px font-400 padding-0"
                                                         id="bigsearch-query-location-input" name="query" type="search"
-                                                        placeholder="여행지 검색">
+                                                        aria-autocomplete="none" autocomplete="none" autocorrect="none"
+                                                        spellcheck="false" placeholder="여행지 검색" value>
                                                 </div>
                                             </label>
                                         </div>
@@ -368,9 +372,12 @@
                                                             </svg>
                                                         </div>
                                                         <!-- 탭 패널 -->
-                                                        <div style="padding-top: 24px;" id="panels-placesByAreasTabId" class="text">
+                                                        <div style="padding-top: 24px;" id="panels-placesByAreasTabId"
+                                                            class="text">
                                                             <!-- 전 세계 -->
-                                                            <div id="panel-placesByAreasTabId-0" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-0" class="width-full">
+                                                            <div id="panel-placesByAreasTabId-0" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-0"
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -510,7 +517,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 동아시아 -->
-                                                            <div id="panel-placesByAreasTabId-1" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-1" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-1" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-1" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -650,7 +659,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 동남아시아 -->
-                                                            <div id="panel-placesByAreasTabId-2" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-2" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-2" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-2" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -790,7 +801,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 유럽 -->
-                                                            <div id="panel-placesByAreasTabId-3" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-3" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-3" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-3" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -930,7 +943,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 북남미 -->
-                                                            <div id="panel-placesByAreasTabId-4" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-4" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-4" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-4" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1070,7 +1085,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 오세아니아 -->
-                                                            <div id="panel-placesByAreasTabId-5" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-5" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-5" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-5" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1210,7 +1227,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 기타 아시아 지역 -->
-                                                            <div id="panel-placesByAreasTabId-6" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-6" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-6" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-6" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1350,7 +1369,9 @@
                                                                 </div>
                                                             </div>
                                                             <!-- 아프리카 -->
-                                                            <div id="panel-placesByAreasTabId-7" role="tabpanel" aria-labelledby="tab-placesByAreasTabId-7" hidden class="width-full">
+                                                            <div id="panel-placesByAreasTabId-7" role="tabpanel"
+                                                                aria-labelledby="tab-placesByAreasTabId-7" hidden
+                                                                class="width-full">
                                                                 <div role="radiogroup">
                                                                     <div
                                                                         style="display: grid; row-gap: 12px; column-gap: 8px; font-size: 14px; justify-content: stretch; grid-template-columns: repeat(4, 1fr);">
@@ -1496,50 +1517,65 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="grey-dividing-line"></div>
                                     <!-- 체크인·아웃 / 날짜 추가 -->
-                                    <div style="flex-basis: 0%;"
-                                        class="layer-container flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
-                                        <div style="border: 1px; flex-basis: 0%;"
-                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32 relative z-index-1">
-                                            <div class="font-black font-12px font-600 padding-bottom-2">
-                                                <span>체크인</span>
-                                            </div>
-                                            <div class="font-grey font-14px font-400">
-                                                <span>날짜 추가</span>
+                                    <div
+                                        class="layer-container flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
+                                        <div style="margin: -1px;"
+                                            class="flex-basis-zero flex-grow-1 flex-shrink-0 relative">
+                                            <div class="hide-dividing-line-middle padding-1 radius-32 transparent-border relative z-index-1"
+                                                role="button" tabindex="0" aria-expanded="false">
+                                                <div class="padding-14-24 text-left relative z-index-1">
+                                                    <div
+                                                        class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                        체크인
+                                                    </div>
+                                                    <div class="text font-grey font-14px font-400 line-height-18px">
+                                                        날짜 추가
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div class="grey-dividing-line"></div>
-                                        <div style="border: 1px; flex-basis: 0%;"
-                                            class="highlight-grey-240 radius-32 flex-grow-1 flex-shrink-0 padding-11-32 relative z-index-1">
-                                            <div class="font-black font-12px font-600 padding-bottom-2">
-                                                <span>체크아웃</span>
-                                            </div>
-                                            <div class="font-grey font-14px font-400">
-                                                <span>날짜 추가</span>
+                                        <div style="margin: -1px;"
+                                            class="flex-basis-zero flex-grow-1 flex-shrink-0 relative">
+                                            <div class="hide-dividing-line-middle padding-1 radius-32 transparent-border relative z-index-1"
+                                                role="button" tabindex="0" aria-expanded="false">
+                                                <div class="padding-14-24 text-left relative z-index-1">
+                                                    <div
+                                                        class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                        체크아웃
+                                                    </div>
+                                                    <div class="text font-grey font-14px font-400 line-height-18px">
+                                                        날짜 추가
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="grey-dividing-line"></div>
                                     <div class="layer-item"></div>
                                     <!-- 여행자 / 게스트 추가 -->
-                                    <div style="flex-basis: 0%;"
-                                        class="layer-container highlight-grey-240 radius-32 flex-container justify-content-between align-items-center flex-grow-1 flex-shrink-0">
-                                        <div style="flex-basis: 0%;" class="flex-grow-1 flex-shrink-0">
-                                            <div class="padding-14-32 relative z-index-1">
-                                                <div class="font-black font-12px font-600 padding-bottom-2">
-                                                    <span>여행자</span>
+                                    <div style="margin: -1px;"
+                                        class="layer-container flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0 relative">
+                                        
+                                        <div class="hide-dividing-line-end padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
+                                            role="button" tabindex="0" aria-expanded="false">
+                                            <div class="padding-14-24 relative z-index-1">
+                                                <div class="font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                    여행자
                                                 </div>
-                                                <div class="font-grey font-14px font-400">
-                                                    <span>게스트 추가</span>
+                                                <div class="font-grey font-14px font-400 line-height-18px">
+                                                    게스트 추가
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="flex-basis: 0%;" class="flex-grow-0 flex-shrink-0">
+                                        <div style="margin-left: -6px; padding-right: 9px;" class="flex-basis-zero flex-grow-0 flex-shrink-0">
                                             <button class="search-button relative z-index-1">
-                                                <div class="padding-16">
+                                                <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                                         aria-hidden="true" role="presentation" focusable="false"
                                                         style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
@@ -1587,7 +1623,8 @@
                 </div>
                 <!-- 마이페이지 설정 -->
                 <div class="flex-container justify-content-between">
-                    <button class="flex-container justify-content-between align-items-center login-button relative z-index-1">
+                    <button
+                        class="flex-container justify-content-between align-items-center login-button relative z-index-1">
                         <div style="height: 16px; width: 16px;">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
                                 role="presentation" focusable="false"
