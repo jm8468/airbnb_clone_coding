@@ -17,11 +17,11 @@ function tabButton(event) {
         if (tab.getAttribute("aria-selected") === "false") {
             tab.classList.remove("font-black");
             tab.classList.remove("selected-button-highlight");
-            tab.classList.add("font-grey");
+            tab.classList.add("font-grey-113");
             panels[index].setAttribute("hidden", true);
         }
         else {
-            tab.classList.remove("font-grey");
+            tab.classList.remove("font-grey-113");
             tab.classList.add("font-black");
             tab.classList.add("selected-button-highlight");
             panels[index].removeAttribute("hidden");

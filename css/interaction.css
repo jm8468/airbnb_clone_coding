@@ -1,0 +1,48 @@
+/* cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-text {
+    cursor: text;
+}
+
+/* pointer-events */
+.pointer-none {
+    pointer-events: none;
+}
+.pointer-auto {
+    pointer-events: auto;
+}
+
+/* hover하면 배경 하이라이트 */
+.highlight-grey-235:hover {
+    background-color: rgb(235, 235, 235);
+}
+.highlight-grey-240:hover {
+    background-color: rgb(240, 240, 240);
+}
+.highlight-grey-247:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+/* hover하면 폰트 색상 하이라이트 */
+.highlight-text-black-34:hover {
+    color: rgb(34, 34, 34);
+}
+
+/* hover하면 밑줄 하이라이트 */
+.highlight-underline:hover {
+    text-decoration: underline;
+}
+
+/* hover하면 경계선 하이라이트 */
+.active-black-border-000:hover {
+    border-color: rgb(0, 0, 0);
+}
+
+/* active하면 경계선 하이라이트 */
+.active-black-border-000:active {
+    border-color: rgb(0, 0, 0);
+}
+
+

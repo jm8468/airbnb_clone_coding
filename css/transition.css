@@ -1,0 +1,5 @@
+.scale-transition {
+    transition-property: transform, background-color, border-color;
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}

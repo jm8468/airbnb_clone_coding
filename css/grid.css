@@ -48,25 +48,20 @@
     column-gap: 8px;
     row-gap: 2px;
 }
-
 .list-explanation-grid-container>div {
     overflow-x: clip;
     overflow-y: clip;
     text-overflow: ellipsis;
     text-align: left;
 }
-
-
 .list-explanation-grid-container>div:nth-child(2) {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
-
 .list-explanation-grid-container>div:nth-child(3) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 }
-
 .list-explanation-grid-container>div:nth-child(4) {
     grid-column: 1 / 3;
     grid-row: 4 / 5;
@@ -87,4 +82,27 @@
 .footer-upper-list-grid-container {
     display: grid;
     row-gap: 12px;
+}
+
+ul[class="recommand-list-grid-container"]>li>a {
+    display: flex;
+    flex-direction: column;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:first-child {
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+}
+
+ul[class="recommand-list-grid-container"]>li>a>span:last-child {
+    color: #717171;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-upper-list-grid-container > li > a:hover {
+    text-decoration: underline;
 }

@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/transition.css">
     <link rel="stylesheet" href="css/img.css">
+    <link rel="stylesheet" href="css/interaction.css">
+    <link rel="stylesheet" href="css/pseudo.css">
 </head>
 
 <body>
@@ -51,11 +53,11 @@
             </div>
 
             <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
-            <div style="min-width: 348px; padding: 0px 24px;"
-                class="flex-grow-0 flex-shrink-1 flex-basis-auto height-auto">
-                <div class="page-padding width-full absolute-00 grey-border-bottom relative z-index-2 pointer-none">
-                    <div style="padding-bottom: 16px;" class="pointer-none">
-                        <div style="margin: 0 auto; max-width: 850px;" class="pointer-none">
+            <div class="flex-grow-0 flex-shrink-1 flex-basis-auto height-auto min-width-348 padding-0-24">
+                <div
+                    class="page-padding width-full absolute top-0 left-0 grey-border-bottom relative z-index-2 pointer-none">
+                    <div class="pointer-none padding-bottom-16">
+                        <div style="max-width: 850px;" class="pointer-none margin-0-auto">
                             <!-- 숙소 / 체험 / 온라인 체험 -->
                             <div
                                 class="flex-container height-80 align-items-center justify-content-center pointer-none">
@@ -64,7 +66,8 @@
                                     <div class="block-inline z-index-0 relative text-center">
                                         <button
                                             class="experience-button transparent-button align-items-start text-center width-full height-full relative">
-                                            <div style="margin: 10px 16px;" class="font-black font-600 font-16px">
+                                            <div
+                                                class="font-black font-600 font-16px highlight-text-black-34 margin-10-16">
                                                 <span>숙소</span>
                                             </div>
                                         </button>
@@ -73,7 +76,8 @@
                                     <div class="block-inline z-index-0 relative text-center">
                                         <button
                                             class="transparent-button align-items-start text-center width-full height-full relative">
-                                            <div style="margin: 10px 16px;" class="font-grey font-400 font-16px">
+                                            <div
+                                                class="font-grey-113 font-400 font-16px highlight-text-black-34 margin-10-16">
                                                 <span>체험</span>
                                             </div>
                                         </button>
@@ -84,7 +88,8 @@
                                     <a href="https://www.airbnb.co.kr/s/experiences/online"
                                         class="block height-full relative">
                                         <div class="block-inline height-full">
-                                            <div style="margin: 12px 16px;" class="font-grey font-16px font-400 block">
+                                            <div
+                                                class="font-grey-113 font-16px font-400 block highlight-text-black-34 margin-12-16">
                                                 <span>온라인 체험</span>
                                             </div>
                                         </div>
@@ -100,15 +105,15 @@
                                         <!-- 여행지 / 여행지 검색 -->
                                         <div style="margin: -1px;"
                                             class="layer-container relative flex-container align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
-                                            <label style="padding: 14px 32px; cursor: pointer;"
-                                                class="hide-dividing-line-start block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border"
+                                            <label
+                                                class="hide-dividing-line-start block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border cursor-pointer padding-14-32"
                                                 for="bigsearch-query-location-input">
                                                 <div class="z-index-1 relative">
                                                     <div style="line-height: 16px;"
                                                         class="font-black font-12px font-600 padding-bottom-2">여행지
                                                     </div>
-                                                    <input style="line-height: 18px; cursor: text;"
-                                                        class="block width-full transparent-button font-grey font-14px font-400 padding-0"
+                                                    <input style="line-height: 18px;"
+                                                        class="cursor-text block width-full transparent-button font-grey-113 font-14px font-400 padding-0"
                                                         id="bigsearch-query-location-input" name="query" type="search"
                                                         aria-autocomplete="none" autocomplete="none" autocorrect="none"
                                                         spellcheck="false" placeholder="여행지 검색" value>
@@ -291,7 +296,7 @@
                                                             <button id="tab-placesByAreasTabId-1"
                                                                 aria-controls="panel-placesByAreasTabId-1"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     동아시아
@@ -301,7 +306,7 @@
                                                             <button id="tab-placesByAreasTabId-2"
                                                                 aria-controls="panel-placesByAreasTabId-2"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     동남아시아
@@ -311,7 +316,7 @@
                                                             <button id="tab-placesByAreasTabId-3"
                                                                 aria-controls="panel-placesByAreasTabId-3"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     유럽
@@ -321,7 +326,7 @@
                                                             <button id="tab-placesByAreasTabId-4"
                                                                 aria-controls="panel-placesByAreasTabId-4"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     북남미
@@ -331,7 +336,7 @@
                                                             <button id="tab-placesByAreasTabId-5"
                                                                 aria-controls="panel-placesByAreasTabId-5"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     오세아니아
@@ -341,7 +346,7 @@
                                                             <button id="tab-placesByAreasTabId-6"
                                                                 aria-controls="panel-placesByAreasTabId-6"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     기타
@@ -352,7 +357,7 @@
                                                             <button id="tab-placesByAreasTabId-7"
                                                                 aria-controls="panel-placesByAreasTabId-7"
                                                                 aria-selected="false" role="tab"
-                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey">
+                                                                class="transparent-button relative radius-8 area-button-highlight highlight-grey-247 font-grey-113">
                                                                 <div style="pointer-events: none;"
                                                                     class="text text-center font-600 font-14px">
                                                                     아프리카
@@ -1521,8 +1526,7 @@
                                     <!-- 체크인·아웃 / 날짜 추가 -->
                                     <div
                                         class="layer-container flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
-                                        <div style="margin: -1px;"
-                                            class="flex-basis-zero flex-grow-1 flex-shrink-0 relative">
+                                        <div class="flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                             <div class="hide-dividing-line-middle padding-1 radius-32 transparent-border relative z-index-1"
                                                 role="button" tabindex="0" aria-expanded="false">
                                                 <div class="padding-14-24 text-left relative z-index-1">
@@ -1530,7 +1534,7 @@
                                                         class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
                                                         체크인
                                                     </div>
-                                                    <div class="text font-grey font-14px font-400 line-height-18px">
+                                                    <div class="text font-grey-113 font-14px font-400 line-height-18px">
                                                         날짜 추가
                                                     </div>
                                                 </div>
@@ -1538,8 +1542,7 @@
                                         </div>
 
                                         <div class="grey-dividing-line"></div>
-                                        <div style="margin: -1px;"
-                                            class="flex-basis-zero flex-grow-1 flex-shrink-0 relative">
+                                        <div class="flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                             <div class="hide-dividing-line-middle padding-1 radius-32 transparent-border relative z-index-1"
                                                 role="button" tabindex="0" aria-expanded="false">
                                                 <div class="padding-14-24 text-left relative z-index-1">
@@ -1547,7 +1550,7 @@
                                                         class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
                                                         체크아웃
                                                     </div>
-                                                    <div class="text font-grey font-14px font-400 line-height-18px">
+                                                    <div class="text font-grey-113 font-14px font-400 line-height-18px">
                                                         날짜 추가
                                                     </div>
                                                 </div>
@@ -1558,27 +1561,31 @@
                                     <div class="grey-dividing-line"></div>
                                     <div class="layer-item"></div>
                                     <!-- 여행자 / 게스트 추가 -->
-                                    <div style="margin: -1px;"
-                                        class="layer-container flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0 relative">
-                                        
+                                    <div=
+                                        class="layer-container flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
+
                                         <div class="hide-dividing-line-end padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
                                             role="button" tabindex="0" aria-expanded="false">
                                             <div class="padding-14-24 relative z-index-1">
-                                                <div class="font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                <div
+                                                    class="font-black font-12px font-600 padding-bottom-2 line-height-16px">
                                                     여행자
                                                 </div>
-                                                <div class="font-grey font-14px font-400 line-height-18px">
+                                                <div class="font-grey-113 font-14px font-400 line-height-18px">
                                                     게스트 추가
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="margin-left: -6px; padding-right: 9px;" class="flex-basis-zero flex-grow-0 flex-shrink-0">
-                                            <button class="search-button relative z-index-1">
+                                        <div style="margin-left: -6px; padding-right: 9px;"
+                                            class="flex-basis-zero flex-grow-0 flex-shrink-0">
+                                            <button
+                                                class="search-button no-border radius-24 cursor-pointer block-inline font-white-255 height-48 text-vertical-middle width-48 relative z-index-1">
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                                         aria-hidden="true" role="presentation" focusable="false"
-                                                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                                        style="fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4;"
+                                                        class="block overflow-visible">
                                                         <path fill="none"
                                                             d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9">
                                                         </path>
@@ -1587,65 +1594,65 @@
                                             </button>
                                         </div>
                                         <div class="layer-item"></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-            <!-- 마이페이지 관련 -->
-            <div style="flex-basis: 140px;"
-                class="height-80 flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-0 z-index-1">
-                <div style="margin-right: 8px;"
-                    class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
-                    <!-- 호스트 링크 -->
-                    <a href="https://www.airbnb.co.kr/host/homes" class="padding-12 relative z-index-1">
-                        <span class="font-black font-14px font-600">당신의 공간을 에어비엔비하세요</span>
-                    </a>
-                    <!-- 언어 설정 -->
-                    <div>
-                        <div class="highlight-grey-247 radius-22">
-                            <button class="transparent-button padding-12 relative z-index-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
-                                    role="presentation" focusable="false"
-                                    style="display: block; height: 16px; width: 16px; fill: currentcolor;">
-                                    <path
-                                        d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 마이페이지 설정 -->
-                <div class="flex-container justify-content-between">
-                    <button
-                        class="flex-container justify-content-between align-items-center login-button relative z-index-1">
-                        <div style="height: 16px; width: 16px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+        <!-- 마이페이지 관련 -->
+        <div style="flex-basis: 140px;"
+            class="height-80 flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-0 z-index-1">
+            <div style="margin-right: 8px;"
+                class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
+                <!-- 호스트 링크 -->
+                <a href="https://www.airbnb.co.kr/host/homes" class="padding-12 relative z-index-1">
+                    <span class="font-black font-14px font-600">당신의 공간을 에어비엔비하세요</span>
+                </a>
+                <!-- 언어 설정 -->
+                <div>
+                    <div class="highlight-grey-247 radius-22">
+                        <button class="transparent-button padding-12 relative z-index-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
                                 role="presentation" focusable="false"
-                                style="color: rgb(34, 34, 34); display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
-                                <g fill="none">
-                                    <path d="M2 16h28M2 24h28M2 8h28"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div style="height: 32px; width: 32px; margin-left: 14px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-                                role="presentation" focusable="false"
-                                style="color: rgb(113, 113, 113); display: block; height: 100%; width: 100%; fill: currentcolor;">
+                                style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                 <path
-                                    d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z">
+                                    d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
                                 </path>
                             </svg>
-                        </div>
-                    </button>
+                        </button>
+                    </div>
+
                 </div>
             </div>
+            <!-- 마이페이지 설정 -->
+            <div class="flex-container justify-content-between">
+                <button style="padding: 8px 8px 8px 14px;"
+                    class="flex-container justify-content-between align-items-center margin-1 background-color-basic radius-30 grey-border-221 relative z-index-1">
+                    <div style="height: 16px; width: 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                            role="presentation" focusable="false"
+                            style="color: rgb(34, 34, 34); display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                            <g fill="none">
+                                <path d="M2 16h28M2 24h28M2 8h28"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div style="height: 32px; width: 32px; margin-left: 14px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                            role="presentation" focusable="false"
+                            style="color: rgb(113, 113, 113); display: block; height: 100%; width: 100%; fill: currentcolor;">
+                            <path
+                                d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z">
+                            </path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
         </div>
 
     </header>
@@ -1770,7 +1777,7 @@
                 </div>
             </div>
             <div style="width: fit-content;">
-                <button class="filter-button">
+                <button class="background-color-transparent radius-12 grey-border-221 padding-12-0">
                     <div style="padding: 2px 16px 0px 16px;" class="flex-container column-gap-8">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
@@ -1791,8 +1798,8 @@
     <div class="list-grid-container page-padding">
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/26300485?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1610140890&search_mode=flex_destinations_search&check_in=2024-02-16&check_out=2024-02-21&source_impression_id=p3_1708063150_hLtFDqlHTxn5eE8i&previous_page_section_name=1000&federated_search_id=630ee33b-d0f4-4ee5-b2ee-085d05d7d5be"
-                style="padding: none; display: inline-block;" class="transparent-button width-full">
-                <div class="flex-explanation-container">
+                style="padding: none;" class="block-inline transparent-button width-full">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-26300485/original/ee94e6c1-6ebc-496e-af84-1502edd1b759.jpeg?im_w=720"
@@ -1803,11 +1810,11 @@
                         <div class="font-black font-15px font-600">
                             <span>영국 그레이터 런던</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Amella 님</span>
                             <span> · 호스팅 경력 6년</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>2월 14일~19일</span>
                         </div>
                         <div>
@@ -1842,7 +1849,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/13903824?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1620494697&search_mode=flex_destinations_search&check_in=2024-03-04&check_out=2024-03-09&source_impression_id=p3_1708675616_YOgZtyI707fi5vUD&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-13903824/original/82d996fb-d7c4-46a8-a713-febd281cd69f.jpeg?im_w=720"
@@ -1853,11 +1860,11 @@
                         <div class="font-black font-15px font-600">
                             <span>이탈리아 투린</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Carmela 님</span>
                             <span> · 호스팅 경력 8년</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 4일~9일</span>
                         </div>
                         <div>
@@ -1892,7 +1899,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/668146487515150072?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1624612910&search_mode=flex_destinations_search&check_in=2024-03-03&check_out=2024-03-08&source_impression_id=p3_1708675616_1tGPDWF20ePZ%2Fgmo&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-668146487515150072/original/8ff2a532-e0cd-41a2-9164-554c4d9eb28a.jpeg?im_w=720"
@@ -1903,11 +1910,11 @@
                         <div class="font-black font-15px font-600">
                             <span>프랑스 낭트</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Golwen님</span>
                             <span></span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 3일~8일</span>
                         </div>
                         <div>
@@ -1942,7 +1949,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/51809333?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1609107727&search_mode=flex_destinations_search&check_in=2024-03-01&check_out=2024-03-06&source_impression_id=p3_1708675616_j8phitm4XYJQVDvn&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-51809333/original/0da70267-d9da-4efb-9123-2714b651c9fd.jpeg?im_w=720"
@@ -1955,11 +1962,11 @@
                         <div class="font-black font-15px font-600">
                             <span>이탈리아 밀라노</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Valentina님</span>
                             <span></span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 1일~6일</span>
                         </div>
                         <div>
@@ -1994,7 +2001,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/742424658135898180?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1608475478&search_mode=flex_destinations_search&check_in=2024-03-08&check_out=2024-03-13&source_impression_id=p3_1708675616_AtK8l03CmtNd3%2Bim&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="high" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/ef5464ea-5eb8-426a-a097-a4ed7a395610.jpeg?im_w=720"
@@ -2005,11 +2012,11 @@
                         <div class="font-black font-15px font-600">
                             <span>프랑스 리옹(Lyon)</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Edouard님</span>
                             <span></span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 8일~13일</span>
                         </div>
                         <div>
@@ -2044,7 +2051,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/53505989?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1614135100&search_mode=flex_destinations_search&check_in=2024-08-01&check_out=2024-08-06&source_impression_id=p3_1708675616_NGvATIfLMkBoa%2Bgs&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="auto" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-53505989/original/607235e0-45d3-4450-b507-b9b0477d68d9.jpeg?im_w=720"
@@ -2055,11 +2062,11 @@
                         <div class="font-black font-15px font-600">
                             <span>프랑스 리옹(Lyon)</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Zoe님</span>
                             <span>마케팅</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>8월 1일~6일</span>
                         </div>
                         <div>
@@ -2094,7 +2101,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/1112254?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1654182496&search_mode=flex_destinations_search&check_in=2024-03-01&check_out=2024-03-06&source_impression_id=p3_1708675616_G8DVEsHn078o8eTE&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="auto" loading="eager"
                             src="https://a0.muscache.com/im/pictures/airflow/Hosting-1112254/original/e6bed0e6-6190-4119-bd80-d12d369cea19.jpg?im_w=720"
@@ -2105,11 +2112,11 @@
                         <div class="font-black font-15px font-600">
                             <span>이탈리아 팔레르모(Palermo)</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Gandolfo Gabriele님</span>
                             <span> · 예술가</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 1일~6일</span>
                         </div>
                         <div>
@@ -2144,7 +2151,7 @@
         <div class="relative">
             <a href="https://www.airbnb.co.kr/rooms/13016398?adults=1&category_tag=Tag%3A8678&children=0&enable_m3_private_room=true&infants=0&pets=0&photo_id=1606405559&search_mode=flex_destinations_search&check_in=2024-03-01&check_out=2024-03-06&source_impression_id=p3_1708675616_meDOlFAipR9C9QSc&previous_page_section_name=1000&federated_search_id=f704a88e-86e0-4ad6-88dc-dde8535b7a3f"
                 style="padding: none; display: inline-block; width: 100%;" class="transparent-button">
-                <div class="flex-explanation-container">
+                <div class="flex-container flex-basis-full flex-grow-1 flex-shrink-0 flex-column">
                     <div class="img-wrapper">
                         <img aria-hidden="true" elementtiming="LCP-target" fetchpriority="auto" loading="eager"
                             src="https://a0.muscache.com/im/pictures/miso/Hosting-13016398/original/6c59e24d-89f3-4475-aaca-80363792fb51.jpeg?im_w=720"
@@ -2155,11 +2162,11 @@
                         <div class="font-black font-15px font-600">
                             <span>프랑스 Malakoff</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>호스트: Jacques-Olivier님</span>
                             <span> · 호스팅 경력 6년</span>
                         </div>
-                        <div class="font-grey font-15px font-400">
+                        <div class="font-grey-113 font-15px font-400">
                             <span>3월 1일~6일</span>
                         </div>
                         <div>
@@ -2193,7 +2200,7 @@
         </div>
     </div>
 
-    <div style="margin: 56px 0px; text-align: center;" class="page-padding">
+    <div style="margin: 56px 0px;" class="text-center page-padding">
         <div>
             <span class="font-black font-18px font-600">최고의 전망 카테고리 계속 검색하기</span>
         </div>
@@ -2205,7 +2212,7 @@
     </div>
 
     <!-- 다음 여행을 위한 추천 여행지 -->
-    <div style="background-color: rgb(247, 247, 247);" class="page-padding padding-48-0">
+    <div class="page-padding padding-48-0 background-color-247">
         <div class="font-22px font-600">
             <span>다음 여행을 위한 추천 여행지</span>
         </div>
@@ -2215,27 +2222,27 @@
                 aria-controls="panel-seo-0" aria-selected="false">
                 인기
             </button>
-            <button id="tab-seo-1" class="font-grey relative" role="tab" aria-controls="panel-seo-1"
+            <button id="tab-seo-1" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-1"
                 aria-selected="false">
                 예술 및 문화
             </button>
-            <button id="tab-seo-2" class="font-grey relative" role="tab" aria-controls="panel-seo-2"
+            <button id="tab-seo-2" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-2"
                 aria-selected="false">
                 야외
             </button>
-            <button id="tab-seo-3" class="font-grey relative" role="tab" aria-controls="panel-seo-3"
+            <button id="tab-seo-3" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-3"
                 aria-selected="false">
                 산맥
             </button>
-            <button id="tab-seo-4" class="font-grey relative" role="tab" aria-controls="panel-seo-4"
+            <button id="tab-seo-4" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-4"
                 aria-selected="false">
                 해변
             </button>
-            <button id="tab-seo-5" class="font-grey relative" role="tab" aria-controls="panel-seo-5"
+            <button id="tab-seo-5" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-5"
                 aria-selected="false">
                 카테고리
             </button>
-            <button id="tab-seo-6" class="font-grey relative" role="tab" aria-controls="panel-seo-6"
+            <button id="tab-seo-6" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-6"
                 aria-selected="false">
                 즐길거리
             </button>
@@ -2986,7 +2993,7 @@
     </div>
     <div class="grey-line"></div>
     <!-- footer -->
-    <div style="background-color: rgb(247, 247, 247);" class="page-padding">
+    <div class="page-padding background-color-247">
         <footer class="footer-upper-grid-container">
             <section>
                 <div>
@@ -3089,12 +3096,12 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="font-black font-14px font-600 text-center hover-underline">한국어(KR)</span>
+                        <span class="font-black font-14px font-600 text-center highlight-underline">한국어(KR)</span>
                     </button>
                     <button class="transparent-button flex-container">
                         <span style="margin-right: 5px;"
                             class="font-black font-16px font-600 text-center block=">₩</span>
-                        <span class="hover-underline font-black font-14px font-600 text-center block">KRW</span>
+                        <span class="highlight-underline font-black font-14px font-600 text-center block">KRW</span>
                     </button>
                 </div>
                 <ul style="margin-left: 24px;" class="align-items-center inline-flex-container">
@@ -3176,31 +3183,31 @@
                 </div>
                 <ul class="font-black font-14px font-400 text-left">
                     <li class="block-inline">
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
+                        <a class="highlight-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
                         <span>·</span>
                     </li>
                     <li class="block-inline">
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
+                        <a class="highlight-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
                         <span>·</span>
                     </li>
                     <li class="block-inline">
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
+                        <a class="highlight-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
                         <span>·</span>
                     </li>
                     <li class="block-inline">
-                        <a class="hover-underline"
+                        <a class="highlight-underline"
                             href="https://www.airbnb.co.kr/home/updated_cancellation_policies?korean_strict_policy=true#strict">한국의
                             변경된 환불 정책</a>
                         <span>·</span>
                     </li>
                     <li class="block-inline">
-                        <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
+                        <a class="highlight-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="grey-line margin-8-0"></div>
-        <div style="letter-spacing: 0.2px;" class="font-10px font-grey">웹사이트 제공자: Airbnb Ireland UC,
+        <div style="letter-spacing: 0.2px;" class="font-10px font-grey-113">웹사이트 제공자: Airbnb Ireland UC,
             private unlimited company, 8 Hanover Quay Dublin 2,
             D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호:
             IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트,

@@ -52,10 +52,13 @@
 }
 
 /* font 색상 */
+.font-white-255 {
+    color: rgb(255, 255, 255);
+}
 .font-black {
     color: rgb(34, 34, 34);
 }
-.font-grey {
+.font-grey-113 {
     color: rgb(113, 113, 113);
 }
 
@@ -70,6 +73,8 @@
     line-height: 16px;
 }
 
+/* text-overflow */
 .text-ellipsis {
     text-overflow: ellipsis;
 }
+

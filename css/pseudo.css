@@ -1,0 +1,104 @@
+.selected-button-highlight::after {
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 20px);
+    bottom: -6px;
+    left: 10px;
+    background-color: rgb(34, 34, 34);
+    content: "";
+}
+
+/* 검색 패널 하이라이트 */
+.hide-dividing-line-start:hover::before {
+    height: 32px;
+    border-right: 1px solid rgb(255, 255, 255);
+    align-self: center;
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    margin-top: -16px;
+    content: "";
+}
+.hide-dividing-line-start::after {
+    background-clip: padding-box;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    content: "";
+    cursor: pointer;
+    display: block;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+    margin-right: 2px;
+}
+.hide-dividing-line-start:hover::after {
+    background-color: rgb(235, 235, 235);
+    content: "";
+}
+
+.hide-dividing-line-middle:hover::before {
+    height: 32px;
+    border-right: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    align-self: center;
+    position: absolute;
+    top: 33px;
+    right: -1px;
+    left: -1px;
+    margin-top: -16px;
+    content: "";
+}
+.hide-dividing-line-middle::after {
+    background-clip: padding-box;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    content: "";
+    cursor: pointer;
+    display: block;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+}
+.hide-dividing-line-middle:hover::after {
+    background-color: rgb(235, 235, 235);
+}
+
+.hide-dividing-line-end:hover::before {
+    height: 32px;
+    border-right: 1px solid rgb(255, 255, 255);
+    align-self: center;
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    margin-top: -16px;
+    content: "";
+}
+.hide-dividing-line-end::after {
+    background-clip: padding-box;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0;
+    margin-left: 2px;
+    pointer-events: auto;
+    user-select: auto;
+}
+.hide-dividing-line-end:hover::after {
+    background-color: rgb(235, 235, 235);
+}
+
+/*  */

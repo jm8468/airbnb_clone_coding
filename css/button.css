@@ -1,19 +1,3 @@
-.login-button {
-    padding: 8px 8px 8px 14px;
-    margin: 1px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    border: 1px solid rgb(221, 221, 221);
-}
-
-.filter-button {
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgb(221, 221, 221);
-    border-top-left-radius: 12px;
-    border-radius: 12px;
-    padding: 12px 0px;
-}
-
 .transparent-button {
     background-color: transparent;
     border: none;
@@ -22,21 +6,13 @@
 
 .search-button {
     background-color: rgb(255, 56, 92);
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    display: inline-block;
-    width: 48px;
     max-width: 48px;
-    height: 48px;
     overflow: hidden;
     transition-behavior: normal;
     transition-delay: 0s;
     transition-duration: 0.2s;
     transition-property: max-width;
     transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
-    vertical-align: middle;
 }
 
 .heart-button {
