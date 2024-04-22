@@ -255,6 +255,10 @@
     overflow: visible;
 }
 
+/* opacity */
+.opacity-0 {
+    opacity: 0;
+}
 
 
 

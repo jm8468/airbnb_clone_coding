@@ -1,5 +1,35 @@
-.scale-transition {
-    transition-property: transform, background-color, border-color;
+/* transition 속성 */
+.transition-transform {
+    transition-property: transform;
+}
+.transition-background-color {
+    transition-property: background-color
+}
+.transition-border-color {
+    transition-property: border-color;
+}
+.transition-opacity {
+    transition-property: opacity;
+}
+
+/* transition 지속시간 */
+.duration-100ms {
+    transition-duration: 0.1s;
+}
+.duration-150ms {
     transition-duration: 0.15s;
+}
+
+/* transition 지연시간 */
+.delay-100ms {
+    transition-delay: 0.1s;
+}
+
+/* transition 타이밍 함수 */
+.cubic-function {
     transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.behavior-normal {
+    transition-behavior: normal;
 }

@@ -1,5 +1,6 @@
 const tabsSeo = document.querySelectorAll('#tabs-seo > button');
 const tabsPlacesByAreasTabId = document.querySelectorAll('#tabs-placesByAreasTabId > button')
+const layerContainers = document.querySelectorAll('.layer-container');
 
 function tabButton(event) {
     const button = event.target;
@@ -30,22 +31,20 @@ function tabButton(event) {
 
 }
 
-function removeLayer(event) {
+function showLayer(event) {
     const target = event.target;
-    console.log(target);
-    const layerContainers = document.querySelectorAll('.layer-container');
     const layerItems = document.querySelectorAll('.layer-item');
-    console.log(layerContainers);
-    console.log(layerItems);
 
     layerContainers.forEach((container, index) => {
         if(target === container) {
             layerItems[index].classList.remove('visibility-hidden');
         }
-        else {
-            layerItems[index].classList.add('visibility-hidden');
-        }
     });
+}
+
+function removeLayer(event) {
+    const target = event.target;
+    const layerItems = document.querySelectorAll('.layer-item');
 }
 
 
@@ -55,4 +54,9 @@ tabsSeo.forEach(tab => {
 tabsPlacesByAreasTabId.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
+
+layerContainers.forEach(container => {
+    container.addEventListener("click", showLayer, true)
+});
+
 document.addEventListener("click", removeLayer);
