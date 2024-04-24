@@ -7,7 +7,6 @@
 .search-button {
     background-color: rgb(255, 56, 92);
     max-width: 48px;
-    overflow: hidden;
     transition-behavior: normal;
     transition-delay: 0s;
     transition-duration: 0.2s;
