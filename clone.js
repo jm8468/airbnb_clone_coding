@@ -1,5 +1,9 @@
 const tabsSeo = document.querySelectorAll('#tabs-seo > button');
 const tabsPlacesByAreasTabId = document.querySelectorAll('#tabs-placesByAreasTabId > button')
+const toggleLayer_0 = document.querySelector('label[for="bigsearch-query-location-input"]');
+const toggleLayer_1 = document.querySelector('#toggle-layer-1');
+const toggleLayer_2 = document.querySelector('#toggle-layer-2');
+const toggleLayer_3 = document.querySelector('#toggle-layer-3');
 
 function tabButton(event) {
     const button = event.target;
@@ -30,10 +34,26 @@ function tabButton(event) {
 
 }
 
+function toggleLayerButton(event) {
+    const target = event.target;
+    const searchPanel = document.querySelector('#search-panel');
+
+    searchPanel.classList.remove('background-color-basic');
+    searchPanel.classList.add('background-color-grey-235');
+    target.classList.remove('hide-dividing-line-start:hover::after');
+
+    
+}
+
 tabsSeo.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
 tabsPlacesByAreasTabId.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
+
+toggleLayer_0.addEventListener("focusin", toggleLayerButton);
+toggleLayer_1.addEventListener("click", toggleLayerButton);
+toggleLayer_2.addEventListener("click", toggleLayerButton);
+toggleLayer_3.addEventListener("click", toggleLayerButton);
 

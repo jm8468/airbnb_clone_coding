@@ -52,14 +52,17 @@
 }
 
 /* font 색상 */
-.font-white-255 {
-    color: rgb(255, 255, 255);
-}
 .font-black {
     color: rgb(34, 34, 34);
 }
+.font-grey-106 {
+    color: rgb(106, 106, 106);
+}
 .font-grey-113 {
     color: rgb(113, 113, 113);
+}
+.font-white-255 {
+    color: rgb(255, 255, 255);
 }
 
 /* font 높이 */
