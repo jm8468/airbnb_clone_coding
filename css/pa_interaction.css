@@ -1,0 +1,4 @@
+.pa_hover-grey-235:hover::after {
+    background-color: rgb(235, 235, 235);
+    content: "";
+}

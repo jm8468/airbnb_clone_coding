@@ -1,0 +1,55 @@
+
+.pb_hover-grey-border-right-255:hover::before {
+    border-right: 1px solid rgb(255, 255, 255);
+    content: "";
+}
+
+.pb_hover-grey-border-left-255:hover::before {
+    border-left: 1px solid rgb(255, 255, 255);
+    content: "";
+}
+
+.pb_hover-height-32:hover::before {
+    height: 32px;
+    content: "";
+}
+
+.pb_hover-align-self-center:hover::before {
+    align-self: center;
+    content: "";
+}
+
+.pb_hover-absolute:hover::before {
+    position: absolute;
+    content: "";
+}
+
+.pb_hover-top-33:hover::before {
+    top: 33px;
+    content: "";
+}
+
+.pb_hover-right-0:hover::before {
+    right: 0px;
+    content: "";
+}
+
+.pb_hover-left-0:hover::before {
+    left: 0px;
+    content: "";
+}
+
+.pb_hover-right--1:hover::before {
+    right: -1px;
+    content: "";
+}
+
+.pb_hover-left--1:hover::before {
+    left: -1px;
+    content: "";
+}
+
+.pb_hover-margin-top--16:hover::before {
+    margin-top: -16px;
+    content: "";
+}

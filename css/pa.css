@@ -1,0 +1,91 @@
+.pa_background-color-34::after {
+    background-color: rgb(34, 34, 34);
+    content: "";
+}
+.pa_background-padding-box::after {
+    background-clip: padding-box;
+    content: "";
+}
+
+.pa_width-calc-100-20::after {
+    width: calc(100% - 20px);
+    content: "";
+}
+
+.pa_radius-32::after {
+    border-radius: 32px;
+    content: "";
+}
+
+.pa_transparent-border::after {
+    border: 1px solid rgba(0, 0, 0, 0);
+    content: "";
+}
+
+.pa_cursor-pointer::after {
+    cursor: pointer;
+    content: "";
+}
+
+.pa_block::after {
+    display: block;
+    content: "";
+}
+
+.pa_pointer-auto::after {
+    pointer-events: auto;
+    content: "";
+}
+
+.pa_absolute::after {
+    position: absolute;
+    content: "";
+}
+
+.pa_top-0::after {
+    top: 0px;
+    content: "";
+}
+.pa_bottom-0::after {
+    bottom: 0px;
+    content: "";
+}
+.pa_bottom--6::after {
+    bottom: -6px;
+    content: "";
+}
+.pa_left-0::after {
+    left: 0px;
+    content: "";
+}
+.pa_left-10::after {
+    left: 10px;
+    content: "";
+}
+.pa_right-0::after {
+    right: 0px;
+    content: "";
+}
+
+.pa_z-index-0::after {
+    z-index: 0;
+    content: "";
+}
+.pa_margin-right-2::after {
+    margin-right: 2px;
+    content: "";
+}
+.pa_margin-left-2::after {
+    margin-left: 2px;
+    content: "";
+}
+
+.pa_user-select-auto::after {
+    user-select: auto;
+    content: "";
+}
+
+.pa_height-2::after {
+    height: 2px;
+    content: "";
+}
