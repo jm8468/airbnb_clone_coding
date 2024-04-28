@@ -1,10 +1,25 @@
+.pa_background-color-basic::after {
+    background-color: rgb(255, 255, 255);
+    content: "";
+}
+
 .pa_background-color-34::after {
     background-color: rgb(34, 34, 34);
     content: "";
 }
+
 .pa_background-padding-box::after {
     background-clip: padding-box;
     content: "";
+}
+
+.pa_grey-border-221::after {
+    border: 1px solid rgb(221, 221, 221);
+    content: '';
+}
+
+.pa_search-panel-shadow::after {
+    box-shadow: 0 3px 12px 0 rgb(0 0 0/0.1),0 1px 2px 0 rgb(0 0 0/0.08);
 }
 
 .pa_width-calc-100-20::after {

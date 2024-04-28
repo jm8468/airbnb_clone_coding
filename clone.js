@@ -5,6 +5,9 @@ const toggleLayer_1 = document.querySelector('#structured-search-input-field-spl
 const toggleLayer_2 = document.querySelector('#structured-search-input-field-split-dates-1');
 const toggleLayer_3 = document.querySelector('#structured-search-input-field-guests-button');
 const toggleLayers = [toggleLayer_0, toggleLayer_1, toggleLayer_2, toggleLayer_3];
+const layer_1 = document.querySelector('#structured-search-input-field-query-panel');
+const layer_2 = document.querySelector('#structured-search-input-field-dates-panel');
+const layer_3 = document.querySelector('#structured-search-input-field-guests-panel');
 
 function tabButton(event) {
     const button = event.target;
@@ -47,25 +50,43 @@ function tabButton(event) {
 
 function toggleLayerButtonStart(event) {
     const target = event.currentTarget;
+    target.classList.remove('pb_hover-grey-border-right-255');
+    target.classList.remove('pb_hover-right-0');
+    target.classList.add('pa_grey-border-221');
+    layer_1.classList.remove('visibility-hidden');
     toggleLayerButton(target);
 }
 function toggleLayerButtonMiddle(event) {
     const target = event.currentTarget;
+    target.classList.remove('pb_hover-grey-border-right-255');
+    target.classList.remove('pb_grey-border-left-255');
+    target.classList.remove('pb_hover-right--1');
+    target.classList.remove('pb_hover-left--1');
+    layer_2.classList.remove('visibility-hidden');
     toggleLayerButton(target);
 }
 function toggleLayerButtonEnd(event) {
     const target = event.currentTarget;
+    target.classList.remove('pb_grey-border-left-255');
+    target.classList.remove('pb_hover-left-0');
+    layer_3.classList.remove('visibility-hidden');
     toggleLayerButton(target);
 }
 
 function toggleLayerButton(event) {
     const searchPanel = document.querySelector('#search-tabpanel');
-    console.log(event);
-
     searchPanel.classList.remove('background-color-basic');
+    searchPanel.classList.remove('search-shadow');
     searchPanel.classList.add('background-color-235');
-    event.classList.add('pa_background-color-basic');
+    event.classList.remove('pb_hover-grey-border-right-255');
+    event.classList.remove('pb_hover-height-32');
+    event.classList.remove('pb_hover-align-self-center');
+    event.classList.remove('pb_hover-absolute');
+    event.classList.remove('pb_hover-top-33');
+    event.classList.remove('pb_hover-margin-top--16');
     event.classList.remove('pa_hover-grey-235');
+    event.classList.add('pa_search-panel-shadow');
+    event.classList.add('pa_background-color-basic');
     event.classList.add('z-index-3');
 }
 

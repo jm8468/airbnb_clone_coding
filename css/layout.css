@@ -34,6 +34,9 @@
 .height-30 {
     height: 30px;
 }
+.height-32 {
+    height: 32px;
+}
 .height-44 {
     height: 44px;
 }
@@ -170,6 +173,9 @@
 .z-index-3 {
     z-index: 3;
 }
+.z-index-5 {
+    z-index: 5;
+}
 .z-index-10 {
     z-index: 10;
 }
@@ -231,6 +237,9 @@
 .grey-border-221 {
     border: 1px solid rgb(221, 221, 221);
 }
+.grey-border-right-221 {
+    border-right: 1px solid rgb(221, 221, 221);
+}
 .transparent-border {
     border: 1px solid rgba(0, 0, 0, 0);
 }
@@ -245,11 +254,6 @@
 }
 
 /* line */
-.grey-dividing-line {
-    height: 32px;
-    border-right: 1px solid rgb(221, 221, 221);
-    align-self: center;
-}
 .grey-line {
     border-top: 0.727273px solid rgb(221, 221, 221);
 }

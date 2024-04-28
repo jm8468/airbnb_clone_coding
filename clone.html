@@ -121,7 +121,8 @@
                                         </div>
                                         <!-- 여행지 검색 레이어 -->
                                         <div style="left: 0px; top: 64px; padding: 40px 32px; box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15); width: 475px; max-height: calc(100vh - 200px); overflow-x: hidden; overscroll-behavior: contain;"
-                                            class="absolute margin-top-12 radius-32 visibility-hidden background-color-basic">
+                                            class="absolute margin-top-12 radius-32 visibility-hidden background-color-basic"
+                                            id="structured-search-input-field-query-panel">
                                             <div style="overflow: hidden; text-align: left; row-gap: 24px;"
                                                 class="flex-container flex-column">
                                                 <!-- 지역으로 검색하기 -->
@@ -1521,13 +1522,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grey-dividing-line"></div>
+                                    <div class="height-32 grey-border-right-221 align-self-center height-32"></div>
                                     <!-- 체크인·아웃 / 날짜 추가 -->
                                     <div
                                         class="flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
                                         <div class="flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                             <div id="structured-search-input-field-split-dates-0"
-                                                class="z-index-1  pb_hover-height-32 pb_hover-grey-border-right-255 pb_grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right--1 pb_hover-left--1 pb_hover-margin-top--16 pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_hover-grey-235 padding-1 radius-32 transparent-border relative"
+                                                class="z-index-1 pb_hover-height-32 pb_hover-grey-border-right-255 pb_grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right--1 pb_hover-left--1 pb_hover-margin-top--16 pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_hover-grey-235 padding-1 radius-32 transparent-border relative"
                                                 role="button" tabindex="0" aria-expanded="false">
                                                 <div class="z-index-1 padding-14-24 text-left relative">
                                                     <div
@@ -1542,7 +1543,8 @@
                                         </div>
                                         <!-- 달력 레이어 -->
                                         <div style="top: 64px; left: 0px; right: 0px; max-height: calc(100vh - 200px);"
-                                            class="visibility-hidden absolute z-index-1 padding-16-32 margin-top-12 background-color-basic radius-32">
+                                            class="visibility-hidden absolute z-index-1 padding-16-32 margin-top-12 background-color-basic radius-32"
+                                            id="structured-search-input-field-dates-panel">
                                             <div style="padding: 18px 28px 10px;"
                                                 class="flex-container justify-content-center align-items-center">
                                                 <div class="flex-container justify-content-center align-items-center">
@@ -1602,7 +1604,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="grey-dividing-line"></div>
+                                        <div class="height-32 grey-border-right-221 align-self-center"></div>
+                                        
                                         <div class="flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                             <div id="structured-search-input-field-split-dates-1"
                                                 class=" pb_hover-height-32 pb_hover-grey-border-right-255 pb_grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right--1 pb_hover-left--1 pb_hover-margin-top--16 pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_hover-grey-235 padding-1 radius-32 transparent-border relative z-index-1"
@@ -1619,12 +1622,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grey-dividing-line"></div>
+                                    <div class="height-32 grey-border-right-221 align-self-center"></div>
                                     <!-- 여행자 / 게스트 추가 -->
                                     <div
                                         class="flex-container align-items-center flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                         <div id="structured-search-input-field-guests-button"
-                                            class=" pb_hover-height-32 pb_grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-left-0 pb_hover-margin-top--16 pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_margin-left-2 pa_user-select-auto pa_hover-grey-235 padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
+                                            class="pb_hover-height-32 pb_grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-left-0 pb_hover-margin-top--16 pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_margin-left-2 pa_user-select-auto pa_hover-grey-235 padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
                                             role="button" tabindex="0" aria-expanded="false">
                                             <div class="padding-14-24 relative z-index-1">
                                                 <div
@@ -1638,7 +1641,7 @@
                                         </div>
                                         <!-- 검색 버튼 -->
                                         <div style="margin-left: -6px; padding-right: 9px;"
-                                            class="flex-basis-zero flex-grow-0 flex-shrink-0">
+                                            class="flex-basis-zero flex-grow-0 flex-shrink-0 z-index-5">
                                             <button
                                                 class="search-button no-border radius-24 cursor-pointer block-inline font-white-255 height-48 text-vertical-middle width-48 relative z-index-0 overflow-hidden">
                                                 <div class="inline-flex-container padding-16 relative z-index-1">
@@ -1662,7 +1665,8 @@
                                     </div>
                                     <!-- 게스트 추가 레이어 -->
                                     <div style="box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15); overscroll-behavior: contain; right: 0px; top: 64px; max-height: calc(100vh - 200px);"
-                                        class="background-color-basic radius-32 margin-top-12 padding-16-32 absolute visibility-hidden">
+                                        class="background-color-basic radius-32 margin-top-12 padding-16-32 absolute visibility-hidden"
+                                        id="structured-search-input-field-guests-panel">
                                         <div style="padding: 0px 6px; width: 342px;">
                                             <div style="padding: 24px 4px 24px 0px;" class="flex-container">
                                                 <section>
