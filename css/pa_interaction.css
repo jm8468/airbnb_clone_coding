@@ -2,3 +2,8 @@
     background-color: rgb(235, 235, 235);
     content: "";
 }
+
+.pa_hover-grey-221:hover::after {
+    background-color: rgb(221, 221, 221);
+    content: '';
+}
