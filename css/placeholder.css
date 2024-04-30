@@ -1,0 +1,11 @@
+.ph_font-black::placeholder {
+    color: rgb(34, 34, 34);
+}
+
+.ph_font-grey-113::placeholder {
+    color: rgb(113, 113, 113);
+}
+
+.ph_font-400::placeholder {
+    font-weight: 400;
+}
