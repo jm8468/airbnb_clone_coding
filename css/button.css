@@ -4,16 +4,6 @@
     outline: none;
 }
 
-.search-button {
-    background-color: rgb(255, 56, 92);
-    max-width: 48px;
-    transition-behavior: normal;
-    transition-delay: 0s;
-    transition-duration: 0.2s;
-    transition-property: max-width;
-    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
-}
-
 .heart-button {
     width: fit-content;
     position: absolute;

@@ -90,7 +90,7 @@ function toggleLayerButtonMidend(event) {
     
     toggleLayer_1.classList.remove('pb_hover-right--1');
     toggleLayer_1.classList.add('pb_hover-right--30');
-    toggleLayer_1.classList.add('pb_hover-grey-gradient-img');
+    toggleLayer_1.classList.add('pb_hover-grey-gradient-img-reverse');
     toggleLayer_1.classList.add('pb_hover-background-color-transparent');
     toggleLayer_1.classList.add('pb_hover-width-100-31');
 
@@ -107,6 +107,11 @@ function toggleLayerButtonEnd(event) {
     target.classList.remove('pb_hover-left-0');
     layer_2.classList.remove('visibility-hidden');
 
+    toggleLayer_2.classList.remove('pb_hover-right--1');
+    toggleLayer_2.classList.add('pb_hover-right--30');
+    toggleLayer_2.classList.add('pb_hover-grey-gradient-img-reverse');
+    toggleLayer_2.classList.add('pb_hover-background-color-transparent');
+    toggleLayer_2.classList.add('pb_hover-width-100-31');
     toggleLayerButton(target, 3);
 }
 
