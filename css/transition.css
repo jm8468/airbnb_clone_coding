@@ -1,3 +1,4 @@
+@import 'variables.css';
 /* transition 속성 */
 .transition-transform {
     transition-property: transform;
@@ -15,6 +16,9 @@
 /* transition 지속시간 */
 .duration-100ms {
     transition-duration: 0.1s;
+}
+.duration-125ms {
+    transition-duration: 1.25s;
 }
 .duration-150ms {
     transition-duration: 0.15s;
@@ -34,6 +38,9 @@
 /* transition 타이밍 함수 */
 .cubic-function {
     transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+.ease-function {
+    transition-timing-function: ease;
 }
 
 .behavior-normal {

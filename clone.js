@@ -8,6 +8,9 @@ const toggleLayers = [toggleLayer_0, toggleLayer_1, toggleLayer_2, toggleLayer_3
 const layer_0 = document.querySelector('#structured-search-input-field-query-panel');
 const layer_1 = document.querySelector('#structured-search-input-field-dates-panel');
 const layer_2 = document.querySelector('#structured-search-input-field-guests-panel');
+const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
+let isPanelFocus = false;
+const searchButtonSpanSpan = document.createElement('span');
 
 function tabButton(event) {
     const button = event.target;
@@ -116,10 +119,14 @@ function toggleLayerButtonEnd(event) {
 }
 
 function toggleLayerButton(event, count) {
+    isPanelFocus = true;
+    dynamicHighlightButton();
     const searchPanel = document.querySelector('#search-tabpanel');
+    // 검색 패널 배경색 조정
     searchPanel.classList.remove('background-color-basic');
     searchPanel.classList.remove('search-shadow');
     searchPanel.classList.add('background-color-235');
+    // 선택된 패널의 클래스 조정
     event.classList.remove('pb_hover-grey-border-right-255');
     event.classList.remove('pb_hover-height-32');
     event.classList.remove('pb_hover-absolute');
@@ -171,16 +178,63 @@ function toggleLayerButton(event, count) {
     
 }
 
+function dynamicHighlightButton() {
+    const searchButtonSpan = document.createElement('span');
+    const searchButtonSpan2 = document.createElement('span');
+    const searchButtonDiv = dynamicSearchButton.querySelector(':scope > div');
+    searchButtonSpan.classList.add('radius-8');
+    searchButtonSpan.classList.add('height-full');
+    searchButtonSpan.classList.add('width-full');
+    searchButtonSpan.classList.add('overflow-hidden');
+    searchButtonSpan.classList.add('absolute');
+    searchButtonSpan.classList.add('top-0');
+    searchButtonSpan.classList.add('right-0');
+    searchButtonSpan.classList.add('bottom-0');
+    searchButtonSpan.classList.add('left-0');
+    searchButtonSpan.classList.add('block');
+    searchButtonSpan2.classList.add('pointer-none')
+    searchButtonSpanSpan.classList.add('background-position-full');
+    searchButtonSpanSpan.classList.add('block');
+    searchButtonSpanSpan.classList.add('background-size-200');
+    searchButtonSpanSpan.classList.add('height-full');
+    searchButtonSpanSpan.classList.add('width-full');
+    searchButtonSpanSpan.classList.add('min-width-200');
+    searchButtonSpanSpan.classList.add('delay-0ms');
+    searchButtonSpanSpan.classList.add('duration-125ms');
+    searchButtonSpanSpan.classList.add('transition-opacity');
+    searchButtonSpanSpan.classList.add('opacity-0');
+    searchButtonSpanSpan.classList.add('background-image-circle');
+    searchButtonSpanSpan.style.backgroundPosition = 'calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)';
+    dynamicSearchButton.appendChild(searchButtonSpan);
+    searchButtonSpan.appendChild(searchButtonSpanSpan);
+    dynamicSearchButton.appendChild(searchButtonSpan2);
+    searchButtonSpan2.appendChild(searchButtonDiv);
+}
+
+function calcMousePosition(event) {
+    target = event.target;
+    searchButtonSpanSpan.style.setProperty('--mouse-x', event.offsetX);
+    searchButtonSpanSpan.style.setProperty('--mouse-y', event.offsetY);
+
+}
+
 tabsSeo.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
 tabsPlacesByAreasTabId.forEach(tab => {
     tab.addEventListener("click", tabButton)
 });
-
 toggleLayer_0.addEventListener("focusin", toggleLayerButtonStart);
 toggleLayer_1.addEventListener("click", toggleLayerButtonStadle);
 toggleLayer_2.addEventListener("click", toggleLayerButtonMidend);
 toggleLayer_3.addEventListener("click", toggleLayerButtonEnd);
+
+
+searchButtonSpanSpan.addEventListener("mousemove", function(event) { 
+    if(isPanelFocus) {
+        calcMousePosition(event);
+    }
+});
+
 
 

@@ -1,3 +1,4 @@
+@import 'variables.css';
 .world-map-img-wrapper {
     overflow: clip;
     aspect-ratio: 1/1;

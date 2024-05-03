@@ -1,3 +1,4 @@
+@import 'variables.css';
 /* border */
 .pb_hover-grey-border-right-255:hover::before {
     border-right: 1px solid rgb(255, 255, 255);

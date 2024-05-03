@@ -1,3 +1,4 @@
+@import 'variables.css';
 .nav-item-frame {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,4 @@
+@import 'variables.css';
 /* background */
 .pa_background-color-34::after {
     background-color: rgb(34, 34, 34);

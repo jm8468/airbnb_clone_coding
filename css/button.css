@@ -1,3 +1,4 @@
+@import 'variables.css';
 .transparent-button {
     background-color: transparent;
     border: none;

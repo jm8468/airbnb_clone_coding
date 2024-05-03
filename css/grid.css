@@ -1,3 +1,4 @@
+@import 'variables.css';
 .search-by-region-grid-container {
     display: grid;
     grid-auto-rows: 0px;
