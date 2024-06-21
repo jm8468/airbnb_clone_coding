@@ -2,15 +2,15 @@
 .world-map-img-wrapper {
     overflow: clip;
     aspect-ratio: 1/1;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .world-map-img {
     aspect-ratio: 1/1;
     object-fit: contain;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .round-image {

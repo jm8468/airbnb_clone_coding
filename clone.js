@@ -1,5 +1,3 @@
-const tabsSeo = document.querySelectorAll('#tabs-seo > button');
-const tabsPlacesByAreasTabId = document.querySelectorAll('#tabs-placesByAreasTabId > button');
 const toggleLayer_0 = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
 const toggleLayer_1 = document.querySelector('#structured-search-input-field-split-dates-0');
 const toggleLayer_2 = document.querySelector('#structured-search-input-field-split-dates-1');
@@ -11,6 +9,7 @@ const layer_2 = document.querySelector('#structured-search-input-field-guests-pa
 const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
 let isPanelFocus = false;
 const searchButtonSpanSpan = document.createElement('span');
+const application = document.querySelector('#js-application');
 
 function tabButton(event) {
     const button = event.target;
@@ -71,11 +70,12 @@ function toggleLayerButtonStadle(event) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
-    
+
     toggleLayer_0.classList.remove('pb_hover-right-0');
     toggleLayer_0.classList.add('pb_hover-background-color-grey-221');
     toggleLayer_0.classList.add('pb_hover-right--30');
     toggleLayer_0.classList.add('pb-hover-width-80');
+
     toggleLayer_2.classList.remove('pb_hover-left--1');
     toggleLayer_2.classList.remove('pb_hover-right--1');
     toggleLayer_2.classList.add('pb_hover-right-0');
@@ -90,7 +90,7 @@ function toggleLayerButtonMidend(event) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
-    
+
     toggleLayer_1.classList.remove('pb_hover-right--1');
     toggleLayer_1.classList.add('pb_hover-right--30');
     toggleLayer_1.classList.add('pb_hover-grey-gradient-img-reverse');
@@ -117,7 +117,6 @@ function toggleLayerButtonEnd(event) {
     toggleLayer_2.classList.add('pb_hover-width-100-31');
     toggleLayerButton(target, 3);
 }
-
 function toggleLayerButton(event, count) {
     isPanelFocus = true;
     dynamicHighlightButton();
@@ -144,9 +143,9 @@ function toggleLayerButton(event, count) {
         const childText = button.querySelector(':scope > div > :last-child');
 
         button.classList.remove('pb_hover-grey-border-left-255');
-        button.classList.remove('pb_hover-grey-border-right-255'); 
+        button.classList.remove('pb_hover-grey-border-right-255');
         // 선택된 패널 양 옆의 패널의 클래스 조정
-        if(count === nearLeft || count === nearRight) {
+        if (count === nearLeft || count === nearRight) {
             button.classList.remove('pb_hover-height-32');
             button.classList.remove('pb_hover-top-33');
             button.classList.remove('pb_hover-margin-top--16');
@@ -154,7 +153,7 @@ function toggleLayerButton(event, count) {
             button.classList.add('pb_hover-height-100--20');
         }
         // 선택되지 않은 패널의 클래스 조정
-        if(count !== index) {
+        if (count !== index) {
             childText.classList.remove('font-grey-113');
             childText.classList.remove('ph_font-grey-113');
             childText.classList.add('font-black');
@@ -172,10 +171,10 @@ function toggleLayerButton(event, count) {
                 button.classList.add('pb_hover-grey-border-right-235');
             }
         }
-        
-        
+
+
     });
-    
+
 }
 
 function dynamicHighlightButton() {
@@ -218,17 +217,32 @@ function calcMousePosition(event) {
 
 }
 
-tabsSeo.forEach(tab => {
-    tab.addEventListener("click", tabButton)
-});
-tabsPlacesByAreasTabId.forEach(tab => {
-    tab.addEventListener("click", tabButton)
-});
-toggleLayer_0.addEventListener("focusin", toggleLayerButtonStart);
-toggleLayer_1.addEventListener("click", toggleLayerButtonStadle);
-toggleLayer_2.addEventListener("click", toggleLayerButtonMidend);
-toggleLayer_3.addEventListener("click", toggleLayerButtonEnd);
 
+
+application.addEventListener('click', function (event) {
+    console.log(event.target);
+    // 탭 변경
+    if (event.target.id.includes('tab-seo') || event.target.id.includes('tab-placesByAreasTabId')) {
+        tabButton(event);
+    }
+    // 검색 탭 상호작용 시 탭과 탭패널에 효과
+    else if (event.target.id === 'structured-search-input-field-split-dates-0') {
+        toggleLayerButtonStadle(event);
+    }
+    else if (event.target.id === 'structured-search-input-field-split-dates-1') {
+        toggleLayerButtonMidend(event);
+    }
+    else if (event.target.id === 'structured-search-input-field-guests-button') {
+        toggleLayerButtonEnd(event);
+    }
+});
+
+application.addEventListener('focusin', function (event) {
+    // 검색 탭 상호작용 시 탭과 탭패널에 효과
+    if (event.target.getAttribute('for') === 'bigsearch-query-location-input') {
+        toggleLayerButtonStart(event);
+    }
+});
 
 searchButtonSpanSpan.addEventListener("mousemove", function(event) { 
     if(isPanelFocus) {
