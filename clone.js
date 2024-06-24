@@ -8,7 +8,7 @@ const layer_1 = document.querySelector('#structured-search-input-field-dates-pan
 const layer_2 = document.querySelector('#structured-search-input-field-guests-panel');
 const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
 let isPanelFocus = false;
-const searchButtonSpanSpan = document.createElement('span');
+
 const application = document.querySelector('#js-application');
 
 function tabButton(event) {
@@ -51,7 +51,7 @@ function tabButton(event) {
 }
 
 function toggleLayerButtonStart(event) {
-    const target = event.currentTarget;
+    const target = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
     target.classList.remove('pb_hover-right-0');
     target.classList.add('pa_grey-border-221');
     layer_0.classList.remove('visibility-hidden');
@@ -66,7 +66,7 @@ function toggleLayerButtonStart(event) {
     toggleLayerButton(target, 0);
 }
 function toggleLayerButtonStadle(event) {
-    const target = event.currentTarget;
+    const target = event.target;
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
@@ -86,7 +86,7 @@ function toggleLayerButtonStadle(event) {
     toggleLayerButton(target, 1);
 }
 function toggleLayerButtonMidend(event) {
-    const target = event.currentTarget;
+    const target = event.target;
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
@@ -106,7 +106,7 @@ function toggleLayerButtonMidend(event) {
     toggleLayerButton(target, 2);
 }
 function toggleLayerButtonEnd(event) {
-    const target = event.currentTarget;
+    const target = event.target;
     target.classList.remove('pb_hover-left-0');
     layer_2.classList.remove('visibility-hidden');
 
@@ -118,7 +118,7 @@ function toggleLayerButtonEnd(event) {
     toggleLayerButton(target, 3);
 }
 function toggleLayerButton(event, count) {
-    isPanelFocus = true;
+    
     dynamicHighlightButton();
     const searchPanel = document.querySelector('#search-tabpanel');
     // 검색 패널 배경색 조정
@@ -133,8 +133,11 @@ function toggleLayerButton(event, count) {
     event.classList.remove('pb_hover-top-33');
     event.classList.remove('pb_hover-margin-top--16');
     event.classList.remove('pa_hover-grey-235');
+    event.classList.remove('pa_transparent-border');
+    event.classList.add('pa_grey-border-221');
     event.classList.add('pa_search-panel-shadow');
     event.classList.add('pa_background-color-basic');
+    event.classList.add('pa_background-color-221');
     event.classList.add('z-index-3');
 
     toggleLayers.forEach((button, index) => {
@@ -178,36 +181,41 @@ function toggleLayerButton(event, count) {
 }
 
 function dynamicHighlightButton() {
-    const searchButtonSpan = document.createElement('span');
-    const searchButtonSpan2 = document.createElement('span');
-    const searchButtonDiv = dynamicSearchButton.querySelector(':scope > div');
-    searchButtonSpan.classList.add('radius-8');
-    searchButtonSpan.classList.add('height-full');
-    searchButtonSpan.classList.add('width-full');
-    searchButtonSpan.classList.add('overflow-hidden');
-    searchButtonSpan.classList.add('absolute');
-    searchButtonSpan.classList.add('top-0');
-    searchButtonSpan.classList.add('right-0');
-    searchButtonSpan.classList.add('bottom-0');
-    searchButtonSpan.classList.add('left-0');
-    searchButtonSpan.classList.add('block');
-    searchButtonSpan2.classList.add('pointer-none')
-    searchButtonSpanSpan.classList.add('background-position-full');
-    searchButtonSpanSpan.classList.add('block');
-    searchButtonSpanSpan.classList.add('background-size-200');
-    searchButtonSpanSpan.classList.add('height-full');
-    searchButtonSpanSpan.classList.add('width-full');
-    searchButtonSpanSpan.classList.add('min-width-200');
-    searchButtonSpanSpan.classList.add('delay-0ms');
-    searchButtonSpanSpan.classList.add('duration-125ms');
-    searchButtonSpanSpan.classList.add('transition-opacity');
-    searchButtonSpanSpan.classList.add('opacity-0');
-    searchButtonSpanSpan.classList.add('background-image-circle');
-    searchButtonSpanSpan.style.backgroundPosition = 'calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)';
-    dynamicSearchButton.appendChild(searchButtonSpan);
-    searchButtonSpan.appendChild(searchButtonSpanSpan);
-    dynamicSearchButton.appendChild(searchButtonSpan2);
-    searchButtonSpan2.appendChild(searchButtonDiv);
+    if (isPanelFocus === false) {
+        const searchButtonSpan = document.createElement('span');
+        const searchButtonSpan2 = document.createElement('span');
+        const searchButtonSpanSpan = document.createElement('span');
+        const searchButtonDiv = dynamicSearchButton.querySelector(':scope > div');
+        searchButtonSpan.classList.add('radius-8');
+        searchButtonSpan.classList.add('height-full');
+        searchButtonSpan.classList.add('width-full');
+        searchButtonSpan.classList.add('overflow-hidden');
+        searchButtonSpan.classList.add('absolute');
+        searchButtonSpan.classList.add('top-0');
+        searchButtonSpan.classList.add('right-0');
+        searchButtonSpan.classList.add('bottom-0');
+        searchButtonSpan.classList.add('left-0');
+        searchButtonSpan.classList.add('block');
+        searchButtonSpan2.classList.add('pointer-none')
+        searchButtonSpanSpan.classList.add('background-position-full');
+        searchButtonSpanSpan.classList.add('block');
+        searchButtonSpanSpan.classList.add('background-size-200');
+        searchButtonSpanSpan.classList.add('height-full');
+        searchButtonSpanSpan.classList.add('width-full');
+        searchButtonSpanSpan.classList.add('min-width-200');
+        searchButtonSpanSpan.classList.add('delay-0ms');
+        searchButtonSpanSpan.classList.add('duration-125ms');
+        searchButtonSpanSpan.classList.add('transition-opacity');
+        searchButtonSpanSpan.classList.add('opacity-0');
+        searchButtonSpanSpan.classList.add('background-image-circle');
+        searchButtonSpanSpan.style.backgroundPosition = 'calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)';
+        dynamicSearchButton.appendChild(searchButtonSpan);
+        searchButtonSpan.appendChild(searchButtonSpanSpan);
+        dynamicSearchButton.appendChild(searchButtonSpan2);
+        searchButtonSpan2.appendChild(searchButtonDiv);
+        isPanelFocus = true;
+    }
+    
 }
 
 function calcMousePosition(event) {
@@ -220,7 +228,7 @@ function calcMousePosition(event) {
 
 
 application.addEventListener('click', function (event) {
-    console.log(event.target);
+    
     // 탭 변경
     if (event.target.id.includes('tab-seo') || event.target.id.includes('tab-placesByAreasTabId')) {
         tabButton(event);
@@ -238,8 +246,9 @@ application.addEventListener('click', function (event) {
 });
 
 application.addEventListener('focusin', function (event) {
+    console.log(event.target);
     // 검색 탭 상호작용 시 탭과 탭패널에 효과
-    if (event.target.getAttribute('for') === 'bigsearch-query-location-input') {
+    if (event.target.id === 'bigsearch-query-location-input') {
         toggleLayerButtonStart(event);
     }
 });
