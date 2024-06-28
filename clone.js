@@ -8,7 +8,6 @@ const layer_1 = document.querySelector('#structured-search-input-field-dates-pan
 const layer_2 = document.querySelector('#structured-search-input-field-guests-panel');
 const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
 let isPanelFocus = false;
-
 const application = document.querySelector('#js-application');
 
 function tabButton(event) {
@@ -50,8 +49,8 @@ function tabButton(event) {
 
 }
 
-function toggleLayerButtonStart(event) {
-    const target = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
+// 여행지 - 여행지 검색
+function travelDestination(target) {
     target.classList.remove('pb_hover-right-0');
     target.classList.add('pa_grey-border-221');
     layer_0.classList.remove('visibility-hidden');
@@ -63,10 +62,9 @@ function toggleLayerButtonStart(event) {
     toggleLayer_1.classList.add('pb_hover-grey-gradient-img');
     toggleLayer_1.classList.add('pb_hover-background-color-transparent');
     toggleLayer_1.classList.add('pb_hover-width-100-31');
-    toggleLayerButton(target, 0);
 }
-function toggleLayerButtonStadle(event) {
-    const target = event.target;
+// 체크인 - 날짜 추가
+function checkIn(target) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
@@ -83,10 +81,9 @@ function toggleLayerButtonStadle(event) {
     toggleLayer_2.classList.add('pb_hover-grey-gradient-img');
     toggleLayer_2.classList.add('pb_hover-background-color-transparent');
     toggleLayer_2.classList.add('pb_hover-width-100-31');
-    toggleLayerButton(target, 1);
 }
-function toggleLayerButtonMidend(event) {
-    const target = event.target;
+// 체크아웃 - 날짜 추가
+function checkOut(target) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
     layer_1.classList.remove('visibility-hidden');
@@ -103,10 +100,9 @@ function toggleLayerButtonMidend(event) {
     toggleLayer_3.classList.add('pb_hover-width-100-29');
     toggleLayer_3.classList.add('pb_hover-left--30');
     toggleLayer_3.classList.add('pb_hover-radius-right-32');
-    toggleLayerButton(target, 2);
 }
-function toggleLayerButtonEnd(event) {
-    const target = event.target;
+// 여행자 - 게스트 추가
+function traveler(target) {
     target.classList.remove('pb_hover-left-0');
     layer_2.classList.remove('visibility-hidden');
 
@@ -115,31 +111,35 @@ function toggleLayerButtonEnd(event) {
     toggleLayer_2.classList.add('pb_hover-grey-gradient-img-reverse');
     toggleLayer_2.classList.add('pb_hover-background-color-transparent');
     toggleLayer_2.classList.add('pb_hover-width-100-31');
-    toggleLayerButton(target, 3);
 }
-function toggleLayerButton(event, count) {
-    
-    dynamicHighlightButton();
+
+// 선택된 패널 효과
+function focusedToggleLayer(target) {
+    isPanelFocus = true;
+
+    // 전체 검색 패널 배경색 조정
     const searchPanel = document.querySelector('#search-tabpanel');
-    // 검색 패널 배경색 조정
     searchPanel.classList.remove('background-color-basic');
     searchPanel.classList.remove('search-shadow');
     searchPanel.classList.add('background-color-235');
     // 선택된 패널의 클래스 조정
-    event.classList.remove('pb_hover-grey-border-right-255');
-    event.classList.remove('pb_hover-height-32');
-    event.classList.remove('pb_hover-absolute');
-    event.classList.remove('pb_hover-align-self-center');
-    event.classList.remove('pb_hover-top-33');
-    event.classList.remove('pb_hover-margin-top--16');
-    event.classList.remove('pa_hover-grey-235');
-    event.classList.remove('pa_transparent-border');
-    event.classList.add('pa_grey-border-221');
-    event.classList.add('pa_search-panel-shadow');
-    event.classList.add('pa_background-color-basic');
-    event.classList.add('pa_background-color-221');
-    event.classList.add('z-index-3');
+    target.classList.remove('pb_hover-grey-border-right-255');
+    target.classList.remove('pb_hover-height-32');
+    target.classList.remove('pb_hover-absolute');
+    target.classList.remove('pb_hover-align-self-center');
+    target.classList.remove('pb_hover-top-33');
+    target.classList.remove('pb_hover-margin-top--16');
+    target.classList.remove('pa_hover-grey-235');
+    target.classList.remove('pa_transparent-border');
+    target.classList.add('pa_grey-border-221');
+    target.classList.add('pa_search-panel-shadow');
+    target.classList.add('pa_background-color-basic');
+    target.classList.add('pa_background-color-221');
+    target.classList.add('z-index-3');
+}
 
+// 선택되지 않은 패널 효과
+function unfocusedToggleLayer(count) {
     toggleLayers.forEach((button, index) => {
         const nearLeft = index - 1;
         const nearRight = index + 1;
@@ -177,11 +177,16 @@ function toggleLayerButton(event, count) {
 
 
     });
+}
+
+// focusedToggleLayer와 unfocusedToggleLayer 함수 무력화
+function outFocusedToggleLayer(event) {
 
 }
 
+// 패널 focus시 검색 버튼 크기 변경, 그라데이션
 function dynamicHighlightButton() {
-    if (isPanelFocus === false) {
+    if (isPanelFocus === true) {
         const searchButtonSpan = document.createElement('span');
         const searchButtonSpan2 = document.createElement('span');
         const searchButtonSpanSpan = document.createElement('span');
@@ -213,43 +218,69 @@ function dynamicHighlightButton() {
         searchButtonSpan.appendChild(searchButtonSpanSpan);
         dynamicSearchButton.appendChild(searchButtonSpan2);
         searchButtonSpan2.appendChild(searchButtonDiv);
-        isPanelFocus = true;
     }
     
 }
 
+// 마우스 위치 계산
 function calcMousePosition(event) {
-    target = event.target;
+    const target = event.target;
     searchButtonSpanSpan.style.setProperty('--mouse-x', event.offsetX);
     searchButtonSpanSpan.style.setProperty('--mouse-y', event.offsetY);
 
 }
 
 
-
+// click 이벤트
 application.addEventListener('click', function (event) {
-    
+    const target = event.target;
     // 탭 변경
-    if (event.target.id.includes('tab-seo') || event.target.id.includes('tab-placesByAreasTabId')) {
+    if (target.id.includes('tab-seo') || target.id.includes('tab-placesByAreasTabId')) {
         tabButton(event);
     }
-    // 검색 탭 상호작용 시 탭과 탭패널에 효과
-    else if (event.target.id === 'structured-search-input-field-split-dates-0') {
-        toggleLayerButtonStadle(event);
+    // 체크인 - 날짜 추가
+    else if (target.id === 'structured-search-input-field-split-dates-0') {
+        outFocusedToggleLayer();
+        checkIn(target);
+        focusedToggleLayer(target);
+        unfocusedToggleLayer(1);
+        dynamicHighlightButton();
     }
-    else if (event.target.id === 'structured-search-input-field-split-dates-1') {
-        toggleLayerButtonMidend(event);
+    // 체크아웃 - 날짜 추가
+    else if (target.id === 'structured-search-input-field-split-dates-1') {
+        outFocusedToggleLayer();
+        checkOut(target);
+        focusedToggleLayer(target);
+        unfocusedToggleLayer(2);        
+        dynamicHighlightButton();
     }
-    else if (event.target.id === 'structured-search-input-field-guests-button') {
-        toggleLayerButtonEnd(event);
+    // 여행자 - 게스트 추가
+    else if (target.id === 'structured-search-input-field-guests-button') {
+        outFocusedToggleLayer();
+        traveler(target);
+        focusedToggleLayer(target);
+        unfocusedToggleLayer(3);
+        dynamicHighlightButton();
+    }
+    else {
+        outFocusedToggleLayer();
     }
 });
 
+// focusin 이벤트
 application.addEventListener('focusin', function (event) {
-    console.log(event.target);
-    // 검색 탭 상호작용 시 탭과 탭패널에 효과
-    if (event.target.id === 'bigsearch-query-location-input') {
-        toggleLayerButtonStart(event);
+    const target = event.target;
+    // 여행지 - 여행지 검색
+    if (target.id === 'bigsearch-query-location-input') {
+        const targetLabel = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
+        outFocusedToggleLayer();
+        travelDestination(targetLabel);
+        focusedToggleLayer(targetLabel);
+        unfocusedToggleLayer(0);
+        dynamicHighlightButton();
+    }
+    else {
+        outFocusedToggleLayer();
     }
 });
 
