@@ -6,6 +6,7 @@ const toggleLayers = [toggleLayer_0, toggleLayer_1, toggleLayer_2, toggleLayer_3
 const layer_0 = document.querySelector('#structured-search-input-field-query-panel');
 const layer_1 = document.querySelector('#structured-search-input-field-dates-panel');
 const layer_2 = document.querySelector('#structured-search-input-field-guests-panel');
+const layers = [layer_0, layer_1, layer_2];
 const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
 let isPanelFocus = false;
 const application = document.querySelector('#js-application');
@@ -113,7 +114,7 @@ function traveler(target) {
     toggleLayer_2.classList.add('pb_hover-width-100-31');
 }
 
-// 선택된 패널 효과
+// 선택된 패널에 효과
 function focusedToggleLayer(target) {
     isPanelFocus = true;
 
@@ -181,7 +182,7 @@ function unfocusedToggleLayer(count) {
 
 // focusedToggleLayer와 unfocusedToggleLayer 함수 무력화
 function outFocusedToggleLayer(event) {
-
+    
 }
 
 // 패널 focus시 검색 버튼 크기 변경, 그라데이션
@@ -263,7 +264,8 @@ application.addEventListener('click', function (event) {
         dynamicHighlightButton();
     }
     else {
-        outFocusedToggleLayer();
+        document.reset();
+        outFocusedToggleLayer(event);
     }
 });
 
@@ -280,7 +282,7 @@ application.addEventListener('focusin', function (event) {
         dynamicHighlightButton();
     }
     else {
-        outFocusedToggleLayer();
+        outFocusedToggleLayer(event);
     }
 });
 
