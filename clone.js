@@ -1,4 +1,5 @@
-const toggleLayer_0 = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
+const toggleFullLayer = document.querySelector('#structured-search-input-field')
+const toggleLayer_0 = document.querySelector('#structured-search-input-field-place-label');
 const toggleLayer_1 = document.querySelector('#structured-search-input-field-split-dates-0');
 const toggleLayer_2 = document.querySelector('#structured-search-input-field-split-dates-1');
 const toggleLayer_3 = document.querySelector('#structured-search-input-field-guests-button');
@@ -175,15 +176,9 @@ function unfocusedToggleLayer(count) {
                 button.classList.add('pb_hover-grey-border-right-235');
             }
         }
-
-
     });
 }
 
-// focusedToggleLayer와 unfocusedToggleLayer 함수 무력화
-function outFocusedToggleLayer(event) {
-    
-}
 
 // 패널 focus시 검색 버튼 크기 변경, 그라데이션
 function dynamicHighlightButton() {
@@ -231,7 +226,29 @@ function calcMousePosition(event) {
 
 }
 
+// 요소의 클래스 저장
+const initialClasses = {};
+function storeInitialClasses() {
+    toggleLayers.forEach(element => {
+        initialClasses[element.id] = Array.from(element.classList);
+    });
+    layers.forEach(element => {
+        initialClasses[element.id] = Array.from(element.classList);
+    });
+}
 
+function restoreInitialClasses() {
+    toggleLayers.forEach(element => {
+        element.className = initialClasses[element.id].join(' ');
+    });
+    layers.forEach(element => {
+        element.className = initialClasses[element.id].join(' ');
+    });
+}
+
+
+
+storeInitialClasses();
 // click 이벤트
 application.addEventListener('click', function (event) {
     const target = event.target;
@@ -241,7 +258,7 @@ application.addEventListener('click', function (event) {
     }
     // 체크인 - 날짜 추가
     else if (target.id === 'structured-search-input-field-split-dates-0') {
-        outFocusedToggleLayer();
+        restoreInitialClasses();
         checkIn(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(1);
@@ -249,7 +266,7 @@ application.addEventListener('click', function (event) {
     }
     // 체크아웃 - 날짜 추가
     else if (target.id === 'structured-search-input-field-split-dates-1') {
-        outFocusedToggleLayer();
+        restoreInitialClasses();
         checkOut(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(2);        
@@ -257,15 +274,12 @@ application.addEventListener('click', function (event) {
     }
     // 여행자 - 게스트 추가
     else if (target.id === 'structured-search-input-field-guests-button') {
-        outFocusedToggleLayer();
+        restoreInitialClasses();
         traveler(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(3);
         dynamicHighlightButton();
-    }
-    else {
-        document.reset();
-        outFocusedToggleLayer(event);
+        
     }
 });
 
@@ -275,22 +289,14 @@ application.addEventListener('focusin', function (event) {
     // 여행지 - 여행지 검색
     if (target.id === 'bigsearch-query-location-input') {
         const targetLabel = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
-        outFocusedToggleLayer();
+        restoreInitialClasses();
         travelDestination(targetLabel);
         focusedToggleLayer(targetLabel);
         unfocusedToggleLayer(0);
         dynamicHighlightButton();
     }
-    else {
-        outFocusedToggleLayer(event);
-    }
 });
 
-searchButtonSpanSpan.addEventListener("mousemove", function(event) { 
-    if(isPanelFocus) {
-        calcMousePosition(event);
-    }
-});
 
 
 
