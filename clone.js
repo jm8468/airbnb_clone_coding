@@ -1,15 +1,6 @@
-const toggleFullLayer = document.querySelector('#structured-search-input-field')
-const toggleLayer_0 = document.querySelector('#structured-search-input-field-place-label');
-const toggleLayer_1 = document.querySelector('#structured-search-input-field-split-dates-0');
-const toggleLayer_2 = document.querySelector('#structured-search-input-field-split-dates-1');
-const toggleLayer_3 = document.querySelector('#structured-search-input-field-guests-button');
-const toggleLayers = [toggleLayer_0, toggleLayer_1, toggleLayer_2, toggleLayer_3];
-const layer_0 = document.querySelector('#structured-search-input-field-query-panel');
-const layer_1 = document.querySelector('#structured-search-input-field-dates-panel');
-const layer_2 = document.querySelector('#structured-search-input-field-guests-panel');
-const layers = [layer_0, layer_1, layer_2];
-const dynamicSearchButton = document.querySelector('#structured-search-input-search-button');
-let isPanelFocus = false;
+const toggleLayers = [document.querySelector('#structured-search-input-field-place-label'), document.querySelector('#structured-search-input-field-split-dates-0'), document.querySelector('#structured-search-input-field-split-dates-1'), document.querySelector('#structured-search-input-field-guests-button')];
+const layers = [document.querySelector('#structured-search-input-field-query-panel'), document.querySelector('#structured-search-input-field-dates-panel'), document.querySelector('#structured-search-input-field-guests-panel')];
+const searchTabPanel = document.querySelector('#search-tabpanel');
 const application = document.querySelector('#js-application');
 
 function tabButton(event) {
@@ -55,70 +46,68 @@ function tabButton(event) {
 function travelDestination(target) {
     target.classList.remove('pb_hover-right-0');
     target.classList.add('pa_grey-border-221');
-    layer_0.classList.remove('visibility-hidden');
+    layers[0].classList.remove('visibility-hidden');
 
-    toggleLayer_1.classList.remove('pb_hover-left--1');
-    toggleLayer_1.classList.remove('pb_hover-right--1');
-    toggleLayer_1.classList.add('pb_hover-right-0');
-    toggleLayer_1.classList.add('pb_hover-left--30');
-    toggleLayer_1.classList.add('pb_hover-grey-gradient-img');
-    toggleLayer_1.classList.add('pb_hover-background-color-transparent');
-    toggleLayer_1.classList.add('pb_hover-width-100-31');
+    toggleLayers[1].classList.remove('pb_hover-left--1');
+    toggleLayers[1].classList.remove('pb_hover-right--1');
+    toggleLayers[1].classList.add('pb_hover-right-0');
+    toggleLayers[1].classList.add('pb_hover-left--30');
+    toggleLayers[1].classList.add('pb_hover-grey-gradient-img');
+    toggleLayers[1].classList.add('pb_hover-background-color-transparent');
+    toggleLayers[1].classList.add('pb_hover-width-100-31');
 }
 // 체크인 - 날짜 추가
 function checkIn(target) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
-    layer_1.classList.remove('visibility-hidden');
+    layers[1].classList.remove('visibility-hidden');
 
-    toggleLayer_0.classList.remove('pb_hover-right-0');
-    toggleLayer_0.classList.add('pb_hover-background-color-grey-221');
-    toggleLayer_0.classList.add('pb_hover-right--30');
-    toggleLayer_0.classList.add('pb-hover-width-80');
+    toggleLayers[0].classList.remove('pb_hover-right-0');
+    toggleLayers[0].classList.add('pb_hover-background-color-grey-221');
+    toggleLayers[0].classList.add('pb_hover-right--30');
+    toggleLayers[0].classList.add('pb-hover-width-80');
 
-    toggleLayer_2.classList.remove('pb_hover-left--1');
-    toggleLayer_2.classList.remove('pb_hover-right--1');
-    toggleLayer_2.classList.add('pb_hover-right-0');
-    toggleLayer_2.classList.add('pb_hover-left--30');
-    toggleLayer_2.classList.add('pb_hover-grey-gradient-img');
-    toggleLayer_2.classList.add('pb_hover-background-color-transparent');
-    toggleLayer_2.classList.add('pb_hover-width-100-31');
+    toggleLayers[2].classList.remove('pb_hover-left--1');
+    toggleLayers[2].classList.remove('pb_hover-right--1');
+    toggleLayers[2].classList.add('pb_hover-right-0');
+    toggleLayers[2].classList.add('pb_hover-left--30');
+    toggleLayers[2].classList.add('pb_hover-grey-gradient-img');
+    toggleLayers[2].classList.add('pb_hover-background-color-transparent');
+    toggleLayers[2].classList.add('pb_hover-width-100-31');
 }
 // 체크아웃 - 날짜 추가
 function checkOut(target) {
     target.classList.remove('pb_hover-right--1');
     target.classList.remove('pb_hover-left--1');
-    layer_1.classList.remove('visibility-hidden');
+    layers[1].classList.remove('visibility-hidden');
 
-    toggleLayer_1.classList.remove('pb_hover-right--1');
-    toggleLayer_1.classList.add('pb_hover-right--30');
-    toggleLayer_1.classList.add('pb_hover-grey-gradient-img-reverse');
-    toggleLayer_1.classList.add('pb_hover-background-color-transparent');
-    toggleLayer_1.classList.add('pb_hover-width-100-31');
+    toggleLayers[1].classList.remove('pb_hover-right--1');
+    toggleLayers[1].classList.add('pb_hover-right--30');
+    toggleLayers[1].classList.add('pb_hover-grey-gradient-img-reverse');
+    toggleLayers[1].classList.add('pb_hover-background-color-transparent');
+    toggleLayers[1].classList.add('pb_hover-width-100-31');
 
-    toggleLayer_3.classList.remove('pb_hover-left-0');
-    toggleLayer_3.classList.add('pb_hover-grey-gradient-img');
-    toggleLayer_3.classList.add('pb_hover-background-color-transparent');
-    toggleLayer_3.classList.add('pb_hover-width-100-29');
-    toggleLayer_3.classList.add('pb_hover-left--30');
-    toggleLayer_3.classList.add('pb_hover-radius-right-32');
+    toggleLayers[3].classList.remove('pb_hover-left-0');
+    toggleLayers[3].classList.add('pb_hover-grey-gradient-img');
+    toggleLayers[3].classList.add('pb_hover-background-color-transparent');
+    toggleLayers[3].classList.add('pb_hover-width-100-29');
+    toggleLayers[3].classList.add('pb_hover-left--30');
+    toggleLayers[3].classList.add('pb_hover-radius-right-32');
 }
 // 여행자 - 게스트 추가
 function traveler(target) {
     target.classList.remove('pb_hover-left-0');
-    layer_2.classList.remove('visibility-hidden');
+    layers[2].classList.remove('visibility-hidden');
 
-    toggleLayer_2.classList.remove('pb_hover-right--1');
-    toggleLayer_2.classList.add('pb_hover-right--30');
-    toggleLayer_2.classList.add('pb_hover-grey-gradient-img-reverse');
-    toggleLayer_2.classList.add('pb_hover-background-color-transparent');
-    toggleLayer_2.classList.add('pb_hover-width-100-31');
+    toggleLayers[2].classList.remove('pb_hover-right--1');
+    toggleLayers[2].classList.add('pb_hover-right--30');
+    toggleLayers[2].classList.add('pb_hover-grey-gradient-img-reverse');
+    toggleLayers[2].classList.add('pb_hover-background-color-transparent');
+    toggleLayers[2].classList.add('pb_hover-width-100-31');
 }
 
 // 선택된 패널에 효과
 function focusedToggleLayer(target) {
-    isPanelFocus = true;
-
     // 전체 검색 패널 배경색 조정
     const searchPanel = document.querySelector('#search-tabpanel');
     searchPanel.classList.remove('background-color-basic');
@@ -180,52 +169,6 @@ function unfocusedToggleLayer(count) {
 }
 
 
-// 패널 focus시 검색 버튼 크기 변경, 그라데이션
-function dynamicHighlightButton() {
-    if (isPanelFocus === true) {
-        const searchButtonSpan = document.createElement('span');
-        const searchButtonSpan2 = document.createElement('span');
-        const searchButtonSpanSpan = document.createElement('span');
-        const searchButtonDiv = dynamicSearchButton.querySelector(':scope > div');
-        searchButtonSpan.classList.add('radius-8');
-        searchButtonSpan.classList.add('height-full');
-        searchButtonSpan.classList.add('width-full');
-        searchButtonSpan.classList.add('overflow-hidden');
-        searchButtonSpan.classList.add('absolute');
-        searchButtonSpan.classList.add('top-0');
-        searchButtonSpan.classList.add('right-0');
-        searchButtonSpan.classList.add('bottom-0');
-        searchButtonSpan.classList.add('left-0');
-        searchButtonSpan.classList.add('block');
-        searchButtonSpan2.classList.add('pointer-none')
-        searchButtonSpanSpan.classList.add('background-position-full');
-        searchButtonSpanSpan.classList.add('block');
-        searchButtonSpanSpan.classList.add('background-size-200');
-        searchButtonSpanSpan.classList.add('height-full');
-        searchButtonSpanSpan.classList.add('width-full');
-        searchButtonSpanSpan.classList.add('min-width-200');
-        searchButtonSpanSpan.classList.add('delay-0ms');
-        searchButtonSpanSpan.classList.add('duration-125ms');
-        searchButtonSpanSpan.classList.add('transition-opacity');
-        searchButtonSpanSpan.classList.add('opacity-0');
-        searchButtonSpanSpan.classList.add('background-image-circle');
-        searchButtonSpanSpan.style.backgroundPosition = 'calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)';
-        dynamicSearchButton.appendChild(searchButtonSpan);
-        searchButtonSpan.appendChild(searchButtonSpanSpan);
-        dynamicSearchButton.appendChild(searchButtonSpan2);
-        searchButtonSpan2.appendChild(searchButtonDiv);
-    }
-    
-}
-
-// 마우스 위치 계산
-function calcMousePosition(event) {
-    const target = event.target;
-    searchButtonSpanSpan.style.setProperty('--mouse-x', event.offsetX);
-    searchButtonSpanSpan.style.setProperty('--mouse-y', event.offsetY);
-
-}
-
 // 요소의 클래스 저장
 const initialClasses = {};
 function storeInitialClasses() {
@@ -235,8 +178,11 @@ function storeInitialClasses() {
     layers.forEach(element => {
         initialClasses[element.id] = Array.from(element.classList);
     });
+    initialClasses[searchTabPanel.id] = Array.from(searchTabPanel.classList);
 }
 
+
+// 요소의 클래스 복구
 function restoreInitialClasses() {
     toggleLayers.forEach(element => {
         element.className = initialClasses[element.id].join(' ');
@@ -244,6 +190,7 @@ function restoreInitialClasses() {
     layers.forEach(element => {
         element.className = initialClasses[element.id].join(' ');
     });
+    searchTabPanel.className = initialClasses[searchTabPanel.id].join(' ');
 }
 
 
@@ -262,15 +209,13 @@ application.addEventListener('click', function (event) {
         checkIn(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(1);
-        dynamicHighlightButton();
     }
     // 체크아웃 - 날짜 추가
     else if (target.id === 'structured-search-input-field-split-dates-1') {
         restoreInitialClasses();
         checkOut(target);
         focusedToggleLayer(target);
-        unfocusedToggleLayer(2);        
-        dynamicHighlightButton();
+        unfocusedToggleLayer(2);
     }
     // 여행자 - 게스트 추가
     else if (target.id === 'structured-search-input-field-guests-button') {
@@ -278,10 +223,18 @@ application.addEventListener('click', function (event) {
         traveler(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(3);
-        dynamicHighlightButton();
-        
     }
 });
+
+//mouseup 이벤트
+application.addEventListener('mouseup', function (event) {
+    const target = event.target;
+    if (target.id !== 'search-tabpanel') {
+        console.log(target);
+        restoreInitialClasses();
+        console.log('33');
+    }
+})
 
 // focusin 이벤트
 application.addEventListener('focusin', function (event) {
@@ -293,7 +246,6 @@ application.addEventListener('focusin', function (event) {
         travelDestination(targetLabel);
         focusedToggleLayer(targetLabel);
         unfocusedToggleLayer(0);
-        dynamicHighlightButton();
     }
 });
 

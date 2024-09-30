@@ -76,8 +76,14 @@
 }
 
 /* width */
+.width-32 {
+    width: 32px;
+}
 .width-48 {
     width: 48px;
+}
+.width-104 {
+    width: 104px;
 }
 .width-full {
     width: 100%;
@@ -248,16 +254,25 @@
 .radius-32 {
     border-radius: 32px;
 }
+.radius-50 {
+    border-radius: 50px;
+}
 .radius-100 {
     border-radius: 100px;
 }
 
 /* border */
+.black-border-176 {
+    border: 1px solid rgb(176, 176, 176);
+}
 .grey-border-211 {
     border: 1px solid rgb(211, 211, 211);
 }
 .grey-border-221 {
     border: 1px solid rgb(221, 221, 221);
+}
+.grey-border-235 {
+    border: 1px solid rgb(235, 235, 235);
 }
 .grey-border-right-221 {
     border-right: 1px solid rgb(221, 221, 221);
