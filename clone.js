@@ -229,12 +229,11 @@ application.addEventListener('click', function (event) {
 //mouseup 이벤트
 application.addEventListener('mouseup', function (event) {
     const target = event.target;
-    if (target.id !== 'search-tabpanel') {
-        console.log(target);
+    const path = event.composedPath();
+    if (path.some((element) => element.id === 'search-tabpanel') === false) {
         restoreInitialClasses();
-        console.log('33');
     }
-})
+});
 
 // focusin 이벤트
 application.addEventListener('focusin', function (event) {
@@ -246,6 +245,8 @@ application.addEventListener('focusin', function (event) {
         travelDestination(targetLabel);
         focusedToggleLayer(targetLabel);
         unfocusedToggleLayer(0);
+        console.log('311113');
+        event.stopPropagation();
     }
 });
 
