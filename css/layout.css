@@ -304,8 +304,25 @@
 .overflow-hidden {
     overflow: hidden;
 }
+.overflow-auto {
+    overflow: auto;
+}
 .overflow-visible {
     overflow: visible;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+.overflow-y-auto {
+    overflow-y: auto;
+}
+.overflow-y-clip {
+    overflow-y: clip;
+}
+
+/* scrollbar-width */
+.scrollbar-width-none {
+    scrollbar-width: none;
 }
 
 /* opacity */

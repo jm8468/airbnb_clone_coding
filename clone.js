@@ -245,8 +245,6 @@ application.addEventListener('focusin', function (event) {
         travelDestination(targetLabel);
         focusedToggleLayer(targetLabel);
         unfocusedToggleLayer(0);
-        console.log('311113');
-        event.stopPropagation();
     }
 });
 
