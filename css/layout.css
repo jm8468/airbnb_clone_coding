@@ -103,6 +103,9 @@
 .max-width-200 {
     max-width: 200px;
 }
+.max-width-full {
+    max-width: 100%;
+}
 
 /* padding */
 .padding-0 {
@@ -177,15 +180,6 @@
 }
 .margin-bottom-12 {
     margin-bottom: 12px;
-}
-
-
-/* gap */
-.column-gap-8 {
-    column-gap: 8px;
-}
-.row-gap-8 {
-    row-gap: 8px;
 }
 
 /* z-index */
@@ -310,11 +304,17 @@
 .overflow-visible {
     overflow: visible;
 }
+.overflow-x-auto {
+    overflow-x: auto;
+}
 .overflow-x-hidden {
     overflow-x: hidden;
 }
 .overflow-y-auto {
     overflow-y: auto;
+}
+.overflow-y-hidden {
+    overflow-y:hidden;
 }
 .overflow-y-clip {
     overflow-y: clip;

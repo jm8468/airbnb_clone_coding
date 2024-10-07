@@ -28,9 +28,9 @@
 </head>
 
 <body>
-    <div id='js-application'>
+    <div id='js-application' class="relative">
         <!-- 헤더 부분 -->
-        <header style="position: sticky; top: 0; left: 0; z-index: 100; background-color: rgb(255, 255, 255);">
+        <header style="position: sticky; top: 0; left: 0; z-index: 100; background-color: rgb(255, 255, 255); height: 168px;" class="grey-border-bottom">
             <div class="height-80 flex-container justify-content-between relative page-padding z-index-1">
                 <!-- airbnb 로고 -->
                 <div style="flex-basis: 140px;" class="height-80 inline-flex-container flex-grow-1 flex-shrink-0">
@@ -58,7 +58,7 @@
                 <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
                 <div class="flex-grow-0 flex-shrink-1 flex-basis-auto height-auto min-width-348 padding-0-24">
                     <div
-                        class="page-padding width-full absolute top-0 left-0 grey-border-bottom relative z-index-2 pointer-none">
+                        class="page-padding width-full absolute top-0 left-0 relative z-index-2 pointer-none">
                         <div class="pointer-none padding-bottom-16">
                             <div style="max-width: 850px;" class="pointer-none margin-0-auto">
                                 <!-- 숙소 / 체험 / 온라인 체험 -->
@@ -70,7 +70,7 @@
                                             <button
                                                 class="experience-button transparent-button align-items-start text-center width-full height-full relative">
                                                 <div
-                                                    class="font-black font-600 font-16px highlight-text-black-34 margin-10-16">
+                                                    class="font-black font-500 font-16px highlight-text-black-34 margin-10-16">
                                                     <span>숙소</span>
                                                 </div>
                                             </button>
@@ -85,18 +85,6 @@
                                                 </div>
                                             </button>
                                         </div>
-                                    </div>
-                                    <!-- 온라인 체험 -->
-                                    <div class="height-44 pointer-auto z-index-0 relative">
-                                        <a href="https://www.airbnb.co.kr/s/experiences/online"
-                                            class="block height-full relative">
-                                            <div class="block-inline height-full">
-                                                <div
-                                                    class="font-grey-113 font-16px font-400 block highlight-text-black-34 margin-12-16">
-                                                    <span>온라인 체험</span>
-                                                </div>
-                                            </div>
-                                        </a>
                                     </div>
                                 </div>
                                 <!-- 여행지 검색 / 날짜 추가 / 게스트 추가 -->
@@ -114,7 +102,7 @@
                                                     for="bigsearch-query-location-input">
                                                     <div class="z-index-1 relative">
                                                         <div
-                                                            class="line-height-16px font-12px font-600 padding-bottom-2">
+                                                            class="line-height-16px font-12px font-500 padding-bottom-2">
                                                             여행지</div>
                                                         <input
                                                             class="line-height-18px cursor-text block width-full transparent-button ph_font-grey-113 font-black font-14px font-600 ph_font-400 padding-0"
@@ -1533,7 +1521,7 @@
                                         </div>
                                         <div class="height-32 grey-border-right-221 align-self-center height-32"></div>
                                         <!-- 체크인·아웃 / 날짜 추가 -->
-                                        <div
+                                        <div 
                                             class="flex-container justify-content-between align-items-center flex-basis-zero flex-grow-1 flex-shrink-0">
                                             <div class="flex-basis-zero flex-grow-1 flex-shrink-0 relative margin--1">
                                                 <div id="structured-search-input-field-split-dates-0"
@@ -1541,7 +1529,7 @@
                                                     role="button" tabindex="0" aria-expanded="false">
                                                     <div class="z-index-1 cursor-pointer padding-14-24 text-left relative pointer-none">
                                                         <div
-                                                            class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                            class="text font-black font-12px font-500 padding-bottom-2 line-height-16px">
                                                             체크인
                                                         </div>
                                                         <div
@@ -1624,7 +1612,7 @@
                                                     role="button" tabindex="0" aria-expanded="false">
                                                     <div class="padding-14-24 text-left relative z-index-1 cursor-pointer pointer-none">
                                                         <div
-                                                            class="text font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                            class="text font-black font-12px font-500 padding-bottom-2 line-height-16px">
                                                             체크아웃
                                                         </div>
                                                         <div
@@ -1644,7 +1632,7 @@
                                                 role="button" tabindex="0" aria-expanded="false">
                                                 <div class="padding-14-24 relative z-index-1 cursor-pointer pointer-none">
                                                     <div
-                                                        class="font-black font-12px font-600 padding-bottom-2 line-height-16px">
+                                                        class="font-black font-12px font-500 padding-bottom-2 line-height-16px">
                                                         여행자
                                                     </div>
                                                     <div class="font-grey-113 font-14px font-400 line-height-18px">
@@ -1760,7 +1748,7 @@
                         class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
                         <!-- 호스트 링크 -->
                         <a href="https://www.airbnb.co.kr/host/homes" class="padding-12 relative z-index-1">
-                            <span class="font-black font-14px font-600">당신의 공간을 에어비엔비하세요</span>
+                            <span class="font-black font-14px font-500">당신의 공간을 에어비엔비하세요</span>
                         </a>
                         <!-- 언어 설정 -->
                         <div>
@@ -1807,139 +1795,259 @@
         </header>
 
         <!-- 여행지 상세 메뉴 -->
-        <div style="top: 310px;" class="sticky page-padding padding-top-12">
-            <div class="nav-grid-container">
-                <div>
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt=""
-                                width="24" height="24">
+        <div style="top: 68px; background-position-x: 0%; background-position-y: 0%;" class="sticky page-padding padding-top-12">
+            <div class="grid-container grid-template-columns-full">
+                <div class="flex-container column-gap-16 align-items-center">
+                    <!-- 상세 여행지 종류 -->
+                    <div style="scrollbar-width: none;" class="grid-container overflow-x-auto grid-auto-flow-column column-gap-32 justify-content-start flex-basis-zero flex-grow-1 flex-shrink-1">
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>한적한 시골</span>
+                            </div>
                         </div>
-                        <div>
-                            <span>최고의 전망</span>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>최고의 전망</span>
+                            </div>
                         </div>
-
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>한옥</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>캠핑장</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>키즈</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>멋진 수영장</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>해변 바로 앞</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <span>방</span>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>기상천외한 숙소</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <span>국립공원</span>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>캐슬</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>통나무집</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <span>농장</span>
+                        </div>
+                        
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <span>초소형 주택</span>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <span>인기 급상승</span>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>Luxe</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/9a2ca4df-ee90-4063-b15d-0de7e4ce210a.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>속세를 벗어난 숙소</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>호숫가</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>호수 근처</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/827c5623-d182-474a-823c-db3894490896.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>료칸</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>디자인</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>저택</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>트리하우스</span>
+                            </div>
+                        </div>
+    
+                        <div class="nav-item-frame">
+                            <div>
+                                <img src="https://a0.muscache.com/pictures/8eccb972-4bd6-43c5-ac83-27822c0d3dcd.jpg" alt=""
+                                    width="24" height="24">
+                            </div>
+                            <div>
+                                <span>그랜드피아노</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>초소형 주택</span>
+                    <!-- 필터 -->
+                    <div style="width: fit-content;">
+                        <button class="background-color-transparent radius-12 grey-border-221 padding-12-0">
+                            <div style="padding: 2px 16px 0px 16px;" class="flex-container column-gap-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
+                                    aria-hidden="true" role="presentation" focusable="false">
+                                    <path fill="none"
+                                        d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3">
+                                    </path>
+                                </svg>
+                                <span class="font-black font-12px font-500">필터</span>
+                            </div>
+                        </button>
                     </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>해변 근처</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>농장</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/c8bba3ed-34c0-464a-8e6e-27574d20e4d2.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>스키</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>방</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>한옥</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>캠핑장</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>국립공원</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>인기 급상승</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>서핑</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/687a8682-68b3-4f21-8d71-3c3aef6c1110.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>보트</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/7ff6e4a1-51b4-4671-bc9a-6f523f196c61.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>리아드</span>
-                    </div>
-
-                    <div class="nav-item-frame">
-                        <div>
-                            <img src="https://a0.muscache.com/pictures/e4b12c1b-409b-4cb6-a674-7c1284449f6e.jpg" alt=""
-                                width="24" height="24">
-                        </div>
-                        <span>키클라데스 주택</span>
-                    </div>
-                </div>
-                <div style="width: fit-content;">
-                    <button class="background-color-transparent radius-12 grey-border-221 padding-12-0">
-                        <div style="padding: 2px 16px 0px 16px;" class="flex-container column-gap-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
-                                aria-hidden="true" role="presentation" focusable="false">
-                                <path fill="none"
-                                    d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3">
-                                </path>
-                            </svg>
-                            <span class="font-black font-12px font-600">필터</span>
-                        </div>
-                    </button>
                 </div>
             </div>
+            
 
         </div>
 

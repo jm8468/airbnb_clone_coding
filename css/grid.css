@@ -1,4 +1,46 @@
 @import 'variables.css';
+/* grid */
+.grid-container {
+    display: grid;
+}
+
+/* grid-columns */
+.grid-template-columns-full {
+    grid-template-columns: 100%;
+}
+.grid-auto-columns-max-content {
+    grid-auto-columns: max-content;
+}
+.grid-auto-flow-column {
+    grid-auto-flow: column;
+}
+
+/* column-gap */
+.column-gap-8 {
+    column-gap: 8px;
+}
+.column-gap-16 {
+    column-gap: 16px;
+}
+.column-gap-32 {
+    column-gap: 32px;
+}
+
+/* row-gap */
+.row-gap-8 {
+    row-gap: 8px;
+}
+
+/* grid-column-start */
+.grid-column-start-1 {
+    grid-column-start: 1;
+}
+
+/* grid-column-end */
+.grid-column-end-2 {
+    grid-column-end: 2;
+}
+
 .search-by-region-grid-container {
     display: grid;
     grid-auto-rows: 0px;
@@ -6,31 +48,6 @@
     grid-template-rows: repeat(1, minmax(0, 1fr));
     row-gap: 6px;
     overflow: hidden;
-}
-
-.nav-grid-container {
-    display: grid;
-    grid-auto-columns: max-content;
-    grid-auto-flow: column;
-    column-gap: 16px;
-    align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    max-width: 100%;
-}
-
-.nav-grid-container>div:first-child {
-    display: grid;
-    overflow-x: auto;
-    overflow-y: hidden;
-    grid-auto-columns: max-content;
-    grid-auto-flow: column;
-    column-gap: 32px;
-    contain: none;
-    justify-content: flex-start;
-    flex-basis: 0%;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
 
 .list-grid-container {

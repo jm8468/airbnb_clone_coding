@@ -1,32 +1,14 @@
-여행지 : pb_hover-height-32 pb_hover-grey-border-right-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right-0 pb_hover-margin-top--16 
-pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_margin-right-2 pa_hover-grey-235 block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border cursor-pointer padding-14-32"
-
-
-체크인 : z-index-1 pb_hover-height-32 pb_hover-grey-border-right-255 pb_hover-grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right--1 pb_hover-left--1 pb_hover-margin-top--16 
-pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_hover-grey-235 padding-1 radius-32 transparent-border relative"
-
-
-체크아웃 : pb_hover-height-32 pb_hover-grey-border-right-255 pb_hover-grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-right--1 pb_hover-left--1 pb_hover-margin-top--16 
-            pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_hover-grey-235 padding-1 radius-32 transparent-border relative z-index-1"
-
-여행자 : pb_hover-height-32 pb_hover-grey-border-left-255 pb_hover-align-self-center pb_hover-absolute pb_hover-top-33 pb_hover-left-0 pb_hover-margin-top--16 
-            pa_hover-grey-235 pa_background-padding-box pa_radius-32 pa_transparent-border pa_cursor-pointer pa_block pa_pointer-auto pa_absolute pa_top-0 pa_bottom-0 pa_left-0 pa_right-0 pa_z-index-0 pa_margin-left-2 pa_user-select-auto pa_hover-grey-235 padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
-
-
-            --------------------- --------------------- --------------------- ---------------------
-
-
-            여행지 :  pb_hover-grey-border-right-255  pb_hover-right-0 
-                  pa_margin-right-2  block flex-basis-zero flex-grow-1 flex-shrink-0 radius-32 transparent-border cursor-pointer padding-14-32"
-            
-            
-            체크인 : z-index-1 pb_hover-grey-border-right-255 pb_hover-grey-border-left-255 pb_hover-right--1 pb_hover-left--1 
-                        padding-1 radius-32 transparent-border relative"
-            
-            
-            체크아웃 :  pb_hover-grey-border-right-255 pb_hover-grey-border-left-255 pb_hover-right--1 pb_hover-left--1 
-                        padding-1 radius-32 transparent-border relative z-index-1"
-            
-            여행자 :  pb_hover-grey-border-left-255  pb_hover-left-0
-                        pa_margin-left-2 pa_user-select-auto pa_hover-grey-235 padding-1 flex-basis-zero flex-grow-1 flex-shrink-0"
-            
+feat	새로운 기능 추가
+fix	버그 수정
+docs	문서 수정
+style	코드 스타일 변경 (코드 포매팅, 세미콜론 누락 등)
+기능 수정이 없는 경우
+design	사용자 UI 디자인 변경 (CSS 등)
+test	테스트 코드, 리팩토링 테스트 코드 추가
+refactor	코드 리팩토링
+build	빌드 파일 수정
+ci	CI 설정 파일 수정
+perf	성능 개선
+chore	빌드 업무 수정, 패키지 매니저 수정 (gitignore 수정 등)
+rename	파일 혹은 폴더명을 수정만 한 경우
+remove	파일을 삭제만 한 경우
