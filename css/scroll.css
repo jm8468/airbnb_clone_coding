@@ -1,0 +1,12 @@
+/* scrollbar-width */
+.scrollbar-width-none {
+    scrollbar-width: none;
+}
+
+/* scroll-snap */
+.scroll-align-start {
+    scroll-snap-align: start;
+}
+.scroll-stop-normal {
+    scroll-snap-stop: normal;
+}

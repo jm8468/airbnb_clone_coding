@@ -1,5 +1,5 @@
 @import 'variables.css';
-.ph_font-black::placeholder {
+.ph_font-black-34::placeholder {
     color: rgb(34, 34, 34);
 }
 

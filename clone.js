@@ -17,7 +17,7 @@ function tabButton(event) {
     // aria-selected가 true인 버튼만 강조하는 기능
     buttons.forEach((tab, index) => {
         if (tab.getAttribute("aria-selected") === "false") {
-            tab.classList.remove("font-black");
+            tab.classList.remove("font-black-34");
             tab.classList.remove("pa_absolute");
             tab.classList.remove('pa_height-2');
             tab.classList.remove('pa_width-calc-100-20');
@@ -29,7 +29,7 @@ function tabButton(event) {
         }
         else {
             tab.classList.remove("font-grey-113");
-            tab.classList.add("font-black");
+            tab.classList.add("font-black-34");
             tab.classList.add("pa_absolute");
             tab.classList.add('pa_height-2');
             tab.classList.add('pa_width-calc-100-20');
@@ -120,7 +120,7 @@ function focusedToggleLayer(target) {
     target.classList.remove('pb_hover-align-self-center');
     target.classList.remove('pb_hover-top-33');
     target.classList.remove('pb_hover-margin-top--16');
-    target.classList.remove('pa_hover-grey-235');
+    target.classList.remove('pa_hover-background-color-235');
     target.classList.remove('pa_transparent-border');
     target.classList.add('pa_grey-border-221');
     target.classList.add('pa_search-panel-shadow');
@@ -150,10 +150,10 @@ function unfocusedToggleLayer(count) {
         if (count !== index) {
             childText.classList.remove('font-grey-113');
             childText.classList.remove('ph_font-grey-113');
-            childText.classList.add('font-black');
-            childText.classList.add('ph_font-black');
-            button.classList.remove('pa_hover-grey-235');
-            button.classList.add('pa_hover-grey-221');
+            childText.classList.add('font-black-34');
+            childText.classList.add('ph_font-black-34');
+            button.classList.remove('pa_hover-background-color-235');
+            button.classList.add('pa_background-color-221');
             if (count < 1) {
                 button.classList.add('pb_hover-grey-border-right-235');
             }

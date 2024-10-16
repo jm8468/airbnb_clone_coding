@@ -16,23 +16,24 @@
 }
 
 /* hover하면 배경 하이라이트 */
-.highlight-grey-221:hover {
+.hover-background-color-221:hover {
     background-color: rgb(221, 221, 221);
 }
-.highlight-grey-235:hover {
+.hover-background-color-235:hover {
     background-color: rgb(235, 235, 235);
 }
-.highlight-grey-240:hover {
-    background-color: rgb(240, 240, 240);
-}
-.highlight-grey-247:hover {
+.hover-background-color-247:hover {
     background-color: rgb(247, 247, 247);
 }
 
 /* hover하면 폰트 색상 하이라이트 */
-.highlight-text-black-34:hover {
+.hover-font-black-0:hover {
+    color: rgb(0, 0, 0);
+}
+.hover-font-black-34:hover {
     color: rgb(34, 34, 34);
 }
+
 
 /* hover하면 밑줄 하이라이트 */
 .highlight-underline:hover {

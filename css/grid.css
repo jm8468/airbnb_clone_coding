@@ -8,11 +8,19 @@
 .grid-template-columns-full {
     grid-template-columns: 100%;
 }
+.grid-template-columns-24-8 {
+    grid-template-columns: 24px 8px;
+}
 .grid-auto-columns-max-content {
     grid-auto-columns: max-content;
 }
 .grid-auto-flow-column {
     grid-auto-flow: column;
+}
+
+/* grid-rows */
+.grid-template-rows-24-16 {
+    grid-template-rows: 24px 16px;
 }
 
 /* column-gap */

@@ -56,7 +56,10 @@
 }
 
 /* font 색상 */
-.font-black {
+.font-black-0 {
+    color: rgb(0, 0, 0);
+}
+.font-black-34 {
     color: rgb(34, 34, 34);
 }
 .font-grey-106 {
