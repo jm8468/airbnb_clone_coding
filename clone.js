@@ -125,7 +125,6 @@ function focusedToggleLayer(target) {
     target.classList.add('pa_grey-border-221');
     target.classList.add('pa_search-panel-shadow');
     target.classList.add('pa_background-color-basic');
-    target.classList.add('pa_background-color-221');
     target.classList.add('z-index-3');
 }
 
@@ -153,7 +152,7 @@ function unfocusedToggleLayer(count) {
             childText.classList.add('font-black-34');
             childText.classList.add('ph_font-black-34');
             button.classList.remove('pa_hover-background-color-235');
-            button.classList.add('pa_background-color-221');
+            button.classList.add('pa_hover-background-color-221');
             if (count < 1) {
                 button.classList.add('pb_hover-grey-border-right-235');
             }

@@ -36,13 +36,18 @@
 
 
 /* hover하면 밑줄 하이라이트 */
-.highlight-underline:hover {
+.hover-underline:hover {
     text-decoration: underline;
 }
 
 /* hover하면 경계선 하이라이트 */
-.active-black-border-000:hover {
+.hover-black-border-000:hover {
     border-color: rgb(0, 0, 0);
+}
+
+/* hover하면 opacity 변경 */
+.hover-opacity-10:hover {
+    opacity: 1;
 }
 
 /* active하면 경계선 하이라이트 */

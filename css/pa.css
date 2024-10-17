@@ -41,6 +41,7 @@
     content: "";
 }
 
+
 /* radius */
 .pa_radius-32::after {
     border-radius: 32px;
@@ -73,6 +74,10 @@
 /* top */
 .pa_top-0::after {
     top: 0px;
+    content: "";
+}
+.pa_top-100p-12::after {
+    top: calc(100% + 12px);
     content: "";
 }
 

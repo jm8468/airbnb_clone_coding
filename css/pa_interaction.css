@@ -4,7 +4,22 @@
     content: "";
 }
 
-.pa_background-color-221:hover::after {
+.pa_hover-background-color-221:hover::after {
     background-color: rgb(221, 221, 221);
     content: '';
+}
+
+.pa_hover-background-color-106:hover::after {
+    background-color: rgb(106, 106, 106);
+    content: '';
+}
+
+.pa_child_hover-background-color-0:hover div>div::after {
+    background-color: rgb(0, 0, 0);
+    content: "";
+}
+
+.pa_child_hover-opacity-1:hover div>div::after {
+    opacity: 0.1;
+    content: "";
 }
