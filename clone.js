@@ -180,7 +180,6 @@ function storeInitialClasses() {
     initialClasses[searchTabPanel.id] = Array.from(searchTabPanel.classList);
 }
 
-
 // 요소의 클래스 복구
 function restoreInitialClasses() {
     toggleLayers.forEach(element => {
@@ -192,6 +191,19 @@ function restoreInitialClasses() {
     searchTabPanel.className = initialClasses[searchTabPanel.id].join(' ');
 }
 
+// 스크롤바의 양 끝에 접근 시 스크롤 버튼 숨김
+function hiddenScrollButton(target) {
+    const scrollLeft = target.scrollLeft;
+    const scrollWidth = target.scrollWidth;
+    const clientWidth = target.clientWidth;
+    
+    if (scrollLeft === 0) {
+        target.previousElementSibling.hidden = true;
+    }
+    if (scrollLeft + clientWidth >= scrollWidth) {
+        target.nextElementSibling.hidden = true;
+    }
+}
 
 
 storeInitialClasses();
@@ -246,6 +258,15 @@ application.addEventListener('focusin', function (event) {
         unfocusedToggleLayer(0);
     }
 });
+
+// scroll 이벤트 
+application.addEventListener('scroll', function (event) {
+    const target = event.target;
+    console.log(333);
+    if (target.id === 'category-item-scrollbar') {
+        hiddenScrollButton(event);
+    }
+})
 
 
 
