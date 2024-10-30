@@ -2,6 +2,7 @@ const toggleLayers = [document.querySelector('#structured-search-input-field-pla
 const layers = [document.querySelector('#structured-search-input-field-query-panel'), document.querySelector('#structured-search-input-field-dates-panel'), document.querySelector('#structured-search-input-field-guests-panel')];
 const searchTabPanel = document.querySelector('#search-tabpanel');
 const application = document.querySelector('#js-application');
+const category_item_scrollbar = document.querySelector('#category-item-scrollbar');
 
 function tabButton(event) {
     const button = event.target;
@@ -192,16 +193,30 @@ function restoreInitialClasses() {
 }
 
 // 스크롤바의 양 끝에 접근 시 스크롤 버튼 숨김
-function hiddenScrollButton(target) {
+function hiddenScrollButton(event) {
+    const target = event.target;
     const scrollLeft = target.scrollLeft;
     const scrollWidth = target.scrollWidth;
     const clientWidth = target.clientWidth;
-    
     if (scrollLeft === 0) {
-        target.previousElementSibling.hidden = true;
+        target.previousElementSibling.classList.add('visibility-hidden');
+        target.previousElementSibling.classList.add('opacity-0');
+        target.previousElementSibling.classList.remove('opacity-10');
+    }
+    else {
+        target.previousElementSibling.classList.remove('visibility-hidden');
+        target.previousElementSibling.classList.add('opacity-10');
+        target.previousElementSibling.classList.remove('opacity-0');
     }
     if (scrollLeft + clientWidth >= scrollWidth) {
-        target.nextElementSibling.hidden = true;
+        target.nextElementSibling.classList.add('visibility-hidden');
+        target.nextElementSibling.classList.add('opacity-0');
+        target.nextElementSibling.classList.remove('opacity-10');
+    }
+    else {
+        target.nextElementSibling.classList.remove('visibility-hidden');
+        target.nextElementSibling.classList.add('opacity-10');
+        target.nextElementSibling.classList.remove('opacity-0');
     }
 }
 
@@ -260,12 +275,8 @@ application.addEventListener('focusin', function (event) {
 });
 
 // scroll 이벤트 
-application.addEventListener('scroll', function (event) {
-    const target = event.target;
-    console.log(333);
-    if (target.id === 'category-item-scrollbar') {
-        hiddenScrollButton(event);
-    }
+category_item_scrollbar.addEventListener('scroll', function (event) {
+    hiddenScrollButton(event);
 })
 
 
