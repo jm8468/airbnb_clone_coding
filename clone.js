@@ -220,6 +220,22 @@ function hiddenScrollButton(event) {
     }
 }
 
+function categoryItemLeftScroll() {
+    const scrollBar = document.querySelector('#category-item-scrollbar');
+    scrollBar.scrollTo({
+        left: scrollBar.scrollLeft - 830,
+        behavior: 'smooth'
+    })
+   
+}
+function categoryItemRightScroll() {
+    const scrollBar = document.querySelector('#category-item-scrollbar');
+    scrollBar.scrollTo({
+        left: scrollBar.scrollLeft + 830,
+        behavior: 'smooth'
+    })
+}
+
 
 storeInitialClasses();
 // click 이벤트
@@ -249,6 +265,14 @@ application.addEventListener('click', function (event) {
         traveler(target);
         focusedToggleLayer(target);
         unfocusedToggleLayer(3);
+    }
+    // 카테고리 아이템 스크롤바의 왼쪽 스크롤
+    else if (target.getAttribute('data-shared-element-id') === 'previous-button') {
+        categoryItemLeftScroll();
+    }
+    // 카테고리 아이템 스크롤바의 오른쪽 스크롤
+    else if (target.getAttribute('data-shared-element-id') === 'next-button') {
+        categoryItemRightScroll();
     }
 });
 
