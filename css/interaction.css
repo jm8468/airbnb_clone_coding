@@ -55,4 +55,14 @@
     border-color: rgb(0, 0, 0);
 }
 
+.child_background-color-0 div>div {
+    background-color: rgb(0, 0, 0);
+}
+
+.child_opacity-10 div>div {
+    opacity: 1;
+}
+
+
+
 

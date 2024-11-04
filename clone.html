@@ -1688,7 +1688,7 @@
                                                     </section>
                                                     <div
                                                         class="flex-container align-items-center justify-content-between height-32 width-104">
-                                                        <button
+                                                        <button data-testid="stepper-adults-decrease-button"
                                                             class="radius-50 grey-border-235 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
                                                             <span style="padding: 5px; width: 22px; height: 22px;"
                                                                 class="font-grey-235">
@@ -1704,7 +1704,7 @@
                                                         <div>
                                                             <span id="stepper-adults-value">0</span>
                                                         </div>
-                                                        <button
+                                                        <button data-testid="stepper-adults-increase-button"
                                                             class="radius-50 black-border-176 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
                                                             <span style="padding: 5px; width: 22px; height: 22px;"
                                                                 class="font-grey-106">
@@ -1722,7 +1722,7 @@
                                                     </div>
                                                 </div>
                                                 <div style="padding: 24px 4px 24px 0px;"
-                                                    class="flex-container grey-line">
+                                                    class="flex-container grey-line justify-content-between align-items-center">
                                                     <section>
                                                         <div>
                                                             <h1 style="margin: 0px;" class="text font-16px font-500">어린이
@@ -1732,9 +1732,43 @@
                                                             class="text font-14px font-400 line-height-18px font-grey-106">
                                                             2~12세</div>
                                                     </section>
+                                                    <div
+                                                        class="flex-container align-items-center justify-content-between height-32 width-104">
+                                                        <button data-testid="stepper-children-decrease-button"
+                                                            class="radius-50 grey-border-235 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-235">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div>
+                                                            <span id="stepper-children-value">0</span>
+                                                        </div>
+                                                        <button data-testid="stepper-children-increase-button"
+                                                            class="radius-50 black-border-176 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-106">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path
+                                                                        d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z">
+                                                                    </path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 <div style="padding: 24px 4px 24px 0px;"
-                                                    class="flex-container grey-line">
+                                                    class="flex-container grey-line justify-content-between align-items-center">
                                                     <section>
                                                         <div>
                                                             <h1 style="margin: 0px;" class="text font-16px font-500">유아
@@ -1744,9 +1778,43 @@
                                                             class="text font-14px font-400 line-height-18px font-grey-106">
                                                             2세 미만</div>
                                                     </section>
+                                                    <div
+                                                        class="flex-container align-items-center justify-content-between height-32 width-104">
+                                                        <button data-testid="stepper-infants-decrease-button"
+                                                            class="radius-50 grey-border-235 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-235">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div>
+                                                            <span id="stepper-infants-value">0</span>
+                                                        </div>
+                                                        <button data-testid="stepper-infants-increase-button"
+                                                            class="radius-50 black-border-176 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-106">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path
+                                                                        d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z">
+                                                                    </path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 <div style="padding: 24px 4px 24px 0px;"
-                                                    class="flex-container grey-line">
+                                                    class="flex-container grey-line justify-content-between align-items-center">
                                                     <section>
                                                         <div>
                                                             <h1 style="margin: 0px;" class="text font-16px font-500">
@@ -1755,11 +1823,45 @@
                                                         </div>
                                                         <div style="padding-top: 4px;"
                                                             class="text font-14px font-400 line-height-18px font-grey-106">
-                                                            <button>
+                                                            <button class="background-color-transparent font-grey-106 underline">
                                                                 보조동물을 동반하시나요?
                                                             </button>
                                                         </div>
                                                     </section>
+                                                    <div
+                                                        class="flex-container align-items-center justify-content-between height-32 width-104">
+                                                        <button data-testid="stepper-pets-decrease-button"
+                                                            class="radius-50 grey-border-235 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-235">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div>
+                                                            <span id="stepper-pets-value">0</span>
+                                                        </div>
+                                                        <button data-testid="stepper-pets-increase-button"
+                                                            class="radius-50 black-border-176 background-color-basic width-32 height-32 flex-container align-items-center justify-content-center">
+                                                            <span style="padding: 5px; width: 22px; height: 22px;"
+                                                                class="font-grey-106">
+                                                                <svg viewBox="0 0 12 12"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    aria-hidden="true" role="presentation"
+                                                                    focusable="false"
+                                                                    style="display: block; height: 12px; width: 12px; fill: currentcolor;">
+                                                                    <path
+                                                                        d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z">
+                                                                    </path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1848,7 +1950,7 @@
                         <div id="category-item-scrollbar" style="height: 78px; margin-right: 20px;"
                             class="grid-container hidden-scrollbar overflow-x-auto overflow-y-hidden grid-auto-flow-column column-gap-32 justify-content-start flex-basis-zero flex-grow-1 flex-shrink-1">
                             <div style="margin-top: 12px; margin-right: 8px; margin-bottom: 10px; padding: 4px 0px; transition-behavior: normal; transition-delay: 0s; transition-duration: 0.2s; transition-property: opacity; transition-timing-function: cubic-bezier(0.2, 0, 0, 1);"
-                                class="radius-8 width-max background-color-transparent font-500 font-12px line-height-16px font-black-0 opacity-6 hover-font-black-0 hover-opacity-10 pa_child_hover-background-color-0 pa_child_hover-opacity-1">
+                                class="opacity-10 radius-8 width-max background-color-transparent font-500 font-12px line-height-16px font-black-0 hover-font-black-0 hover-opacity-10 pa_child_hover-background-color-0 pa_child_hover-opacity-1">
                                 <div id="category-item--기상천외한 숙소--checked"
                                     class="flex-container flex-column row-gap-8 text-center min-width-56 align-items-center">
                                     <img src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"

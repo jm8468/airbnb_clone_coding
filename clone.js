@@ -236,6 +236,34 @@ function categoryItemRightScroll() {
     })
 }
 
+function decreaseGuest(target, guest) {
+
+}
+
+function increaseGuest(target, guest) {
+
+}
+
+function guestIndicator() {
+    const adultsDecreaseButton = document.querySelector('[data-testid = "stepper-adults-decrease-button"]');
+    const adults = parseInt(document.querySelector('#stepper-adults-value').textContent, 10);
+    const children = parseInt(document.querySelector('#stepper-children-value').textContent, 10);
+    const infants = parseInt(document.querySelector('#stepper-infants-value').textContent, 10);
+    const pets = parseInt(document.querySelector('#stepper-pets-value').textContent, 10);
+    const sum = adults + children + infants + pets;
+    console.log(adultsDecreaseButton);
+    let guestText = document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent;
+    if (sum === 0) guestText = '게스트 추가';
+    else {
+        guestText = '게스트 ' + adults + children + '명';
+        if (infants >= 1) guestText += ', 유아 ' + infants + '명';
+        if (pets >= 1) guestText += ', 반려동물 ' + pets + '마리';
+    }
+
+    if (children + infants + pets === 0 && adults === 1) adultsDecreaseButton.classList.add('pointer-none');
+    else adultsDecreaseButton.classList.remove('pointer-none');
+    
+}
 
 storeInitialClasses();
 // click 이벤트
@@ -273,6 +301,40 @@ application.addEventListener('click', function (event) {
     // 카테고리 아이템 스크롤바의 오른쪽 스크롤
     else if (target.getAttribute('data-shared-element-id') === 'next-button') {
         categoryItemRightScroll();
+    }
+    //성인 게스트 수
+    else if (target.getAttribute('data-testid') === 'stepper-adults-decrease-button') {
+        guestIndicator();
+    }   
+    else if (target.getAttribute('data-testid') === 'stepper-adults-increase-button') {
+        guestIndicator();
+    }
+    //어린이 게스트 수
+    else if (target.getAttribute('data-testid') === 'stepper-children-decrease-button') {
+        
+        guestIndicator();
+    }
+    else if (target.getAttribute('data-testid') === 'stepper-children-increase-button') {
+        
+        guestIndicator();
+    }
+    //유아 게스트 수
+    else if (target.getAttribute('data-testid') === 'stepper-infants-decrease-button') {
+        
+        guestIndicator();
+    }
+    else if (target.getAttribute('data-testid') === 'stepper-infants-increase-button') {
+        
+        guestIndicator();
+    }
+    //반려동물 게스트 수
+    else if (target.getAttribute('data-testid') === 'stepper-pets-decrease-button') {
+        
+        guestIndicator();
+    }
+    else if (target.getAttribute('data-testid') === 'stepper-pets-increase-button') {
+        
+        guestIndicator();
     }
 });
 
