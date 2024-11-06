@@ -250,28 +250,39 @@ function modifyGuest(target) {
 
 function guestIndicator() {
     const adultsDecreaseButton = document.querySelector('[data-testid = "stepper-adults-decrease-button"]');
-    const adults = parseInt(document.querySelector('#stepper-adults-value').textContent, 10);
+    let adults = parseInt(document.querySelector('#stepper-adults-value').textContent, 10);
     const children = parseInt(document.querySelector('#stepper-children-value').textContent, 10);
     const infants = parseInt(document.querySelector('#stepper-infants-value').textContent, 10);
     const pets = parseInt(document.querySelector('#stepper-pets-value').textContent, 10);
     const sum = adults + children + infants + pets;
-    let guestText = document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent;
-    if (sum === 0) guestText = '게스트 추가';
+
+    // 성인이 아닌 게스트만 있으면 성인 1명 동행 강제
+    if (children + infants + pets > 0 && adults <= 1) {
+        adults = 1;
+        document.querySelector('#stepper-adults-value').textContent = adults.toString();
+        adultsDecreaseButton.classList.add('cursor-not-allowed');
+        adultsDecreaseButton.disabled = true;
+    } 
     else {
-        guestText = '게스트 ' + adults + children + '명';
-        if (infants >= 1) guestText += ', 유아 ' + infants + '명';
-        if (pets >= 1) guestText += ', 반려동물 ' + pets + '마리';
+        adultsDecreaseButton.classList.remove('cursor-not-allowed');
+        adultsDecreaseButton.disabled = false;
     }
 
-    if (children + infants + pets === 0 && adults === 1) adultsDecreaseButton.classList.add('pointer-none');
-    else adultsDecreaseButton.classList.remove('pointer-none');
-    
+    if (sum === 0) document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent = '게스트 추가';
+    else {
+        document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent = '게스트 ' + (adults + children) + '명';
+        if (infants >= 1) document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent += ', 유아 ' + infants + '명';
+        if (pets >= 1) document.querySelector('#structured-search-input-field-guests-button > div > div:last-child').textContent += ', 반려동물 ' + pets + '마리';
+    }
 }
 
 storeInitialClasses();
 // click 이벤트
 application.addEventListener('click', function (event) {
     const target = event.target;
+    const closestGuestButton = target.closest('button[data-testid*="stepper"]');
+    console.log(target);
+    console.log(closestGuestButton);
     // 탭 변경
     if (target.id.includes('tab-seo') || target.id.includes('tab-placesByAreasTabId')) {
         tabButton(event);
@@ -306,52 +317,52 @@ application.addEventListener('click', function (event) {
         categoryItemRightScroll();
     }
     //성인 게스트 수
-    else if (target.getAttribute('data-testid') === 'stepper-adults-decrease-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-adults-decrease-button') {
         let value = parseInt(document.querySelector('#stepper-adults-value').textContent);
         value = (value - 1).toString();
         document.querySelector('#stepper-adults-value').textContent = value;
         guestIndicator();
     }   
-    else if (target.getAttribute('data-testid') === 'stepper-adults-increase-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-adults-increase-button') {
         let value = parseInt(document.querySelector('#stepper-adults-value').textContent);
         value = (value + 1).toString();
         document.querySelector('#stepper-adults-value').textContent = value;        
         guestIndicator();
     }
     //어린이 게스트 수
-    else if (target.getAttribute('data-testid') === 'stepper-children-decrease-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-children-decrease-button') {
         let value = parseInt(document.querySelector('#stepper-children-value').textContent);
         value = (value - 1).toString();
         document.querySelector('#stepper-children-value').textContent = value;
         guestIndicator();
     }
-    else if (target.getAttribute('data-testid') === 'stepper-children-increase-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-children-increase-button') {
         let value = parseInt(document.querySelector('#stepper-children-value').textContent);
         value = (value + 1).toString();
         document.querySelector('#stepper-children-value').textContent = value;
         guestIndicator();
     }
     //유아 게스트 수
-    else if (target.getAttribute('data-testid') === 'stepper-infants-decrease-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-infants-decrease-button') {
         let value = parseInt(document.querySelector('#stepper-infants-value').textContent);
         value = (value - 1).toString();
         document.querySelector('#stepper-infants-value').textContent = value;
         guestIndicator();
     }
-    else if (target.getAttribute('data-testid') === 'stepper-infants-increase-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-infants-increase-button') {
         let value = parseInt(document.querySelector('#stepper-infants-value').textContent);
         value = (value + 1).toString();
         document.querySelector('#stepper-infants-value').textContent = value;
         guestIndicator();
     }
     //반려동물 게스트 수
-    else if (target.getAttribute('data-testid') === 'stepper-pets-decrease-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-pets-decrease-button') {
         let value = parseInt(document.querySelector('#stepper-pets-value').textContent);
         value = (value - 1).toString();
         document.querySelector('#stepper-pets-value').textContent = value;
         guestIndicator();
     }
-    else if (target.getAttribute('data-testid') === 'stepper-pets-increase-button') {
+    else if (closestGuestButton.getAttribute('data-testid') === 'stepper-pets-increase-button') {
         let value = parseInt(document.querySelector('#stepper-pets-value').textContent);
         value = (value + 1).toString();
         document.querySelector('#stepper-pets-value').textContent = value;

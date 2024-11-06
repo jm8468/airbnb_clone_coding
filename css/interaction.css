@@ -6,6 +6,9 @@
 .cursor-text {
     cursor: text;
 }
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
 
 /* pointer-events */
 .pointer-none {
