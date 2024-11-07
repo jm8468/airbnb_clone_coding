@@ -237,16 +237,8 @@ function categoryItemRightScroll() {
 }
 
 
-function switchDecreaseGuestButton(guest) {
-    const decreaseButton = document.querySelector('#stepper-' + guest + '-decrease-button');
-    const value = document.querySelector('#stepper-' + guest + '-value');
 
-    if (value > 0) {
-        decreaseButton
-    }
-}
-
-function guestIndicator() {
+function guestIndicator(guest) {
     const adultsDecreaseButton = document.querySelector('[data-testid = "stepper-adults-decrease-button"]');
     let adults = parseInt(document.querySelector('#stepper-adults-value').textContent, 10);
     const children = parseInt(document.querySelector('#stepper-children-value').textContent, 10);
@@ -255,16 +247,15 @@ function guestIndicator() {
     const sum = adults + children + infants + pets;
     const indicator = document.querySelector('#structured-search-input-field-guests-button > div > div:last-child');
 
-    // 성인이 아닌 게스트만 있으면 성인 1명 동행 강제
-    if (children + infants + pets > 0 && adults <= 1) {
-        adults = 1;
-        document.querySelector('#stepper-adults-value').textContent = adults.toString();
-        adultsDecreaseButton.classList.add('cursor-not-allowed');
-        adultsDecreaseButton.disabled = true;
-    } 
-    else {
-        adultsDecreaseButton.classList.remove('cursor-not-allowed');
-        adultsDecreaseButton.disabled = false;
+    const decreaseButton = document.querySelector('[data-testid = "stepper-' + guest + '-decrease-button"]');
+    const value = parseInt(document.querySelector('#stepper-' + guest + '-value').textContent);
+    
+    if (value === 0) {
+        decreaseButton.disabled = true;
+        decreaseButton.classList.add('cursor-not-allowed');
+    } else if (children + infants + pets > 0 && guest === 'adults') {
+        decreaseButton.disabled = false;
+        decreaseButton.classList.remove('cursor-not-allowed');
     }
 
     // 게스트 종류 별 수 표시
@@ -275,11 +266,6 @@ function guestIndicator() {
         if (pets >= 1) indicator.textContent += ', 반려동물 ' + pets + '마리';
     }
 
-    //decrease버튼 제한
-    if(adults = 0) {
-    } else {
-
-    }
     
 }
 
@@ -325,45 +311,45 @@ application.addEventListener('click', function (event) {
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-adults-decrease-button') {
         let value = document.querySelector('#stepper-adults-value');
         value.textContent = parseInt(value.textContent) - 1;
-        guestIndicator();
+        guestIndicator('adults');
     }
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-adults-increase-button') {
         let value = document.querySelector('#stepper-adults-value');
         value.textContent = parseInt(value.textContent) + 1; 
-        guestIndicator();
+        guestIndicator('adults');
     }
     //어린이 게스트 수
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-children-decrease-button') {
         let value = document.querySelector('#stepper-children-value');
         value.textContent = parseInt(value.textContent) - 1;
-        guestIndicator();
+        guestIndicator('children');
     }
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-children-increase-button') {
         let value = document.querySelector('#stepper-children-value');
         value.textContent = parseInt(value.textContent) + 1;
-        guestIndicator();
+        guestIndicator('children');
     }
     //유아 게스트 수
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-infants-decrease-button') {
         let value = document.querySelector('#stepper-infants-value');
         value.textContent = parseInt(value.textContent) - 1;
-        guestIndicator();
+        guestIndicator('infants');
     }
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-infants-increase-button') {
         let value = document.querySelector('#stepper-infants-value');
         value.textContent = parseInt(value.textContent) + 1;
-        guestIndicator();
+        guestIndicator('infants');
     }
     //반려동물 게스트 수
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-pets-decrease-button') {
         let value = document.querySelector('#stepper-pets-value');
         value.textContent = parseInt(value.textContent) - 1;
-        guestIndicator();
+        guestIndicator('pets');
     }
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-pets-increase-button') {
         let value = document.querySelector('#stepper-pets-value');
         value.textContent = parseInt(value.textContent) + 1;
-        guestIndicator();
+        guestIndicator('pets');
     }
 });
 
