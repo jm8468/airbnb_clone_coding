@@ -253,9 +253,27 @@ function guestIndicator(guest) {
     if (value === 0) {
         decreaseButton.disabled = true;
         decreaseButton.classList.add('cursor-not-allowed');
-    } else if (children + infants + pets > 0 && guest === 'adults') {
+    } else if (guest !== 'adults' && value === 1) {
         decreaseButton.disabled = false;
         decreaseButton.classList.remove('cursor-not-allowed');
+    } 
+    
+    if (guest !== 'adults' && adults === 0 && children + infants + pets > 0) {
+        adults = 1;
+        document.querySelector('#stepper-adults-value').textContent = adults;
+        adultsDecreaseButton.disabled = true;
+        adultsDecreaseButton.classList.add('cursor-not-allowed');
+    } else if (adults === 1) {
+        if (children + infants + pets > 0) {
+            adultsDecreaseButton.disabled = true;
+            adultsDecreaseButton.classList.add('cursor-not-allowed');
+        } else {
+            adultsDecreaseButton.disabled = false;
+            adultsDecreaseButton.classList.remove('cursor-not-allowed');
+        }
+    } else if (adults === 2) {
+        adultsDecreaseButton.disabled = false;
+        adultsDecreaseButton.classList.remove('cursor-not-allowed');
     }
 
     // 게스트 종류 별 수 표시
