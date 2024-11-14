@@ -47,6 +47,9 @@
 .hover-black-border-000:hover {
     border-color: rgb(0, 0, 0);
 }
+.hover-black-border-34:hover {
+    border: 1px solid rgb(34, 34, 34);
+}
 
 /* hover하면 opacity 변경 */
 .hover-opacity-10:hover {

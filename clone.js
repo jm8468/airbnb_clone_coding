@@ -250,30 +250,69 @@ function guestIndicator(guest) {
     const decreaseButton = document.querySelector('[data-testid = "stepper-' + guest + '-decrease-button"]');
     const value = parseInt(document.querySelector('#stepper-' + guest + '-value').textContent);
     
+    // 게스트 수 증감
     if (value === 0) {
         decreaseButton.disabled = true;
         decreaseButton.classList.add('cursor-not-allowed');
+        decreaseButton.classList.add('font-grey-235');
+        decreaseButton.classList.add('grey-border-235');
+        decreaseButton.classList.remove('font-grey-106');
+        decreaseButton.classList.remove('black-border-176');
+        decreaseButton.classList.remove('hover-black-border-34');
+        decreaseButton.classList.remove('hover-font-black-34');
     } else if (guest !== 'adults' && value === 1) {
         decreaseButton.disabled = false;
         decreaseButton.classList.remove('cursor-not-allowed');
+        decreaseButton.classList.remove('font-grey-235');
+        decreaseButton.classList.remove('grey-border-235');
+        decreaseButton.classList.add('font-grey-106');
+        decreaseButton.classList.add('black-border-176');
+        decreaseButton.classList.add('hover-black-border-34');
+        decreaseButton.classList.add('hover-font-black-34');
     } 
     
-    if (guest !== 'adults' && adults === 0 && children + infants + pets > 0) {
+    if (adults === 0 && guest !== 'adults' && children + infants + pets > 0) {
         adults = 1;
         document.querySelector('#stepper-adults-value').textContent = adults;
         adultsDecreaseButton.disabled = true;
+        console.log(decreaseButton);
+        console.log(adultsDecreaseButton);
         adultsDecreaseButton.classList.add('cursor-not-allowed');
+        adultsDecreaseButton.classList.add('font-grey-235');
+        adultsDecreaseButton.classList.add('grey-border-235');
+        adultsDecreaseButton.classList.remove('font-grey-106');
+        adultsDecreaseButton.classList.remove('black-border-176');
+        adultsDecreaseButton.classList.remove('hover-black-border-34');
+        adultsDecreaseButton.classList.remove('hover-font-black-34');
     } else if (adults === 1) {
         if (children + infants + pets > 0) {
             adultsDecreaseButton.disabled = true;
             adultsDecreaseButton.classList.add('cursor-not-allowed');
+            adultsDecreaseButton.classList.add('font-grey-235');
+            adultsDecreaseButton.classList.add('grey-border-235');
+            adultsDecreaseButton.classList.remove('font-grey-106');
+            adultsDecreaseButton.classList.remove('black-border-176');
+            adultsDecreaseButton.classList.remove('hover-black-border-34');
+            adultsDecreaseButton.classList.remove('hover-font-black-34');
         } else {
             adultsDecreaseButton.disabled = false;
             adultsDecreaseButton.classList.remove('cursor-not-allowed');
+            adultsDecreaseButton.classList.remove('font-grey-235');
+            adultsDecreaseButton.classList.remove('grey-border-235');
+            adultsDecreaseButton.classList.add('font-grey-106');
+            adultsDecreaseButton.classList.add('black-border-176');
+            adultsDecreaseButton.classList.add('hover-black-border-34');
+            adultsDecreaseButton.classList.add('hover-font-black-34');
         }
     } else if (adults === 2) {
         adultsDecreaseButton.disabled = false;
         adultsDecreaseButton.classList.remove('cursor-not-allowed');
+        adultsDecreaseButton.classList.remove('font-grey-235');
+        adultsDecreaseButton.classList.remove('grey-border-235');
+        adultsDecreaseButton.classList.add('font-grey-106');
+        adultsDecreaseButton.classList.add('black-border-176');
+        adultsDecreaseButton.classList.add('hover-black-border-34');
+        adultsDecreaseButton.classList.add('hover-font-black-34');
     }
 
     // 게스트 종류 별 수 표시

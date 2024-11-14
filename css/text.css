@@ -90,6 +90,9 @@
 .text-ellipsis {
     text-overflow: ellipsis;
 }
+.text-clip {
+    text-overflow: clip;
+}
 
 .underline {
     text-decoration: underline;
