@@ -326,6 +326,47 @@ function guestIndicator(guest) {
     
 }
 
+
+function windowScrollTop() {
+    const scrollTop = window.scrollY;
+    const smallSearchbar = document.querySelector('div[data-searchbar-open="true"]');
+    const bigSearchbar = smallSearchbar.nextElementSibling;
+    const headerDiv = document.querySelector('#js-application > div');
+    const travelDetailsMenu = document.querySelector('#travel-details-menu')
+    console.log(travelDetailsMenu);
+    if (scrollTop === 0) {
+        headerDiv.classList.remove('height-80');
+        headerDiv.classList.add('height-168');
+
+        bigSearchbar.classList.remove('opacity-0');
+        bigSearchbar.classList.remove('visibility-hidden');
+        bigSearchbar.classList.add('opacity-10');
+        bigSearchbar.style.transform = 'scale(1, 1) translateY(0px)';
+
+        smallSearchbar.classList.remove('opacity-10');
+        smallSearchbar.classList.add('visibility-hidden');
+        smallSearchbar.classList.add('opacity-0');
+        smallSearchbar.style.transform = 'scale(2.44, 1.375) translateY(58px)';
+
+        travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
+    } else {
+        headerDiv.classList.remove('height-168');
+        headerDiv.classList.add('height-80');
+
+        bigSearchbar.classList.add('opacity-0');
+        bigSearchbar.classList.add('visibility-hidden');
+        bigSearchbar.classList.remove('opacity-10');
+        bigSearchbar.style.transform = 'scale(0.41, 0.73) translateY(-58px)';
+
+        smallSearchbar.classList.add('opacity-10');
+        smallSearchbar.classList.remove('visibility-hidden');
+        smallSearchbar.classList.remove('opacity-0');
+        smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
+
+        travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
+    }
+}
+
 storeInitialClasses();
 // click 이벤트
 application.addEventListener('click', function (event) {
@@ -435,6 +476,12 @@ application.addEventListener('focusin', function (event) {
 // scroll 이벤트 
 category_item_scrollbar.addEventListener('scroll', function (event) {
     hiddenScrollButton(event);
+})
+
+window.addEventListener('scroll', function (event) {
+    const target = event.target;
+    console.log('33');
+    windowScrollTop();
 })
 
 

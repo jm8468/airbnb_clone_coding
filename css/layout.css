@@ -295,6 +295,9 @@
 .grey-border-bottom {
     border-bottom: 0.2px solid rgb(211, 211, 211);
 }
+.grey-border-top {
+    border-top: 0.2px solid rgb(211, 211, 211);
+}
 
 /* line */
 .grey-line {
