@@ -44,6 +44,9 @@
 }
 
 /* height */
+.height-24 {
+    height: 24px;
+}
 .height-30 {
     height: 30px;
 }
@@ -76,6 +79,9 @@
 }
 
 /* width */
+.width-1 {
+    width: 1px;
+}
 .width-32 {
     width: 32px;
 }
@@ -256,6 +262,9 @@
 }
 .radius-32 {
     border-radius: 32px;
+}
+.radius-40 {
+    border-radius: 40px;
 }
 .radius-50 {
     border-radius: 50px;

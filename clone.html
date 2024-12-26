@@ -30,10 +30,9 @@
 <body>
     <div id='js-application' class="relative">
         <!-- 헤더 부분 -->
-        <div style="top: 0; left: 0; z-index: 100; transition: height 250ms cubic-bezier(0.2, 0, 0, 1);" 
+        <div style="top: 0; left: 0; z-index: 100; transition: height 250ms cubic-bezier(0.2, 0, 0, 1);"
             class="sticky height-168 grey-border-bottom">
-            <header style="top: 0; left: 0; background-color: rgb(255, 255, 255); height: 100%;"
-                class="sticky">
+            <header style="top: 0; left: 0; background-color: rgb(255, 255, 255); height: 100%;" class="sticky">
                 <div class="height-80 flex-container justify-content-between relative page-padding z-index-1">
                     <!-- airbnb 로고 -->
                     <div style="flex-basis: 140px;" class="height-80 inline-flex-container flex-grow-1 flex-shrink-0">
@@ -59,14 +58,44 @@
                         </a>
                     </div>
                     <!-- 숙소/체험/온라인 체험 | 여행지 검색/날짜 추가/게스트 추가 -->
-                    <div class="flex-grow-0 flex-shrink-1 flex-basis-auto height-auto min-width-348 padding-0-24">
+                    <div class="flex-grow-0 flex-shrink-1 flex-basis-auto min-width-348 padding-0-24 text-center">
                         <!-- small 검색바 -->
                         <div style="transform: scale(2.44, 1.375) translateY(58px); transform-origin: 50% 50%; transition: transform 250ms cubic-bezier(0.2,0,0,1), opacity 250ms cubic-bezier(0.2,0,0,1), visibility 0ms 125ms;"
                             data-searchbar-open="true"
                             class="opacity-0 visibility-hidden pointer-none text-vertical-middle">
-                            <div id="little-search" aria-labelledby="littleSearchLabel">
-                                <span>
+                            <div style="box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px 0px, rgba(0, 0, 0, 0.05) 0px 4px 12px 0px;"
+                                class="background-color-basic grey-border-221 radius-40 relative text-vertical-middle inline-flex-container align-items-center"
+                                id="little-search" aria-labelledby="littleSearchLabel">
+                                <span class="flex-container align-items-center ">
+                                    <button
+                                        style="padding-left: 8px; margin: -1px;"
+                                        class="background-color-transparent flex-basis-auto flex-grow-0 flex-shrink-1 flex-container cursor-pointer transparent-border height-48 align-items-center"
+                                        data-index="0" id="little-search-location">
+                                        <div style="line-height: 22px; min-width: 80px; padding: 0px 16px;"
+                                            class="flex-basis-auto flex-grow-1 flex-shrink-1 text font-500 overflow-hidden text-ellipsis font-14px cursor-pointer">
+                                            어디든지
+                                        </div>
+                                    </button>
 
+                                    <span style="flex-basis: 1px;"
+                                        class="background-color-221 flex-grow-0 flex-shrink-0 height-24 width-1"></span>
+
+                                    <button data-index="1" id="little-search-anytime">
+                                        <div style="line-height: 22px; min-width: 80px; padding: 0px 16px;"
+                                            class="flex-basis-auto flex-grow-1 flex-shrink-1 text font-500 overflow-hidden text-ellipsis font-14px cursor-pointer">
+                                            언제든 일주일
+                                        </div>
+                                    </button>
+
+                                    <span style="flex-basis: 1px;"
+                                        class="background-color-221 flex-grow-0 flex-shrink-0 height-24 width-1"></span>
+
+                                    <button data-index="2" id="little-search-guests">
+                                        <div style="line-height: 22px; min-width: 80px; padding: 0px 16px;"
+                                            class="flex-basis-auto flex-grow-1 flex-shrink-1 text font-500 overflow-hidden text-ellipsis font-14px cursor-pointer">
+                                            게스트 추가
+                                        </div>
+                                    </button>
                                 </span>
                             </div>
                         </div>
@@ -1990,7 +2019,8 @@
         </div>
 
         <!-- 여행지 상세 메뉴 -->
-        <div style="top: 68px; height: 90px; z-index: 99;" class="sticky padding-top-12 background-color-basic" id="travel-details-menu">
+        <div style="top: 68px; height: 90px; z-index: 99;" class="sticky padding-top-12 background-color-basic"
+            id="travel-details-menu">
             <div class="page-padding">
                 <div class="grid-container grid-template-columns-full">
                     <div class="flex-container column-gap-16 align-items-center">
@@ -3475,7 +3505,7 @@
                         </ul>
                     </div>
                 </section>
-    
+
                 <section>
                     <div>
                         <div class="font-black-34 font-14px font-600 margin-bottom-12">
@@ -3492,7 +3522,8 @@
                                 <a href="https://www.airbnb.co.kr/resources/hosting-homes">호스팅 자료</a>
                             </li>
                             <li>
-                                <a href="https://community.withairbnb.com/t5/custom/page/page-id/CommunityCenterNotFound">커뮤니티
+                                <a
+                                    href="https://community.withairbnb.com/t5/custom/page/page-id/CommunityCenterNotFound">커뮤니티
                                     포럼</a>
                             </li>
                             <li>
@@ -3504,7 +3535,7 @@
                         </ul>
                     </div>
                 </section>
-    
+
                 <section>
                     <div>
                         <div class="font-black-34 font-14px font-600 margin-bottom-12">
@@ -3533,8 +3564,9 @@
             </footer>
             <div class="grey-line"></div>
         </div>
-    
-        <div style="background-color: rgb(247, 247, 247); padding-top: 24px; padding-bottom: 24px;" class="page-padding">
+
+        <div style="background-color: rgb(247, 247, 247); padding-top: 24px; padding-bottom: 24px;"
+            class="page-padding">
             <div class="reactive-footer">
                 <div class="flex-container">
                     <div class="flex-container">
@@ -3619,7 +3651,8 @@
                                     <path fill="#222"
                                         d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
                                     </path>
-                                    <path fill="#fff" d="M10 0h12.81v16.78l-5.88 10.13a.6.6 0 0 1-.99.09l-.06-.1L10 16.79z">
+                                    <path fill="#fff"
+                                        d="M10 0h12.81v16.78l-5.88 10.13a.6.6 0 0 1-.99.09l-.06-.1L10 16.79z">
                                     </path>
                                     <path fill="#222"
                                         d="M12.66 4.64v7.5h7.5v-7.5zm5.87 5.69h-1.5l-1.28-1.96v1.96h-1.47V6.45h1.43l1.32 1.95V6.45h1.5z">

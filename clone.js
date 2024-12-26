@@ -220,6 +220,7 @@ function hiddenScrollButton(event) {
     }
 }
 
+// 왼쪽 스크롤
 function categoryItemLeftScroll() {
     const scrollBar = document.querySelector('#category-item-scrollbar');
     scrollBar.scrollTo({
@@ -228,6 +229,8 @@ function categoryItemLeftScroll() {
     })
    
 }
+
+// 오른쪽 스크롤
 function categoryItemRightScroll() {
     const scrollBar = document.querySelector('#category-item-scrollbar');
     scrollBar.scrollTo({
@@ -237,7 +240,7 @@ function categoryItemRightScroll() {
 }
 
 
-
+// 게스트 표시
 function guestIndicator(guest) {
     const adultsDecreaseButton = document.querySelector('[data-testid = "stepper-adults-decrease-button"]');
     let adults = parseInt(document.querySelector('#stepper-adults-value').textContent, 10);
@@ -326,7 +329,7 @@ function guestIndicator(guest) {
     
 }
 
-
+// window.scrollTop의 위치에 따른 함수수
 function windowScrollTop() {
     const scrollTop = window.scrollY;
     const smallSearchbar = document.querySelector('div[data-searchbar-open="true"]');
