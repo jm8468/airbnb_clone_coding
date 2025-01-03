@@ -56,6 +56,12 @@
     opacity: 1;
 }
 
+/* hover하면 box-shadow 변경 */
+.hover-box-shadow-small-searchbar:has(button:hover) {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    
+}
+
 /* active하면 경계선 하이라이트 */
 .active-black-border-000:active {
     border-color: rgb(0, 0, 0);
