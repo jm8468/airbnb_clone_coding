@@ -332,11 +332,10 @@ function guestIndicator(guest) {
 // window.scrollTop의 위치에 따른 함수수
 function windowScrollTop() {
     const scrollTop = window.scrollY;
-    const smallSearchbar = document.querySelector('div[data-searchbar-open="true"]');
+    const smallSearchbar = document.querySelector('div[data-searchbar-open]');
     const bigSearchbar = smallSearchbar.nextElementSibling;
     const headerDiv = document.querySelector('#js-application > div');
     const travelDetailsMenu = document.querySelector('#travel-details-menu')
-    console.log(travelDetailsMenu);
     if (scrollTop === 0) {
         headerDiv.classList.remove('height-80');
         headerDiv.classList.add('height-168');
@@ -352,6 +351,8 @@ function windowScrollTop() {
         smallSearchbar.style.transform = 'scale(2.44, 1.375) translateY(58px)';
 
         travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
+        smallSearchbar.setAttribute('data-searchbar-open', 'true');
+
     } else {
         headerDiv.classList.remove('height-168');
         headerDiv.classList.add('height-80');
@@ -367,7 +368,30 @@ function windowScrollTop() {
         smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
 
         travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
+        smallSearchbar.setAttribute('data-searchbar-open', 'false');
     }
+}
+
+// little-searchbar의 버튼이 클릭됐을 때 big-searchbar 활성화
+function activateLittleSearchbar() {
+    const smallSearchbar = document.querySelector('div[data-searchbar-open]');
+    console.log(smallSearchbar);
+    const bigSearchbar = smallSearchbar.nextElementSibling;
+    const headerDiv = document.querySelector('#js-application > div');
+    const travelDetailsMenu = document.querySelector('#travel-details-menu')
+    smallSearchbar.setAttribute('data-searchbar-open', 'true');
+    
+    headerDiv.classList.remove('height-80');
+    headerDiv.classList.add('height-168');
+    bigSearchbar.classList.remove('opacity-0');
+    bigSearchbar.classList.remove('visibility-hidden');
+    bigSearchbar.classList.add('opacity-10');
+    bigSearchbar.style.transform = 'scale(1, 1) translateY(0px)';
+    smallSearchbar.classList.remove('opacity-10');
+    smallSearchbar.classList.add('visibility-hidden');
+    smallSearchbar.classList.add('opacity-0');
+    smallSearchbar.style.transform = 'scale(2.44, 1.375) translateY(58px)';
+    travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
 }
 
 storeInitialClasses();
@@ -451,6 +475,29 @@ application.addEventListener('click', function (event) {
         let value = document.querySelector('#stepper-pets-value');
         value.textContent = parseInt(value.textContent) + 1;
         guestIndicator('pets');
+    }
+
+    else if (target.id === 'little-search-location') {
+        const targetLabel = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
+        activateLittleSearchbar(target);
+        restoreInitialClasses();
+        travelDestination(targetLabel);
+        focusedToggleLayer(targetLabel);
+        unfocusedToggleLayer(0);
+    }
+    else if (target.id === 'little-search-anytime') {
+        activateLittleSearchbar(target);
+        restoreInitialClasses();
+        checkIn(target);
+        focusedToggleLayer(target);
+        unfocusedToggleLayer(1);
+    }
+    else if (target.id === 'little-search-guests') {
+        activateLittleSearchbar(target);
+        restoreInitialClasses();
+        traveler(target);
+        focusedToggleLayer(target);
+        unfocusedToggleLayer(3);
     }
 });
 
