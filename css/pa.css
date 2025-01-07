@@ -38,6 +38,10 @@
     width: 40px;
     content: "";
 }
+.pa_width-full::after {
+    width: 100%;
+    content: "";
+}
 
 /* height */
 .pa_height-2::after {
@@ -76,6 +80,10 @@
 /* position */
 .pa_absolute::after {
     position: absolute;
+    content: "";
+}
+.pa_relative::after {
+    position: relative;
     content: "";
 }
 
@@ -155,4 +163,7 @@
     content: "";
 }
 
+.pa_header-box-shadow::after {
+    content: "";
+}
 

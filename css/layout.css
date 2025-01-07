@@ -78,6 +78,14 @@
     height: auto;
 }
 
+/* contain-intrinsic-height */
+.intrinsic-height-168 {
+    contain-intrinsic-height: 168px;
+}
+.intrinsic-height-80 {
+    contain-intrinsic-height: 80px;
+}
+
 /* width */
 .width-1 {
     width: 1px;
