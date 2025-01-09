@@ -331,14 +331,12 @@ function guestIndicator(guest) {
 
 // window.scrollTop의 위치에 따른 함수수
 function windowScrollTop() {
-    console.log('windowscrolltop');
-    
     const scrollTop = window.scrollY;
     const smallSearchbar = document.querySelector('div[data-searchbar-open]');
     const bigSearchbar = smallSearchbar.nextElementSibling;
     const headerDiv = document.querySelector('#js-application > div');
     const travelDetailsMenu = document.querySelector('#travel-details-menu')
-    console.log(smallSearchbar.getAttribute('data-searchbar-open'));
+    
     if (scrollTop === 0) {
         headerDiv.classList.remove('height-80');
         headerDiv.classList.remove('intrinsic-height-80');
@@ -354,8 +352,6 @@ function windowScrollTop() {
         smallSearchbar.style.transform = 'scale(2.44, 1.375) translateY(58px)';
         travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
         smallSearchbar.setAttribute('data-searchbar-open', 'true');
-
-        console.log('scrollTop === 0');
     } else if (scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'false') {
         headerDiv.classList.remove('height-168');
         headerDiv.classList.remove('intrinsic-height-168');
@@ -370,36 +366,24 @@ function windowScrollTop() {
         smallSearchbar.classList.remove('opacity-0');
         smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
         travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
-        smallSearchbar.setAttribute('data-searchbar-open', 'false');
-
-        console.log("scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'false'");
     } else if (scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'true') {
-        bigSearchbar.classList.add('opacity-0');
-        bigSearchbar.classList.add('visibility-hidden');
-        bigSearchbar.classList.remove('opacity-10');
-        bigSearchbar.style.transform = 'scale(0.41, 0.73) translateY(-58px)';
-        smallSearchbar.classList.add('opacity-10');
-        smallSearchbar.classList.remove('visibility-hidden');
-        smallSearchbar.classList.remove('opacity-0');
-        smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
         travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
         smallSearchbar.setAttribute('data-searchbar-open', 'false');
-        
-        console.log("scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'true'");
     }
 }
 
 // little-searchbar의 버튼이 클릭됐을 때 big-searchbar 활성화
 function activateLittleSearchbar() {
-    console.log('activatelittlesearchbar');
     const smallSearchbar = document.querySelector('div[data-searchbar-open]');
     const bigSearchbar = smallSearchbar.nextElementSibling;
     const headerDiv = document.querySelector('#js-application > div');
     const travelDetailsMenu = document.querySelector('#travel-details-menu')
     smallSearchbar.setAttribute('data-searchbar-open', 'true');
     
-    headerDiv.classList.remove('height-80');
-    headerDiv.classList.add('height-168');
+    headerDiv.classList.remove('height-168');
+    headerDiv.classList.remove('intrinsic-height-168');
+    headerDiv.classList.add('height-80');
+    headerDiv.classList.add('intrinsic-height-80');
     bigSearchbar.classList.remove('opacity-0');
     bigSearchbar.classList.remove('visibility-hidden');
     bigSearchbar.classList.add('opacity-10');
@@ -504,17 +488,19 @@ application.addEventListener('click', function (event) {
         unfocusedToggleLayer(0);
     }
     else if (target.id === 'little-search-anytime') {
+        const matchTarget = document.querySelector('#structured-search-input-field-split-dates-0');
         activateLittleSearchbar();
         restoreInitialClasses();
-        checkIn(target);
-        focusedToggleLayer(target);
+        checkIn(matchTarget);
+        focusedToggleLayer(matchTarget);
         unfocusedToggleLayer(1);
     }
     else if (target.id === 'little-search-guests') {
+        const matchTarget = document.querySelector('#structured-search-input-field-guests-button');
         activateLittleSearchbar();
         restoreInitialClasses();
-        traveler(target);
-        focusedToggleLayer(target);
+        traveler(matchTarget);
+        focusedToggleLayer(matchTarget);
         unfocusedToggleLayer(3);
     }
 });
