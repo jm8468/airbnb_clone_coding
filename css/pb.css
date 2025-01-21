@@ -2,13 +2,14 @@
 
 .pb_width-40::before {
     width: 40px;
-    content: "";
 }
 .pb_height-full::before {
     height: 100%;
-    content: "";
 }
 .pb_z-index--1::before {
     z-index: -1;
-    content: "";
+}
+
+.pb_content::before {
+    content: '';
 }
