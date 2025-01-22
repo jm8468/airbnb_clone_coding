@@ -239,7 +239,6 @@ function categoryItemRightScroll() {
     })
 }
 
-
 // 게스트 표시
 function guestIndicator(guest) {
     const adultsDecreaseButton = document.querySelector('[data-testid = "stepper-adults-decrease-button"]');
@@ -329,19 +328,28 @@ function guestIndicator(guest) {
     
 }
 
-// window.scrollTop의 위치에 따른 함수수
+// window.scrollTop의 위치에 따른 함수
 function windowScrollTop() {
     const scrollTop = window.scrollY;
     const smallSearchbar = document.querySelector('div[data-searchbar-open]');
     const bigSearchbar = smallSearchbar.nextElementSibling;
     const headerDiv = document.querySelector('#js-application > div');
-    const travelDetailsMenu = document.querySelector('#travel-details-menu')
+    const header = document.querySelector('header');
+    const travelDetailsMenu = document.querySelector('#travel-details-menu');
     
     if (scrollTop === 0) {
         headerDiv.classList.remove('height-80');
         headerDiv.classList.remove('intrinsic-height-80');
         headerDiv.classList.add('height-168');
         headerDiv.classList.add('intrinsic-height-168');
+        headerDiv.classList.add('header-parent-bottom-shadow');
+        header.classList.remove('pa_opacity-10');
+        header.classList.add('pa_opacity-0');
+        header.classList.remove('pa_header-box-shadow');
+        header.classList.remove('pa_header-after-transition-changed');
+        header.classList.add('pa_header-after-transition-inital');
+        header.classList.remove('pa_transform-initial');
+        header.classList.add('pa_transform-scaleY-2-1point');
         bigSearchbar.classList.remove('opacity-0');
         bigSearchbar.classList.remove('visibility-hidden');
         bigSearchbar.classList.add('opacity-10');
@@ -357,6 +365,14 @@ function windowScrollTop() {
         headerDiv.classList.remove('intrinsic-height-168');
         headerDiv.classList.add('height-80');
         headerDiv.classList.add('intrinsic-height-80');
+        headerDiv.classList.remove('header-parent-bottom-shadow');
+        header.classList.remove('pa_opacity-0');
+        header.classList.add('pa_opacity-10');
+        header.classList.add('pa_header-box-shadow');
+        header.classList.remove('pa_header-after-transition-inital');
+        header.classList.add('pa_header-after-transition-changed');
+        header.classList.remove('pa_transform-scaleY-2-1point');
+        header.classList.add('pa_transform-initial');
         bigSearchbar.classList.add('opacity-0');
         bigSearchbar.classList.add('visibility-hidden');
         bigSearchbar.classList.remove('opacity-10');
@@ -366,8 +382,14 @@ function windowScrollTop() {
         smallSearchbar.classList.remove('opacity-0');
         smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
         travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
+        //TODO scrollTop === 0 에서 bigsearchbar가 열려있는데 스크롤하면 열린 걸 닫아야 함
+        
     } else if (scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'true') {
-        travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
+        if(header.nextElementSibling !== null) header.nextElementSibling.remove();
+        header.classList.remove('pa_transform-scaleY-2-1point');
+        header.classList.add('pa_transform-initial');
+        header.classList.remove('pa_header-after-transition-inital');
+        header.classList.add('pa_header-after-transition-changed');
         smallSearchbar.setAttribute('data-searchbar-open', 'false');
     }
 }
@@ -377,13 +399,20 @@ function activateLittleSearchbar() {
     const smallSearchbar = document.querySelector('div[data-searchbar-open]');
     const bigSearchbar = smallSearchbar.nextElementSibling;
     const headerDiv = document.querySelector('#js-application > div');
+    const header = document.querySelector('header');
     const travelDetailsMenu = document.querySelector('#travel-details-menu')
+    const div = document.createElement('div');
+    const blackDiv = headerDiv.appendChild(div);
     smallSearchbar.setAttribute('data-searchbar-open', 'true');
     
     headerDiv.classList.remove('height-168');
     headerDiv.classList.remove('intrinsic-height-168');
     headerDiv.classList.add('height-80');
     headerDiv.classList.add('intrinsic-height-80');
+    header.classList.remove('pa_transform-initial');
+    header.classList.add('pa_transform-scaleY-2-1point');
+    header.classList.remove('pa_header-after-transition-changed');
+    header.classList.add('pa_header-after-transition-inital');
     bigSearchbar.classList.remove('opacity-0');
     bigSearchbar.classList.remove('visibility-hidden');
     bigSearchbar.classList.add('opacity-10');
@@ -393,6 +422,46 @@ function activateLittleSearchbar() {
     smallSearchbar.classList.add('opacity-0');
     smallSearchbar.style.transform = 'scale(2.44, 1.375) translateY(58px)';
     travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
+    blackDiv.classList.add('height-100vh');
+    blackDiv.classList.add('top-0');
+    blackDiv.classList.add('right-0');
+    blackDiv.classList.add('bottom-0');
+    blackDiv.classList.add('left-0');
+    blackDiv.classList.add('fixed');
+    blackDiv.classList.add('background-color-0-25');
+    blackDiv.classList.add('z-index-99');
+}
+
+//activateLittleSearchBar()가 활성화된 상태에서 검은 배경화면 클릭 시
+function detectBlackDivClicked(target) {
+    const smallSearchbar = document.querySelector('div[data-searchbar-open]');
+    const bigSearchbar = smallSearchbar.nextElementSibling;
+    const headerDiv = document.querySelector('#js-application > div');
+    const header = document.querySelector('header');
+    const travelDetailsMenu = document.querySelector('#travel-details-menu');
+
+    target.remove();
+    smallSearchbar.setAttribute('data-searchbar-open', 'false');
+    headerDiv.classList.remove('height-168');
+    headerDiv.classList.remove('intrinsic-height-168');
+    headerDiv.classList.add('height-80');
+    headerDiv.classList.add('intrinsic-height-80');
+    header.classList.remove('pa_opacity-0');
+    header.classList.add('pa_opacity-10');
+    header.classList.add('pa_header-box-shadow');
+    header.classList.remove('pa_header-after-transition-inital');
+    header.classList.add('pa_header-after-transition-changed');
+    header.classList.remove('pa_transform-scaleY-2-1point');
+    header.classList.add('pa_transform-initial');
+    bigSearchbar.classList.add('opacity-0');
+    bigSearchbar.classList.add('visibility-hidden');
+    bigSearchbar.classList.remove('opacity-10');
+    bigSearchbar.style.transform = 'scale(0.41, 0.73) translateY(-58px)';
+    smallSearchbar.classList.add('opacity-10');
+    smallSearchbar.classList.remove('visibility-hidden');
+    smallSearchbar.classList.remove('opacity-0');
+    smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
+    travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
 }
 
 windowScrollTop();
@@ -502,6 +571,11 @@ application.addEventListener('click', function (event) {
         traveler(matchTarget);
         focusedToggleLayer(matchTarget);
         unfocusedToggleLayer(3);
+    }
+
+    //TODO 화면스크롤에 bigsearhbar 열려있을 때  검은색 배경 클릭시 상호작용
+    else if (target.classList.contains('background-color-0-25')) {
+        detectBlackDivClicked(target);
     }
 });
 

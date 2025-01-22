@@ -4,8 +4,12 @@
     box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.08);
 }
 
-.box-shadow-small-searchbar{
+.box-shadow-small-searchbar {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-parent-bottom-shadow {
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
 }
 
 

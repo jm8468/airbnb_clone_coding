@@ -1,4 +1,8 @@
 @import 'variables.css';
+.pa_content::after {
+    content: "";
+}
+
 /* background */
 .pa_background-color-34::after {
     background-color: rgb(34, 34, 34);
@@ -140,6 +144,7 @@
     bottom: 0;
     left: 0;
     z-index: -1;
+    content: '';
 }
 
 .pa_header-box-shadow::after {
@@ -165,9 +170,7 @@
     transition: transform 250ms cubic-bezier(0.2,0,0,1);
 }
 
-.pa_content::after {
-    content: "";
-}
+
 
 
 
