@@ -548,7 +548,7 @@ application.addEventListener('click', function (event) {
         guestIndicator('pets');
     }
 
-    else if (target.id === 'little-search-location') {
+    else if (target.id === 'little-search-location' || target.closest('#little-search-location')) {
         const targetLabel = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
         activateLittleSearchbar();
         restoreInitialClasses();
@@ -556,7 +556,7 @@ application.addEventListener('click', function (event) {
         focusedToggleLayer(targetLabel);
         unfocusedToggleLayer(0);
     }
-    else if (target.id === 'little-search-anytime') {
+    else if (target.id === 'little-search-anytime' || target.closest('#little-search-anytime')) {
         const matchTarget = document.querySelector('#structured-search-input-field-split-dates-0');
         activateLittleSearchbar();
         restoreInitialClasses();
@@ -564,7 +564,7 @@ application.addEventListener('click', function (event) {
         focusedToggleLayer(matchTarget);
         unfocusedToggleLayer(1);
     }
-    else if (target.id === 'little-search-guests') {
+    else if (target.id === 'little-search-guests' || target.closest('#little-search-guests')) {
         const matchTarget = document.querySelector('#structured-search-input-field-guests-button');
         activateLittleSearchbar();
         restoreInitialClasses();
@@ -573,7 +573,6 @@ application.addEventListener('click', function (event) {
         unfocusedToggleLayer(3);
     }
 
-    //TODO 화면스크롤에 bigsearhbar 열려있을 때  검은색 배경 클릭시 상호작용
     else if (target.classList.contains('background-color-0-25')) {
         detectBlackDivClicked(target);
     }
