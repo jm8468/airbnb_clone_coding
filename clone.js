@@ -361,6 +361,7 @@ function windowScrollTop() {
         travelDetailsMenu.classList.remove('pa_travel-details-menu-shadow');
         smallSearchbar.setAttribute('data-searchbar-open', 'true');
     } else if (scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'false') {
+        restoreInitialClasses();
         headerDiv.classList.remove('height-168');
         headerDiv.classList.remove('intrinsic-height-168');
         headerDiv.classList.add('height-80');
@@ -382,8 +383,6 @@ function windowScrollTop() {
         smallSearchbar.classList.remove('opacity-0');
         smallSearchbar.style.transform = 'scale(1, 1) translateY(0)';
         travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
-        //TODO scrollTop === 0 에서 bigsearchbar가 열려있는데 스크롤하면 열린 걸 닫아야 함
-        
     } else if (scrollTop !== 0 && smallSearchbar.getAttribute('data-searchbar-open') === 'true') {
         if(header.nextElementSibling !== null) header.nextElementSibling.remove();
         header.classList.remove('pa_transform-scaleY-2-1point');
