@@ -13,3 +13,28 @@
 .pb_content::before {
     content: '';
 }
+
+.pb_absolute::before {
+    position: absolute;
+}
+
+.pb_radius-22::before {
+    border-radius: 22px;
+}
+
+.pb_top-0::before {
+    top: 0;
+}
+.pb_bottom-0::before {
+    bottom: 0;
+}
+.pb_left--3::before {
+    left: -3px;
+}
+.pb_right--3::before {
+    right: -3px
+}
+
+.pb_z-index-0::before {
+    z-index: 0;
+}

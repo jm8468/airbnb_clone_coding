@@ -23,8 +23,11 @@
 .pb_hover-background-color-transparent:hover::before {
     background-color: rgba(0, 0, 0, 0);
 }
-.pb_hover-background-color-grey-221:hover::before {
+.pb_hover-background-color-221:hover::before {
     background-color: rgb(221, 221, 221);
+}
+.pb_hover-background-color-247:hover::before {
+    background-color: rgb(247, 247, 247);
 }
 .pb_hover-grey-gradient-img:hover::before {
     background-image: linear-gradient(90deg, rgb(221, 221, 221) 0px, rgb(221, 221, 221) 50%, rgb(235, 235, 235) 50%, rgb(235, 235, 235) 100%);

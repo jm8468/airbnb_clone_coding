@@ -59,7 +59,9 @@
 /* hover하면 box-shadow 변경 */
 .hover-box-shadow-small-searchbar:has(button:hover) {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-    
+}
+.hover-box-shadow-category-item-scroll-button:hover{
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 /* active하면 경계선 하이라이트 */
