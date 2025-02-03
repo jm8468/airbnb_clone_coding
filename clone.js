@@ -185,6 +185,11 @@ function storeInitialClasses() {
 function restoreInitialClasses() {
     toggleLayers.forEach(element => {
         element.className = initialClasses[element.id].join(' ');
+        const childText = element.querySelector(':scope > div > :last-child');
+        childText.classList.add('font-grey-113');
+        childText.classList.add('ph_font-grey-113');
+        childText.classList.remove('font-black-34');
+        childText.classList.remove('ph_font-black-34');
     });
     layers.forEach(element => {
         element.className = initialClasses[element.id].join(' ');
