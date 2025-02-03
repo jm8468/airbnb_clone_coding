@@ -64,7 +64,7 @@ function checkIn(target) {
     layers[1].classList.remove('visibility-hidden');
 
     toggleLayers[0].classList.remove('pb_hover-right-0');
-    toggleLayers[0].classList.add('pb_hover-background-color-grey-221');
+    toggleLayers[0].classList.add('pb_hover-background-color-221');
     toggleLayers[0].classList.add('pb_hover-right--30');
     toggleLayers[0].classList.add('pb-hover-width-80');
 
@@ -166,6 +166,7 @@ function unfocusedToggleLayer(count) {
             }
         }
     });
+    // TODO 검색버튼 늘리기
 }
 
 
