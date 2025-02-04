@@ -166,7 +166,20 @@ function unfocusedToggleLayer(count) {
             }
         }
     });
-    // TODO 검색버튼 늘리기
+    
+}
+
+// TODO 검색버튼 늘리기
+function focusedSearchButton(target) {
+    //[ ] max-width 변경
+    //[ ] "검색" opacity 변경
+    //[ ] 버튼 색상 변경
+}
+
+function unfocusedSearchButton(target) {
+    //[ ] max-width 변경
+    //[ ] "검색" opacity 변경
+    //[ ] 버튼 색상 변경
 }
 
 
