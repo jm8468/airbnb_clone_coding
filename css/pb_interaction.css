@@ -104,3 +104,7 @@
 .pb_hover-align-self-center:hover::before {
     align-self: center;
 }
+
+.pb_hover-opacity-10:hover::before {
+    opacity: 1;
+}

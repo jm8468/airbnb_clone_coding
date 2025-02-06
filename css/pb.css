@@ -28,8 +28,14 @@
 .pb_bottom-0::before {
     bottom: 0;
 }
+.pb_left-0::before {
+    left: 0;
+}
 .pb_left--3::before {
     left: -3px;
+}
+.pb_right-0::before {
+    right: 0;
 }
 .pb_right--3::before {
     right: -3px
@@ -37,4 +43,20 @@
 
 .pb_z-index-0::before {
     z-index: 0;
+}
+
+.pb_opacity-0::before {
+    opacity: 0;
+}
+
+.pb_transition-opacity-02::before {
+    transition: 0.2s opacity cubic-bezier(0.2, 0, 0, 1)
+}
+
+.pb_background-color-transparent::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.pb_background-image-search-button::before {
+    background-image: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
 }

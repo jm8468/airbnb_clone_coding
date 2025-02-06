@@ -114,6 +114,14 @@ function focusedToggleLayer(target) {
     searchPanel.classList.remove('background-color-basic');
     searchPanel.classList.remove('search-shadow');
     searchPanel.classList.add('background-color-235');
+    const searchButton = document.querySelector('#structured-search-input-search-button');
+    const searchText = searchButton.querySelector('div > div:last-child');
+    //검색 버튼 조정정
+    searchButton.classList.remove('max-width-48');
+    searchButton.classList.add('max-width-200');
+    searchButton.classList.remove('pb_opacity-0');
+    searchText.classList.remove('opacity-0');
+    searchText.classList.add('opacity-10');
     // 선택된 패널의 클래스 조정
     target.classList.remove('pb_hover-grey-border-right-255');
     target.classList.remove('pb_hover-height-32');
@@ -169,19 +177,6 @@ function unfocusedToggleLayer(count) {
     
 }
 
-// TODO 검색버튼 늘리기
-function focusedSearchButton(target) {
-    //[ ] max-width 변경
-    //[ ] "검색" opacity 변경
-    //[ ] 버튼 색상 변경
-}
-
-function unfocusedSearchButton(target) {
-    //[ ] max-width 변경
-    //[ ] "검색" opacity 변경
-    //[ ] 버튼 색상 변경
-}
-
 
 // 요소의 클래스 저장
 const initialClasses = {};
@@ -197,6 +192,8 @@ function storeInitialClasses() {
 
 // 요소의 클래스 복구
 function restoreInitialClasses() {
+    const searchButton = document.querySelector('#structured-search-input-search-button');
+    const searchText = searchButton.querySelector('div > div:last-child');
     toggleLayers.forEach(element => {
         element.className = initialClasses[element.id].join(' ');
         const childText = element.querySelector(':scope > div > :last-child');
@@ -209,6 +206,11 @@ function restoreInitialClasses() {
         element.className = initialClasses[element.id].join(' ');
     });
     searchTabPanel.className = initialClasses[searchTabPanel.id].join(' ');
+    searchButton.classList.add('max-width-48');
+    searchButton.classList.remove('max-width-200');
+    searchButton.classList.add('pb_opacity-0');
+    searchText.classList.add('opacity-0');
+    searchText.classList.remove('opacity-10');
 }
 
 // 스크롤바의 양 끝에 접근 시 스크롤 버튼 숨김
