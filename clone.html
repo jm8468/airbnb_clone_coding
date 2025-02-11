@@ -1749,12 +1749,13 @@
                                                     <button
                                                         class="delay-0ms cubic-function duration-200ms transition-max-width behavior-normal max-width-48 background-color-main no-border radius-24 cursor-pointer block-inline font-white-255 height-48 text-vertical-middle relative z-index-0 overflow-hidden relative pb_content pb_absolute pb_opacity-0 pb_transition-opacity-02 pb_bottom-0 pb_top-0 pb_left-0 pb_right-0 pb_background-color-transparent pb_background-image-search-button pb_z-index-0 pb_hover-opacity-10"
                                                         id="structured-search-input-search-button">
-                                                        <!-- <span class="radius-8 height-full width-full absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
+                                                        <!-- 
+                                                        <span class="radius-8 height-full width-full absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
                                                             <span style="background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%); --mouse-x: 17.75; --mouse-y: 87.5;"
                                                             class="">
                                                             </span>
                                                         </span> -->
-                                                        <!-- TODO 검색 버튼 focused인 상태에서 hover 시 커서의 위치를 중심으로 원형 그라데이션션  -->
+                                                        <!-- TODO 검색 버튼 focused인 상태에서 hover 시 커서의 위치를 중심으로 원형 그라데이션  -->
                                                         <div
                                                             class="inline-flex-container padding-16 relative z-index-1">
                                                             <div>
@@ -2990,1019 +2991,1031 @@
                 <span class="font-black-34 font-18px font-600">최고의 전망 카테고리 계속 검색하기</span>
             </div>
             <div style="margin-top: 16px;">
-                <button class="search-more-button">
+                <button class="search-more-button radius-8 background-color-34 font-white-255 font-16px font-500 padding-14-24 border-width-0">
                     <span>더 보기</span>
                 </button>
             </div>
         </div>
 
         <!-- 다음 여행을 위한 추천 여행지 -->
-        <div class="page-padding padding-48-0 background-color-247">
-            <div class="font-22px font-600">
-                <span>다음 여행을 위한 추천 여행지</span>
-            </div>
-            <div id="tabs-seo" style="margin-top: 8px;" class="flex-container justify-content-start travel-tab-list"
-                role="tablist">
-                <button id="tab-seo-0"
-                    class="font-black-34 relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content"
-                    role="tab" aria-controls="panel-seo-0" aria-selected="false">
-                    인기
-                </button>
-                <button id="tab-seo-1" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-1"
-                    aria-selected="false">
-                    예술 및 문화
-                </button>
-                <button id="tab-seo-2" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-2"
-                    aria-selected="false">
-                    야외
-                </button>
-                <button id="tab-seo-3" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-3"
-                    aria-selected="false">
-                    산맥
-                </button>
-                <button id="tab-seo-4" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-4"
-                    aria-selected="false">
-                    해변
-                </button>
-                <button id="tab-seo-5" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-5"
-                    aria-selected="false">
-                    카테고리
-                </button>
-                <button id="tab-seo-6" class="font-grey-113 relative" role="tab" aria-controls="panel-seo-6"
-                    aria-selected="false">
-                    즐길거리
-                </button>
-            </div>
-            <div class="grey-line"></div>
-            <div id="panels-seo">
-                <!-- 인기 -->
-                <div id="panel-seo-0" role="tabpanel" aria-labelledby="tab-seo-0">
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/canmore-canada/stays">
-                                <span>캔모어</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/benalmadena-spain/stays/apartments">
-                                <span>베날마데나</span>
-                                <span>아파트 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/marbella-spain/stays/beach-houses">
-                                <span>마르베야</span>
-                                <span>해변 근처 독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/mijas-spain/stays/houses">
-                                <span>미하스</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/prescott-az/stays/cottages">
-                                <span>프레스콧</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/scottsdale-az/stays/mansions">
-                                <span>스캇츠데일</span>
-                                <span>대저택 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/tucson-az/stays/pools">
-                                <span>투손</span>
-                                <span>수영장이 있는 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/jasper-ar/stays">
-                                <span>요스퍼</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/mountain-view-ar/stays/houses">
-                                <span>마운틴뷰</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/devonport-australia/stays">
-                                <span>Devonport</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/mallacoota-australia/stays/beach-houses">
-                                <span>Mallacoota</span>
-                                <span>해변 근처 독채 숙소</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.airbnb.co.kr/ibiza-spain/stays">
-                                <span>이비자</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/anaheim-ca/stays">
-                                <span>애나하임</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/monterey-ca/stays/condos">
-                                <span>몬터레이</span>
-                                <span>콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/paso-robles-ca/stays">
-                                <span>파소 로블레스</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/santa-barbara-ca/stays/houses">
-                                <span>산타바바라</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/sonoma-ca/stays/cottages">
-                                <span>소노마</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="page-padding max-width-2520 background-color-247 recommand-grid-container">
+            <div class="padding-48-0 grid-column-start-2">
+                <div class="font-22px font-500">
+                    <span>다음 여행을 위한 추천 여행지</span>
                 </div>
-                <!-- 예술 및 문화 -->
-                <div id="panel-seo-1" role="tabpanel" aria-labelledby="tab-seo-1" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/phoenix-az/stays">
-                                <span>피닉스</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/hot-springs-ar/stays">
-                                <span>핫스프링스</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/los-angeles-ca/stays/beach-condos">
-                                <span>로스엔젤레스</span>
-                                <span>해변 근처 콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/san-diego-ca/stays/beach-condos">
-                                <span>샌디에이고</span>
-                                <span>해변 근처 콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/san-francisco-ca/stays">
-                                <span>샌프란시스코</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/barcelona-spain/stays">
-                                <span>바르셀로나</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/prague-czechia/stays">
-                                <span>프라하</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/washington-dc/stays/pet-friendly">
-                                <span>워싱턴</span>
-                                <span>반려동물 동반이 허용되는 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/keswick-united-kingdom/stays/cottages">
-                                <span>케직</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/london-united-kingdom/stays/beachfront">
-                                <span>런던</span>
-                                <span>해변 바로 앞 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/scarborough-united-kingdom/stays">
-                                <span>스카버러</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/sherwood-forest-united-kingdom/stays/cottages">
-                                <span>Sherwood Forest</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/york-united-kingdom/stays/family-friendly">
-                                <span>york</span>
-                                <span>가족여행에 적합한 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/paris-france/stays/cottages">
-                                <span>파리</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/rhodes-greece/stays/pools">
-                                <span>로즈</span>
-                                <span>수영장이 있는 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/nashville-in/stays">
-                                <span>내쉬빌</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/dublin-ireland/stays/apartments">
-                                <span>더블린</span>
-                                <span>아파트 숙소</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div id="tabs-seo" style="margin-top: 8px;" class="flex-container justify-content-start travel-tab-list"
+                    role="tablist">
+                    <button style="margin-left: -10px;" id="tab-seo-0"
+                        class="font-black-34 relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-0" aria-selected="false">
+                        인기
+                    </button>
+                    <button id="tab-seo-1" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-1"
+                        aria-selected="false">
+                        예술 및 문화
+                    </button>
+                    <button id="tab-seo-2" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-2"
+                        aria-selected="false">
+                        야외
+                    </button>
+                    <button id="tab-seo-3" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-3"
+                        aria-selected="false">
+                        산맥
+                    </button>
+                    <button id="tab-seo-4" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-4"
+                        aria-selected="false">
+                        해변
+                    </button>
+                    <button id="tab-seo-5" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-5"
+                        aria-selected="false">
+                        카테고리
+                    </button>
+                    <button id="tab-seo-6" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-6"
+                        aria-selected="false">
+                        즐길거리
+                    </button>
                 </div>
-                <!-- 야외 -->
-                <div id="panel-seo-2" role="tabpanel" aria-labelledby="tab-seo-2" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/lake-martin-al/stays/lakehouses">
-                                <span>Lake Martin</span>
-                                <span>호숫가 주택 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/banff-canada/stays/houses">
-                                <span>Banff</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/nerja-spain/stays/villas">
-                                <span>네르하</span>
-                                <span>저택 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/greer-az/stays">
-                                <span>Greer</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/lake-havasu-city-az/stays/condos">
-                                <span>레이크하바수 시티</span>
-                                <span>콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/lake-powell-az/stays">
-                                <span>Lake Powell</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/north-rim-az/stays">
-                                <span>North Lim</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/payson-az/stays">
-                                <span>Payson</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/pinetop-lakeside-az/stays/cabins">
-                                <span>파인톱-레이크 사이드</span>
-                                <span>통나무집 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/red-rock-az/stays/cabins">
-                                <span>Red Rock</span>
-                                <span>통나무집 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/dinner-plain-australia/stays">
-                                <span>Dinner Plain</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/streaky-bay-australia/stays">
-                                <span>Streaky Bay</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/emerald-lake-canada/stays">
-                                <span>Emerald Lake</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://airbnb.co.kr/vancouver-island-canada/stays/pet-friendly">
-                                <span>벤쿠버 아일랜드</span>
-                                <span>반려동물 동반이 허용되는 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/victoria-canada/stays/cottages">
-                                <span>빅토리아</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/idyllwild-pine-cove-ca/stays">
-                                <span>Idyllwild-Pine Cove</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/mammoth-lakes-ca/stays">
-                                <span>매머드 레이크</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 산맥 -->
-                <div id="panel-seo-3" role="tabpanel" aria-labelledby="tab-seo-3" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/mentone-al/stays/houses">
-                                <span>Mentone</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/sedona-az/stays/condos">
-                                <span>Sedona</span>
-                                <span>콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/helen-ga/stays">
-                                <span>Helen</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/pine-mountain-ga/stays">
-                                <span>Pine Mountain</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stone-mountain-ga/stays">
-                                <span>스톤 마운틴</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stone-mountain-ga/stays">
-                                <span>Island Park</span>
-                                <span>통나무집 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/blue-mountains-australia/stays">
-                                <span>Blue Mountains</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/asheville-nc/stays/cottages">
-                                <span>애쉬빌</span>
-                                <span>별장 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/blowing-rock-nc/stays/condos">
-                                <span>Blowing Rock</span>
-                                <span>콘도 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/boone-nc/stays">
-                                <span>Boone</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/hochatown-ok/stays">
-                                <span>Hochatown</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/pigeon-forge-tn/stays">
-                                <span>Pigeon Forge</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/townsend-tn/stays">
-                                <span>Townsend</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/wears-valley-tn/stays">
-                                <span>Wears Valley</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/wears-valley-tn/stays">
-                                <span>Cabins</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 해변 -->
-                <div id="panel-seo-4" role="tabpanel" aria-labelledby="tab-seo-4" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/dauphin-island-al/stays/apartments">
-                                <span>Dauphin Island</span>
-                                <span>아파트 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/fort-morgan-al/stays">
-                                <span>Fort Morgan</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/gulf-shores-al/stays">
-                                <span>걸프 쇼어즈</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/bruny-island-australia/stays">
-                                <span>브루니섬</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/crescent-head-australia/stays/pet-friendly">
-                                <span>Crescent Head</span>
-                                <span>반려동물 동반이 허용되는 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/gerringong-australia/stays">
-                                <span>Gerringong</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/hamilton-island-australia/stays">
-                                <span>해밀턴 섬</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/lancelin-australia/stays">
-                                <span>란셀린</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/melbourne-beach-fl/stays/beachfront">
-                                <span>멜버른 비치</span>
-                                <span>해변 바로 앞 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/moonta-bay-australia/stays">
-                                <span>Moonta Bay</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/ocean-grove-australia/stays/beachfront">
-                                <span>오션 그로브</span>
-                                <span>해변 바로 앞 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/majorca-spain/stays/beach-houses">
-                                <span>마요르카</span>
-                                <span>해변 근처 독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/big-sur-ca/stays/cabins">
-                                <span>Big Sur</span>
-                                <span>통나무집 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/bodega-bay-ca/stays">
-                                <span>보데가 베이</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/cambria-ca/stays/houses">
-                                <span>캠브리아</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/cayucos-ca/stays">
-                                <span>카유코스</span>
-                                <span>휴가지 숙소</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/huntington-beach-ca/stays/houses">
-                                <span>헌팅턴 비치</span>
-                                <span>독채 숙소</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 카테고리 -->
-                <div id="panel-seo-5" role="tabpanel" aria-labelledby="tab-seo-5" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/amazing-pools">
-                                <span>멋진 수영장</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/arctic">
-                                <span>북극</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/camping">
-                                <span>캠핑장</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/campers">
-                                <span>캠핑카</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/castles">
-                                <span>캐슬</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/containers">
-                                <span>컨테이너하우스</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/countryside">
-                                <span>한적한 시골</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/design">
-                                <span>디자인</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/earth-homes">
-                                <span>복토 주택</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/farms">
-                                <span>농장</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/national-parks">
-                                <span>국립공원</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/vineyards">
-                                <span>와인 농장</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/omg">
-                                <span>기상천외한 숙소</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/tiny-homes">
-                                <span>초소형 주택</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/towers">
-                                <span>타워</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/windmills">
-                                <span>풍차</span>
-                                <span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/stays/luxury">
-                                <span>Luxe</span>
-                                <span></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 즐길거리 -->
-                <div id="panel-seo-6" role="tabpanel" aria-labelledby="tab-seo-6" hidden>
-                    <ul class="recommand-list-grid-container">
-                        <li>
-                            <a href="https://www.airbnb.co.kr/london-united-kingdom/things-to-do">
-                                <span>런던</span>
-                                <span>잉글랜드</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/paris-france/things-to-do">
-                                <span>파리</span>
-                                <span>lie-de-France</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/new-york-ny/things-to-do">
-                                <span>뉴욕</span>
-                                <span>뉴욕</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/barcelona-spain/things-to-do">
-                                <span>바르셀로나</span>
-                                <span>카탈루냐</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/istanbul-turkiye/things-to-do">
-                                <span>이스탄불</span>
-                                <span>이스탄불</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/bali-indonesia/things-to-do">
-                                <span>발리</span>
-                                <span>인도네시아</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/amsterdam-netherlands/things-to-do">
-                                <span>암스테르담</span>
-                                <span>North Holland</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/miami-fl/things-to-do">
-                                <span>마이애미</span>
-                                <span>플로리다</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/madrid-spain/things-to-do">
-                                <span>마드리드</span>
-                                <span>마드리드의 커뮤니티</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/los-angeles-ca/things-to-do">
-                                <span>로스엔젤레스</span>
-                                <span>캘리포니아</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/rome-italy/things-to-do">
-                                <span>로마</span>
-                                <span>Lazio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/lisbon-portugal/things-to-do">
-                                <span>리스본</span>
-                                <span>리스본</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/tokyo-japan/things-to-do">
-                                <span>도쿄</span>
-                                <span>도쿄</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/vienna-austria/things-to-do">
-                                <span>빈</span>
-                                <span>Vienna</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/athens-greece/things-to-do">
-                                <span>아테네</span>
-                                <span>그리스</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/prague-czechia/things-to-do">
-                                <span>프라하</span>
-                                <span>체코</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.airbnb.co.kr/orlando-fl/things-to-do">
-                                <span>올랜도</span>
-                                <span>플로리다</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="grey-line"></div>
+                <div id="panels-seo">
+                    <!-- 인기 -->
+                    <div id="panel-seo-0" role="tabpanel" aria-labelledby="tab-seo-0">
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/canmore-canada/stays">
+                                    <span>캔모어</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/benalmadena-spain/stays/apartments">
+                                    <span>베날마데나</span>
+                                    <span>아파트 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/marbella-spain/stays/beach-houses">
+                                    <span>마르베야</span>
+                                    <span>해변 근처 독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/mijas-spain/stays/houses">
+                                    <span>미하스</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/prescott-az/stays/cottages">
+                                    <span>프레스콧</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/scottsdale-az/stays/mansions">
+                                    <span>스캇츠데일</span>
+                                    <span>대저택 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/tucson-az/stays/pools">
+                                    <span>투손</span>
+                                    <span>수영장이 있는 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/jasper-ar/stays">
+                                    <span>요스퍼</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/mountain-view-ar/stays/houses">
+                                    <span>마운틴뷰</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/devonport-australia/stays">
+                                    <span>Devonport</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/mallacoota-australia/stays/beach-houses">
+                                    <span>Mallacoota</span>
+                                    <span>해변 근처 독채 숙소</span>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="https://www.airbnb.co.kr/ibiza-spain/stays">
+                                    <span>이비자</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/anaheim-ca/stays">
+                                    <span>애나하임</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/monterey-ca/stays/condos">
+                                    <span>몬터레이</span>
+                                    <span>콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/paso-robles-ca/stays">
+                                    <span>파소 로블레스</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/santa-barbara-ca/stays/houses">
+                                    <span>산타바바라</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/sonoma-ca/stays/cottages">
+                                    <span>소노마</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 예술 및 문화 -->
+                    <div id="panel-seo-1" role="tabpanel" aria-labelledby="tab-seo-1" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/phoenix-az/stays">
+                                    <span>피닉스</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/hot-springs-ar/stays">
+                                    <span>핫스프링스</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/los-angeles-ca/stays/beach-condos">
+                                    <span>로스엔젤레스</span>
+                                    <span>해변 근처 콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/san-diego-ca/stays/beach-condos">
+                                    <span>샌디에이고</span>
+                                    <span>해변 근처 콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/san-francisco-ca/stays">
+                                    <span>샌프란시스코</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/barcelona-spain/stays">
+                                    <span>바르셀로나</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/prague-czechia/stays">
+                                    <span>프라하</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/washington-dc/stays/pet-friendly">
+                                    <span>워싱턴</span>
+                                    <span>반려동물 동반이 허용되는 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/keswick-united-kingdom/stays/cottages">
+                                    <span>케직</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/london-united-kingdom/stays/beachfront">
+                                    <span>런던</span>
+                                    <span>해변 바로 앞 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/scarborough-united-kingdom/stays">
+                                    <span>스카버러</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/sherwood-forest-united-kingdom/stays/cottages">
+                                    <span>Sherwood Forest</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/york-united-kingdom/stays/family-friendly">
+                                    <span>york</span>
+                                    <span>가족여행에 적합한 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/paris-france/stays/cottages">
+                                    <span>파리</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/rhodes-greece/stays/pools">
+                                    <span>로즈</span>
+                                    <span>수영장이 있는 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/nashville-in/stays">
+                                    <span>내쉬빌</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/dublin-ireland/stays/apartments">
+                                    <span>더블린</span>
+                                    <span>아파트 숙소</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 야외 -->
+                    <div id="panel-seo-2" role="tabpanel" aria-labelledby="tab-seo-2" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/lake-martin-al/stays/lakehouses">
+                                    <span>Lake Martin</span>
+                                    <span>호숫가 주택 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/banff-canada/stays/houses">
+                                    <span>Banff</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/nerja-spain/stays/villas">
+                                    <span>네르하</span>
+                                    <span>저택 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/greer-az/stays">
+                                    <span>Greer</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/lake-havasu-city-az/stays/condos">
+                                    <span>레이크하바수 시티</span>
+                                    <span>콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/lake-powell-az/stays">
+                                    <span>Lake Powell</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/north-rim-az/stays">
+                                    <span>North Lim</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/payson-az/stays">
+                                    <span>Payson</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/pinetop-lakeside-az/stays/cabins">
+                                    <span>파인톱-레이크 사이드</span>
+                                    <span>통나무집 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/red-rock-az/stays/cabins">
+                                    <span>Red Rock</span>
+                                    <span>통나무집 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/dinner-plain-australia/stays">
+                                    <span>Dinner Plain</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/streaky-bay-australia/stays">
+                                    <span>Streaky Bay</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/emerald-lake-canada/stays">
+                                    <span>Emerald Lake</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://airbnb.co.kr/vancouver-island-canada/stays/pet-friendly">
+                                    <span>벤쿠버 아일랜드</span>
+                                    <span>반려동물 동반이 허용되는 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/victoria-canada/stays/cottages">
+                                    <span>빅토리아</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/idyllwild-pine-cove-ca/stays">
+                                    <span>Idyllwild-Pine Cove</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/mammoth-lakes-ca/stays">
+                                    <span>매머드 레이크</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 산맥 -->
+                    <div id="panel-seo-3" role="tabpanel" aria-labelledby="tab-seo-3" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/mentone-al/stays/houses">
+                                    <span>Mentone</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/sedona-az/stays/condos">
+                                    <span>Sedona</span>
+                                    <span>콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/helen-ga/stays">
+                                    <span>Helen</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/pine-mountain-ga/stays">
+                                    <span>Pine Mountain</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stone-mountain-ga/stays">
+                                    <span>스톤 마운틴</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stone-mountain-ga/stays">
+                                    <span>Island Park</span>
+                                    <span>통나무집 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/blue-mountains-australia/stays">
+                                    <span>Blue Mountains</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/asheville-nc/stays/cottages">
+                                    <span>애쉬빌</span>
+                                    <span>별장 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/blowing-rock-nc/stays/condos">
+                                    <span>Blowing Rock</span>
+                                    <span>콘도 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/boone-nc/stays">
+                                    <span>Boone</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/hochatown-ok/stays">
+                                    <span>Hochatown</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/pigeon-forge-tn/stays">
+                                    <span>Pigeon Forge</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/townsend-tn/stays">
+                                    <span>Townsend</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/wears-valley-tn/stays">
+                                    <span>Wears Valley</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/wears-valley-tn/stays">
+                                    <span>Cabins</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 해변 -->
+                    <div id="panel-seo-4" role="tabpanel" aria-labelledby="tab-seo-4" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/dauphin-island-al/stays/apartments">
+                                    <span>Dauphin Island</span>
+                                    <span>아파트 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/fort-morgan-al/stays">
+                                    <span>Fort Morgan</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/gulf-shores-al/stays">
+                                    <span>걸프 쇼어즈</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/bruny-island-australia/stays">
+                                    <span>브루니섬</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/crescent-head-australia/stays/pet-friendly">
+                                    <span>Crescent Head</span>
+                                    <span>반려동물 동반이 허용되는 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/gerringong-australia/stays">
+                                    <span>Gerringong</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/hamilton-island-australia/stays">
+                                    <span>해밀턴 섬</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/lancelin-australia/stays">
+                                    <span>란셀린</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/melbourne-beach-fl/stays/beachfront">
+                                    <span>멜버른 비치</span>
+                                    <span>해변 바로 앞 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/moonta-bay-australia/stays">
+                                    <span>Moonta Bay</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/ocean-grove-australia/stays/beachfront">
+                                    <span>오션 그로브</span>
+                                    <span>해변 바로 앞 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/majorca-spain/stays/beach-houses">
+                                    <span>마요르카</span>
+                                    <span>해변 근처 독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/big-sur-ca/stays/cabins">
+                                    <span>Big Sur</span>
+                                    <span>통나무집 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/bodega-bay-ca/stays">
+                                    <span>보데가 베이</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/cambria-ca/stays/houses">
+                                    <span>캠브리아</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/cayucos-ca/stays">
+                                    <span>카유코스</span>
+                                    <span>휴가지 숙소</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/huntington-beach-ca/stays/houses">
+                                    <span>헌팅턴 비치</span>
+                                    <span>독채 숙소</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 카테고리 -->
+                    <div id="panel-seo-5" role="tabpanel" aria-labelledby="tab-seo-5" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/amazing-pools">
+                                    <span>멋진 수영장</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/arctic">
+                                    <span>북극</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/camping">
+                                    <span>캠핑장</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/campers">
+                                    <span>캠핑카</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/castles">
+                                    <span>캐슬</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/containers">
+                                    <span>컨테이너하우스</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/countryside">
+                                    <span>한적한 시골</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/design">
+                                    <span>디자인</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/earth-homes">
+                                    <span>복토 주택</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/farms">
+                                    <span>농장</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/national-parks">
+                                    <span>국립공원</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/vineyards">
+                                    <span>와인 농장</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/omg">
+                                    <span>기상천외한 숙소</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/tiny-homes">
+                                    <span>초소형 주택</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/towers">
+                                    <span>타워</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/windmills">
+                                    <span>풍차</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/stays/luxury">
+                                    <span>Luxe</span>
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 즐길거리 -->
+                    <div id="panel-seo-6" role="tabpanel" aria-labelledby="tab-seo-6" hidden>
+                        <ul class="recommand-list-grid-container">
+                            <li>
+                                <a href="https://www.airbnb.co.kr/london-united-kingdom/things-to-do">
+                                    <span>런던</span>
+                                    <span>잉글랜드</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/paris-france/things-to-do">
+                                    <span>파리</span>
+                                    <span>lie-de-France</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/new-york-ny/things-to-do">
+                                    <span>뉴욕</span>
+                                    <span>뉴욕</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/barcelona-spain/things-to-do">
+                                    <span>바르셀로나</span>
+                                    <span>카탈루냐</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/istanbul-turkiye/things-to-do">
+                                    <span>이스탄불</span>
+                                    <span>이스탄불</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/bali-indonesia/things-to-do">
+                                    <span>발리</span>
+                                    <span>인도네시아</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/amsterdam-netherlands/things-to-do">
+                                    <span>암스테르담</span>
+                                    <span>North Holland</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/miami-fl/things-to-do">
+                                    <span>마이애미</span>
+                                    <span>플로리다</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/madrid-spain/things-to-do">
+                                    <span>마드리드</span>
+                                    <span>마드리드의 커뮤니티</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/los-angeles-ca/things-to-do">
+                                    <span>로스엔젤레스</span>
+                                    <span>캘리포니아</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/rome-italy/things-to-do">
+                                    <span>로마</span>
+                                    <span>Lazio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/lisbon-portugal/things-to-do">
+                                    <span>리스본</span>
+                                    <span>리스본</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/tokyo-japan/things-to-do">
+                                    <span>도쿄</span>
+                                    <span>도쿄</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/vienna-austria/things-to-do">
+                                    <span>빈</span>
+                                    <span>Vienna</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/athens-greece/things-to-do">
+                                    <span>아테네</span>
+                                    <span>그리스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/prague-czechia/things-to-do">
+                                    <span>프라하</span>
+                                    <span>체코</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.airbnb.co.kr/orlando-fl/things-to-do">
+                                    <span>올랜도</span>
+                                    <span>플로리다</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <div class="grey-line"></div>
         <!-- footer -->
-        <div class="page-padding background-color-247">
-            <footer class="footer-upper-grid-container">
-                <section>
-                    <div>
-                        <div class="font-black-34 font-14px font-600 margin-bottom-12">
-                            <span>에어비엔비 지원</span>
-                        </div>
-                        <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
-                            <li>
-                                <a href="https://www.airbnb.co.kr/help">도움말 센터</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/help/article/3218">에어커버</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/against-discrimination">차별 반대</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/accessibility">장애인 지원</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/help/article/2701">예약 취소 옵션</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/help/article/3290">이웃 민원 신고</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <div class="font-black-34 font-14px font-600 margin-bottom-12">
-                            <span>호스팅</span>
-                        </div>
-                        <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
-                            <li>
-                                <a href="https://www.airbnb.co.kr/host/homes?from_footer=1">당신의 공간을 에어비엔비하세요</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/aircover-for-hosts">호스트를 위한 에어커버</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/resources/hosting-homes">호스팅 자료</a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://community.withairbnb.com/t5/custom/page/page-id/CommunityCenterNotFound">커뮤니티
-                                    포럼</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/help/article/1387">책임감 있는 호스팅</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/ambassadors/joinaclass">무료 호스팅 클래스 참여하기</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <div class="font-black-34 font-14px font-600 margin-bottom-12">
-                            <span>에어비엔비</span>
-                        </div>
-                        <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
-                            <li>
-                                <a href="https://news.airbnb.com/">뉴스룸</a>
-                            </li>
-                            <li>
-                                <a href="https://www.airbnb.co.kr/release">새로운 기능</a>
-                            </li>
-                            <li>
-                                <a href="https://careers.airbnb.com/">채용정보</a>
-                            </li>
-                            <li>
-                                <a href="https://investors.airbnb.com/home/default.aspx">투자자 정보</a>
-                            </li>
-                            <li>
-                                <a href="https://ko.airbnb.org/?_set_bev_on_new_domain=1709362214_ZTZjZDY4M2QyYjFi">Airbnb
-                                    긴급 숙소</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </footer>
-            <div class="grey-line"></div>
-        </div>
-
-        <div style="background-color: rgb(247, 247, 247); padding-top: 24px; padding-bottom: 24px;"
-            class="page-padding">
-            <div class="reactive-footer">
-                <div class="flex-container">
-                    <div class="flex-container">
-                        <button style="margin-right: 24px;"
-                            class="transparent-button flex-container justify-content-between align-items-center">
-                            <span style="width: fit-content; margin-right: 8px;" class="text-vertical-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
-                                    role="presentation" focusable="false"
-                                    style="display: block; height: 16px; width: 16px; fill: currentcolor;">
-                                    <path
-                                        d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="font-black-34 font-14px font-600 text-center hover-underline">한국어(KR)</span>
-                        </button>
-                        <button class="transparent-button flex-container">
-                            <span style="margin-right: 5px;"
-                                class="font-black-34 font-16px font-600 text-center block=">₩</span>
-                            <span class="hover-underline font-black-34 font-14px font-600 text-center block">KRW</span>
-                        </button>
-                    </div>
-                    <ul style="margin-left: 24px;" class="align-items-center inline-flex-container">
-                        <li style="margin-right: 16px;">
-                            <a href="https://www.facebook.com/AirbnbKorea">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="페이스북으로 이동하기"
-                                    role="img" focusable="false"
-                                    style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                    <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
-                                    </path>
-                                    <path fill="#fff"
-                                        d="M22.94 16H18.5v-3c0-1.27.62-2.5 2.6-2.5h2.02V6.56s-1.83-.31-3.58-.31c-3.65 0-6.04 2.21-6.04 6.22V16H9.44v4.62h4.06V32h5V20.62h3.73z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li style="margin-right: 16px;">
-                            <a href="https://twitter.com/airbnb">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="트위터로 이동하기"
-                                    role="img" focusable="false"
-                                    style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                    <path d="M32 4v24a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4z">
-                                    </path>
-                                    <path fill="#fff"
-                                        d="M18.66 7.99a4.5 4.5 0 0 0-2.28 4.88A12.31 12.31 0 0 1 7.3 8.25a4.25 4.25 0 0 0 1.38 5.88c-.69 0-1.38-.13-2-.44a4.54 4.54 0 0 0 3.5 4.31 4.3 4.3 0 0 1-2 .06 4.64 4.64 0 0 0 4.19 3.13A8.33 8.33 0 0 1 5.8 23a12.44 12.44 0 0 0 19.32-11.19A7.72 7.72 0 0 0 27.3 9.5a8.3 8.3 0 0 1-2.5.75 4.7 4.7 0 0 0 2-2.5c-.87.5-1.81.87-2.81 1.06a4.5 4.5 0 0 0-5.34-.83z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li style="margin-right: 16px;">
-                            <a href="https://www.instagram.com/airbnb/">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="인스타그램으로 이동하기"
-                                    role="img" focusable="false"
-                                    style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                    <path d="M30 0H2a2 2 0 0 0-2 2v28c0 1.1.9 2 2 2h28a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
-                                    </path>
-                                    <path fill="#fff"
-                                        d="M15.71 4h1.25c2.4 0 2.85.02 3.99.07 1.28.06 2.15.26 2.91.56.79.3 1.46.72 2.13 1.38.6.6 1.08 1.33 1.38 2.13l.02.06c.28.74.48 1.58.54 2.8l.01.4c.05 1.02.06 1.63.06 4.4v.92c0 2.6-.02 3.05-.07 4.23a8.78 8.78 0 0 1-.56 2.91c-.3.8-.77 1.53-1.38 2.13a5.88 5.88 0 0 1-2.13 1.38l-.06.02c-.74.28-1.59.48-2.8.53l-.4.02c-1.02.05-1.63.06-4.4.06h-.92a73.1 73.1 0 0 1-4.23-.07 8.78 8.78 0 0 1-2.91-.56c-.8-.3-1.53-.77-2.13-1.38a5.88 5.88 0 0 1-1.38-2.13l-.02-.06a8.84 8.84 0 0 1-.54-2.8l-.01-.37A84.75 84.75 0 0 1 4 16.29v-1c0-2.62.02-3.06.07-4.24.06-1.26.26-2.13.55-2.88l.01-.03c.3-.8.77-1.53 1.38-2.13a5.88 5.88 0 0 1 2.13-1.38l.06-.02a8.84 8.84 0 0 1 2.8-.54l.37-.01C12.39 4 12.99 4 15.71 4zm.91 2.16h-1.24c-2.3 0-2.91.01-3.81.05l-.42.02c-1.17.05-1.8.25-2.23.41-.56.22-.96.48-1.38.9-.4.41-.67.8-.88 1.35l-.03.06a6.7 6.7 0 0 0-.4 2.2l-.02.45c-.04.9-.05 1.53-.05 3.94v1.08c0 2.64.02 3.05.07 4.23v.07c.06 1.13.25 1.74.42 2.16.21.56.47.96.9 1.38.4.4.8.67 1.34.88l.06.03a6.7 6.7 0 0 0 2.2.4l.45.02c.9.04 1.53.05 3.94.05h1.08c2.64 0 3.05-.02 4.23-.07h.07a6.51 6.51 0 0 0 2.16-.42c.52-.19.99-.5 1.38-.9.4-.4.67-.8.88-1.34l.03-.06a6.7 6.7 0 0 0 .4-2.2l.02-.45c.04-.9.05-1.53.05-3.94v-1.09c0-2.63-.02-3.04-.07-4.22v-.07a6.51 6.51 0 0 0-.42-2.16c-.19-.52-.5-.99-.9-1.38a3.7 3.7 0 0 0-1.34-.88l-.06-.03a6.63 6.63 0 0 0-2.16-.4l-.46-.02c-.9-.04-1.5-.05-3.8-.05zM16 9.84a6.16 6.16 0 1 1 0 12.32 6.16 6.16 0 0 1 0-12.32zM16 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.4-3.85a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li style="margin-right: 16px;">
-                            <a href="https://blog.naver.com/airbnbkr">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 블로그로 이동하기"
-                                    role="img" focusable="false"
-                                    style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                    <path fill="#222"
-                                        d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
-                                    </path>
-                                    <path fill="#fff"
-                                        d="M23.92 6A4.1 4.1 0 0 1 28 9.88l.01.2v9.84A4.08 4.08 0 0 1 24.13 24h-5.86l-1.91 3.31a.45.45 0 0 1-.73.08l-.05-.08-1.91-3.3h-5.6a4.08 4.08 0 0 1-4.06-3.87l-.01-.2v-9.86a4.08 4.08 0 0 1 3.87-4.06l.2-.01zm-1.99 7.22c-1.13 0-2.05.95-2.05 2.12 0 1.16.92 2.1 2.05 2.1.47 0 .9-.15 1.24-.42v.59l-.03.08-.05.1c-.11.16-.36.39-.9.39v1.09h.22c.3-.02.87-.13 1.42-.61l.13-.13.05-.06.1-.12c.11-.17.26-.44.31-.76v-4.28h-1.25v.34a2.02 2.02 0 0 0-1.24-.43zM8.81 11.9H7.58v5.6H8.8v-.4c.35.3.79.5 1.27.5 1.1 0 2-.98 2-2.19s-.89-2.2-2-2.2c-.42 0-.81.15-1.14.4l-.13.1zm8.3 1.31c-1.23 0-2.23.98-2.23 2.2s1 2.18 2.23 2.18c1.22 0 2.22-.98 2.22-2.19s-1-2.19-2.22-2.19zm-3.35-.66a1.98 1.98 0 0 0-1.33-.75H12.22v1.12l.08.01c.14.04.44.16.56.5l.04.12v3.94h1.27v-3.97a2.12 2.12 0 0 0-.24-.7l-.08-.15zM9.84 14.3a1.1 1.1 0 1 1 0 2.19 1.1 1.1 0 0 1-1.12-1.1c0-.15.04-.3.1-.43.17-.4.56-.66 1.02-.66zm7.27.05c.58 0 1.06.47 1.06 1.04s-.47 1.05-1.06 1.05c-.6 0-1.07-.47-1.07-1.05s.48-1.04 1.07-1.04zm5.05-.11c.44 0 .83.24 1.01.6.08.15.12.3.12.48s-.05.34-.12.48c-.18.36-.57.6-1 .6a1.1 1.1 0 0 1-1.13-1.08c0-.6.5-1.08 1.12-1.08z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://post.naver.com/airbnb_kr">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 포스트로 이동하기"
-                                    role="img" focusable="false"
-                                    style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                    <path fill="#222"
-                                        d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
-                                    </path>
-                                    <path fill="#fff"
-                                        d="M10 0h12.81v16.78l-5.88 10.13a.6.6 0 0 1-.99.09l-.06-.1L10 16.79z">
-                                    </path>
-                                    <path fill="#222"
-                                        d="M12.66 4.64v7.5h7.5v-7.5zm5.87 5.69h-1.5l-1.28-1.96v1.96h-1.47V6.45h1.43l1.32 1.95V6.45h1.5z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="background-color-247 page-padding max-width-2520 recommand-grid-container">
+            <div class="grid-column-start-2">
+                <div>
+                    <footer class="footer-upper-grid-container">
+                        <section>
+                            <div>
+                                <div class="font-black-34 font-14px font-500 margin-bottom-12">
+                                    <span>에어비엔비 지원</span>
+                                </div>
+                                <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/help">도움말 센터</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/help/article/3218">에어커버</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/against-discrimination">차별 반대</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/accessibility">장애인 지원</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/help/article/2701">예약 취소 옵션</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/help/article/3290">이웃 민원 신고</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+        
+                        <section>
+                            <div>
+                                <div class="font-black-34 font-14px font-500 margin-bottom-12">
+                                    <span>호스팅</span>
+                                </div>
+                                <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/host/homes?from_footer=1">당신의 공간을 에어비엔비하세요</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/aircover-for-hosts">호스트를 위한 에어커버</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/resources/hosting-homes">호스팅 자료</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://community.withairbnb.com/t5/custom/page/page-id/CommunityCenterNotFound">커뮤니티
+                                            포럼</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/help/article/1387">책임감 있는 호스팅</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/ambassadors/joinaclass">무료 호스팅 클래스 참여하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+        
+                        <section>
+                            <div>
+                                <div class="font-black-34 font-14px font-500 margin-bottom-12">
+                                    <span>에어비엔비</span>
+                                </div>
+                                <ul class="font-black-34 font-14px font-400 footer-upper-list-grid-container">
+                                    <li>
+                                        <a href="https://news.airbnb.com/">뉴스룸</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airbnb.co.kr/release">새로운 기능</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://careers.airbnb.com/">채용정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://investors.airbnb.com/home/default.aspx">투자자 정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ko.airbnb.org/?_set_bev_on_new_domain=1709362214_ZTZjZDY4M2QyYjFi">Airbnb
+                                            긴급 숙소</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </footer>
+                    <div class="grey-line"></div>
                 </div>
-                <div class="flex-container justify-content-center align-items-center">
-                    <div class="font-black-34 font-14px font-400 text-left block-inline">
-                        <span>© 2024 Airbnb, Inc.</span>
-                        <span style="margin-right: 5px;">·</span>
+        
+                <div style="padding-top: 24px; padding-bottom: 24px;">
+                    <div class="reactive-footer">
+                        <div class="flex-container">
+                            <div class="flex-container">
+                                <button style="margin-right: 24px;"
+                                    class="transparent-button flex-container justify-content-between align-items-center">
+                                    <span style="width: fit-content; margin-right: 8px;" class="text-vertical-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
+                                            role="presentation" focusable="false"
+                                            style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                            <path
+                                                d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span class="font-black-34 font-14px font-600 text-center hover-underline">한국어(KR)</span>
+                                </button>
+                                <button class="transparent-button flex-container">
+                                    <span style="margin-right: 5px;"
+                                        class="font-black-34 font-16px font-600 text-center block=">₩</span>
+                                    <span class="hover-underline font-black-34 font-14px font-600 text-center block">KRW</span>
+                                </button>
+                            </div>
+                            <ul style="margin-left: 24px;" class="align-items-center inline-flex-container">
+                                <li style="margin-right: 16px;">
+                                    <a href="https://www.facebook.com/AirbnbKorea">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="페이스북으로 이동하기"
+                                            role="img" focusable="false"
+                                            style="display: block; height: 18px; width: 18px; fill: currentcolor;">
+                                            <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M22.94 16H18.5v-3c0-1.27.62-2.5 2.6-2.5h2.02V6.56s-1.83-.31-3.58-.31c-3.65 0-6.04 2.21-6.04 6.22V16H9.44v4.62h4.06V32h5V20.62h3.73z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li style="margin-right: 16px;">
+                                    <a href="https://twitter.com/airbnb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="트위터로 이동하기"
+                                            role="img" focusable="false"
+                                            style="display: block; height: 18px; width: 18px; fill: currentcolor;">
+                                            <path d="M32 4v24a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M18.66 7.99a4.5 4.5 0 0 0-2.28 4.88A12.31 12.31 0 0 1 7.3 8.25a4.25 4.25 0 0 0 1.38 5.88c-.69 0-1.38-.13-2-.44a4.54 4.54 0 0 0 3.5 4.31 4.3 4.3 0 0 1-2 .06 4.64 4.64 0 0 0 4.19 3.13A8.33 8.33 0 0 1 5.8 23a12.44 12.44 0 0 0 19.32-11.19A7.72 7.72 0 0 0 27.3 9.5a8.3 8.3 0 0 1-2.5.75 4.7 4.7 0 0 0 2-2.5c-.87.5-1.81.87-2.81 1.06a4.5 4.5 0 0 0-5.34-.83z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li style="margin-right: 16px;">
+                                    <a href="https://www.instagram.com/airbnb/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="인스타그램으로 이동하기"
+                                            role="img" focusable="false"
+                                            style="display: block; height: 18px; width: 18px; fill: currentcolor;">
+                                            <path d="M30 0H2a2 2 0 0 0-2 2v28c0 1.1.9 2 2 2h28a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M15.71 4h1.25c2.4 0 2.85.02 3.99.07 1.28.06 2.15.26 2.91.56.79.3 1.46.72 2.13 1.38.6.6 1.08 1.33 1.38 2.13l.02.06c.28.74.48 1.58.54 2.8l.01.4c.05 1.02.06 1.63.06 4.4v.92c0 2.6-.02 3.05-.07 4.23a8.78 8.78 0 0 1-.56 2.91c-.3.8-.77 1.53-1.38 2.13a5.88 5.88 0 0 1-2.13 1.38l-.06.02c-.74.28-1.59.48-2.8.53l-.4.02c-1.02.05-1.63.06-4.4.06h-.92a73.1 73.1 0 0 1-4.23-.07 8.78 8.78 0 0 1-2.91-.56c-.8-.3-1.53-.77-2.13-1.38a5.88 5.88 0 0 1-1.38-2.13l-.02-.06a8.84 8.84 0 0 1-.54-2.8l-.01-.37A84.75 84.75 0 0 1 4 16.29v-1c0-2.62.02-3.06.07-4.24.06-1.26.26-2.13.55-2.88l.01-.03c.3-.8.77-1.53 1.38-2.13a5.88 5.88 0 0 1 2.13-1.38l.06-.02a8.84 8.84 0 0 1 2.8-.54l.37-.01C12.39 4 12.99 4 15.71 4zm.91 2.16h-1.24c-2.3 0-2.91.01-3.81.05l-.42.02c-1.17.05-1.8.25-2.23.41-.56.22-.96.48-1.38.9-.4.41-.67.8-.88 1.35l-.03.06a6.7 6.7 0 0 0-.4 2.2l-.02.45c-.04.9-.05 1.53-.05 3.94v1.08c0 2.64.02 3.05.07 4.23v.07c.06 1.13.25 1.74.42 2.16.21.56.47.96.9 1.38.4.4.8.67 1.34.88l.06.03a6.7 6.7 0 0 0 2.2.4l.45.02c.9.04 1.53.05 3.94.05h1.08c2.64 0 3.05-.02 4.23-.07h.07a6.51 6.51 0 0 0 2.16-.42c.52-.19.99-.5 1.38-.9.4-.4.67-.8.88-1.34l.03-.06a6.7 6.7 0 0 0 .4-2.2l.02-.45c.04-.9.05-1.53.05-3.94v-1.09c0-2.63-.02-3.04-.07-4.22v-.07a6.51 6.51 0 0 0-.42-2.16c-.19-.52-.5-.99-.9-1.38a3.7 3.7 0 0 0-1.34-.88l-.06-.03a6.63 6.63 0 0 0-2.16-.4l-.46-.02c-.9-.04-1.5-.05-3.8-.05zM16 9.84a6.16 6.16 0 1 1 0 12.32 6.16 6.16 0 0 1 0-12.32zM16 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.4-3.85a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li style="margin-right: 16px;">
+                                    <a href="https://blog.naver.com/airbnbkr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 블로그로 이동하기"
+                                            role="img" focusable="false"
+                                            style="display: block; height: 18px; width: 18px; fill: currentcolor;">
+                                            <path fill="#222"
+                                                d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M23.92 6A4.1 4.1 0 0 1 28 9.88l.01.2v9.84A4.08 4.08 0 0 1 24.13 24h-5.86l-1.91 3.31a.45.45 0 0 1-.73.08l-.05-.08-1.91-3.3h-5.6a4.08 4.08 0 0 1-4.06-3.87l-.01-.2v-9.86a4.08 4.08 0 0 1 3.87-4.06l.2-.01zm-1.99 7.22c-1.13 0-2.05.95-2.05 2.12 0 1.16.92 2.1 2.05 2.1.47 0 .9-.15 1.24-.42v.59l-.03.08-.05.1c-.11.16-.36.39-.9.39v1.09h.22c.3-.02.87-.13 1.42-.61l.13-.13.05-.06.1-.12c.11-.17.26-.44.31-.76v-4.28h-1.25v.34a2.02 2.02 0 0 0-1.24-.43zM8.81 11.9H7.58v5.6H8.8v-.4c.35.3.79.5 1.27.5 1.1 0 2-.98 2-2.19s-.89-2.2-2-2.2c-.42 0-.81.15-1.14.4l-.13.1zm8.3 1.31c-1.23 0-2.23.98-2.23 2.2s1 2.18 2.23 2.18c1.22 0 2.22-.98 2.22-2.19s-1-2.19-2.22-2.19zm-3.35-.66a1.98 1.98 0 0 0-1.33-.75H12.22v1.12l.08.01c.14.04.44.16.56.5l.04.12v3.94h1.27v-3.97a2.12 2.12 0 0 0-.24-.7l-.08-.15zM9.84 14.3a1.1 1.1 0 1 1 0 2.19 1.1 1.1 0 0 1-1.12-1.1c0-.15.04-.3.1-.43.17-.4.56-.66 1.02-.66zm7.27.05c.58 0 1.06.47 1.06 1.04s-.47 1.05-1.06 1.05c-.6 0-1.07-.47-1.07-1.05s.48-1.04 1.07-1.04zm5.05-.11c.44 0 .83.24 1.01.6.08.15.12.3.12.48s-.05.34-.12.48c-.18.36-.57.6-1 .6a1.1 1.1 0 0 1-1.13-1.08c0-.6.5-1.08 1.12-1.08z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://post.naver.com/airbnb_kr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 포스트로 이동하기"
+                                            role="img" focusable="false"
+                                            style="display: block; height: 18px; width: 18px; fill: currentcolor;">
+                                            <path fill="#222"
+                                                d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
+                                            </path>
+                                            <path fill="#fff"
+                                                d="M10 0h12.81v16.78l-5.88 10.13a.6.6 0 0 1-.99.09l-.06-.1L10 16.79z">
+                                            </path>
+                                            <path fill="#222"
+                                                d="M12.66 4.64v7.5h7.5v-7.5zm5.87 5.69h-1.5l-1.28-1.96v1.96h-1.47V6.45h1.43l1.32 1.95V6.45h1.5z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-container justify-content-center align-items-center">
+                            <div class="font-black-34 font-14px font-400 text-left block-inline">
+                                <span>© 2025 Airbnb, Inc.</span>
+                                <span style="margin-right: 5px;">·</span>
+                            </div>
+                            <ul class="font-black-34 font-14px font-400 text-left">
+                                <li class="block-inline">
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
+                                    <span>·</span>
+                                </li>
+                                <li class="block-inline">
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2866">쿠키 정책</a>
+                                    <span>·</span>
+                                </li>
+                                <li class="block-inline">
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
+                                    <span>·</span>
+                                </li>
+                                <li class="block-inline">
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
+                                    <span>·</span>
+                                </li>
+                                <li class="block-inline">
+                                    <a class="hover-underline"
+                                        href="https://www.airbnb.co.kr/home/updated_cancellation_policies?korean_strict_policy=true#strict">한국의
+                                        변경된 환불 정책</a>
+                                    <span>·</span>
+                                </li>
+                                <li class="block-inline">
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="font-black-34 font-14px font-400 text-left">
-                        <li class="block-inline">
-                            <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
-                            <span>·</span>
-                        </li>
-                        <li class="block-inline">
-                            <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
-                            <span>·</span>
-                        </li>
-                        <li class="block-inline">
-                            <a class="hover-underline" href="https://www.airbnb.co.kr/">사이트맵</a>
-                            <span>·</span>
-                        </li>
-                        <li class="block-inline">
-                            <a class="hover-underline"
-                                href="https://www.airbnb.co.kr/home/updated_cancellation_policies?korean_strict_policy=true#strict">한국의
-                                변경된 환불 정책</a>
-                            <span>·</span>
-                        </li>
-                        <li class="block-inline">
-                            <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
-                        </li>
-                    </ul>
+                    <div class="grey-line margin-8-0"></div>
+                    <div style="letter-spacing: 0.2px; line-height: 12px;" class="font-10px font-grey-113">웹사이트 제공자: Airbnb Ireland UC,
+                        private unlimited company, 8 Hanover Quay Dublin 2,
+                        D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호:
+                        IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트,
+                        080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는 통신판매 중개자로
+                        에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다.
+                        에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당
+                        서비스를 제공하는 호스트에게 있습니다.</div>
                 </div>
             </div>
-            <div class="grey-line margin-8-0"></div>
-            <div style="letter-spacing: 0.2px;" class="font-10px font-grey-113">웹사이트 제공자: Airbnb Ireland UC,
-                private unlimited company, 8 Hanover Quay Dublin 2,
-                D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호:
-                IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트,
-                080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는 통신판매 중개자로
-                에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다.
-                에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당
-                서비스를 제공하는 호스트에게 있습니다.</div>
+            
         </div>
+        
     </div>
     <script src="clone.js"></script>
 </body>

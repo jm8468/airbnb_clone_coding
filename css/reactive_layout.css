@@ -11,6 +11,9 @@
     .recommand-list-grid-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .recommand-grid-container {
+        display: block;
+    }
     .footer-upper-grid-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -147,5 +150,17 @@
 @media screen and (min-width: 1640px) {
     .list-grid-container {
         grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (min-width: 1880px) {
+    .list-grid-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .recommand-grid-container {
+        display: grid;
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 4fr) minmax(0px, 1fr);
+        grid-gap: 24px;
     }
 }
