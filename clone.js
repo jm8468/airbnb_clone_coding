@@ -4,6 +4,7 @@ const searchTabPanel = document.querySelector('#search-tabpanel');
 const application = document.querySelector('#js-application');
 const category_item_scrollbar = document.querySelector('#category-item-scrollbar');
 
+//BUG 밑에 언더라인으로 강조효과 주는 기능 안됨됨
 function tabButton(event) {
     const button = event.target;
     const parentButton = button.parentElement.parentElement;

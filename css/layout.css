@@ -14,6 +14,9 @@
 .background-color-main {
     background-color: rgb(255, 56, 92);
 }
+.background-color-34 {
+    background-color: rgb(34, 34, 34);
+}
 .background-color-221 {
     background-color: rgb(221, 221, 221);
 }
@@ -129,6 +132,9 @@
 .max-width-200 {
     max-width: 200px;
 }
+.max-width-2520 {
+    max-width: 2520px;
+}
 .max-width-full {
     max-width: 100%;
 }
@@ -148,6 +154,9 @@
 }
 .padding-0-24 {
     padding: 0px 24px;
+}
+.padding-10 {
+    padding: 10px;
 }
 .padding-11-32 {
     padding: 11px 32px;
@@ -206,6 +215,9 @@
 }
 .margin-bottom-12 {
     margin-bottom: 12px;
+}
+.margin-6-6-6-0 {
+    margin: 6px 6px 6px 0px;
 }
 
 /* z-index */
@@ -339,6 +351,9 @@
 .grey-border-top {
     border-top: 0.2px solid rgb(211, 211, 211);
 }
+.border-width-0 {
+    border-width: 0px;
+}
 
 /* line */
 .grey-line {
@@ -387,5 +402,9 @@
     opacity: 1;
 }
 
+/* outline */
+.no-outline {
+    outline: none;
+}
 
 
