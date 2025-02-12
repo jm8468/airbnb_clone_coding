@@ -4,11 +4,11 @@ const searchTabPanel = document.querySelector('#search-tabpanel');
 const application = document.querySelector('#js-application');
 const category_item_scrollbar = document.querySelector('#category-item-scrollbar');
 
-//BUG 밑에 언더라인으로 강조효과 주는 기능 안됨됨
+
 function tabButton(event) {
     const button = event.target;
     const parentButton = button.parentElement.parentElement;
-    const buttons = parentButton.querySelectorAll('div[id^="tabs-"] > button[id^="tab-"]')
+    const buttons = parentButton.querySelectorAll('div[id^="tabs-"] > button[id^="tab-"]');
     const panels = parentButton.querySelectorAll('div[id^="panels-"] > div[id^="panel-"]');
     // 선택한 aria-selected만 true가 되게 하는 기능
     buttons.forEach(tab => {
@@ -16,17 +16,22 @@ function tabButton(event) {
     });
     button.setAttribute("aria-selected", "true");
 
+    console.log(buttons);
+    console.log(panels);
+
     // aria-selected가 true인 버튼만 강조하는 기능
     buttons.forEach((tab, index) => {
         if (tab.getAttribute("aria-selected") === "false") {
             tab.classList.remove("font-black-34");
+            tab.classList.add("font-grey-113");
             tab.classList.remove("pa_absolute");
             tab.classList.remove('pa_height-2');
             tab.classList.remove('pa_width-calc-100-20');
             tab.classList.remove('pa_bottom--6');
             tab.classList.remove('pa_left-10');
             tab.classList.remove('pa_background-color-34');
-            tab.classList.add("font-grey-113");
+            tab.classList.remove('pa_content');
+            tab.classList.remove('pointer-none');
             panels[index].setAttribute("hidden", true);
         }
         else {
@@ -38,6 +43,8 @@ function tabButton(event) {
             tab.classList.add('pa_bottom--6');
             tab.classList.add('pa_left-10');
             tab.classList.add('pa_background-color-34');
+            tab.classList.add('pa_content');
+            tab.classList.add('pointer-none');
             panels[index].removeAttribute("hidden");
         }
     });
