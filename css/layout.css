@@ -65,6 +65,9 @@
 .height-48 {
     height: 48px;
 }
+.height-50 {
+    height: 50px;
+}
 .height-64 {
     height: 64px;
 }
@@ -101,6 +104,9 @@
 }
 .width-32 {
     width: 32px;
+}
+.width-36 {
+    width: 36px;
 }
 .width-48 {
     width: 48px;

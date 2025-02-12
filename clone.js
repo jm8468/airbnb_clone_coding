@@ -2,11 +2,13 @@ const toggleLayers = [document.querySelector('#structured-search-input-field-pla
 const layers = [document.querySelector('#structured-search-input-field-query-panel'), document.querySelector('#structured-search-input-field-dates-panel'), document.querySelector('#structured-search-input-field-guests-panel')];
 const searchTabPanel = document.querySelector('#search-tabpanel');
 const application = document.querySelector('#js-application');
-const category_item_scrollbar = document.querySelector('#category-item-scrollbar');
+const categoryItemScrollbar = document.querySelector('#category-item-scrollbar');
+const tabsPlacesByAreasTabId = document.querySelector('#tabs-placesByAreasTabId');
 
-
+//탭 버튼 강조
 function tabButton(event) {
     const button = event.target;
+    if (button.getAttribute("aria-selected") === "true") return;
     const parentButton = button.parentElement.parentElement;
     const buttons = parentButton.querySelectorAll('div[id^="tabs-"] > button[id^="tab-"]');
     const panels = parentButton.querySelectorAll('div[id^="panels-"] > div[id^="panel-"]');
@@ -15,10 +17,6 @@ function tabButton(event) {
         tab.setAttribute("aria-selected", "false");
     });
     button.setAttribute("aria-selected", "true");
-
-    console.log(buttons);
-    console.log(panels);
-
     // aria-selected가 true인 버튼만 강조하는 기능
     buttons.forEach((tab, index) => {
         if (tab.getAttribute("aria-selected") === "false") {
@@ -31,10 +29,9 @@ function tabButton(event) {
             tab.classList.remove('pa_left-10');
             tab.classList.remove('pa_background-color-34');
             tab.classList.remove('pa_content');
-            tab.classList.remove('pointer-none');
+            tab.classList.remove('cursor-default');
             panels[index].setAttribute("hidden", true);
-        }
-        else {
+        } else {
             tab.classList.remove("font-grey-113");
             tab.classList.add("font-black-34");
             tab.classList.add("pa_absolute");
@@ -44,11 +41,10 @@ function tabButton(event) {
             tab.classList.add('pa_left-10');
             tab.classList.add('pa_background-color-34');
             tab.classList.add('pa_content');
-            tab.classList.add('pointer-none');
+            tab.classList.add('cursor-default');
             panels[index].removeAttribute("hidden");
         }
     });
-
 }
 
 // 여행지 - 여행지 검색
@@ -250,21 +246,20 @@ function hiddenScrollButton(event) {
 }
 
 // 왼쪽 스크롤
-function categoryItemLeftScroll() {
-    const scrollBar = document.querySelector('#category-item-scrollbar');
+function categoryItemLeftScroll(scrollId, pixel, behaviorOption) {
+    const scrollBar = document.querySelector('#' + scrollId);
     scrollBar.scrollTo({
-        left: scrollBar.scrollLeft - 830,
-        behavior: 'smooth'
+        left: scrollBar.scrollLeft - pixel,
+        behavior: behaviorOption
     })
    
 }
-
 // 오른쪽 스크롤
-function categoryItemRightScroll() {
-    const scrollBar = document.querySelector('#category-item-scrollbar');
+function categoryItemRightScroll(scrollId, pixel, behaviorOption) {
+    const scrollBar = document.querySelector('#' + scrollId);
     scrollBar.scrollTo({
-        left: scrollBar.scrollLeft + 830,
-        behavior: 'smooth'
+        left: scrollBar.scrollLeft + pixel,
+        behavior: behaviorOption
     })
 }
 
@@ -523,13 +518,21 @@ application.addEventListener('click', function (event) {
         focusedToggleLayer(target);
         unfocusedToggleLayer(3);
     }
+    // 여행지 검색 레이어에서 지역 선택을 위한 왼쪽 스크롤
+    else if (target.id === 'scroll-back-button') {
+        categoryItemLeftScroll('tabs-placesByAreasTabId', 55, 'auto');
+    }
+    // 여여행지 검색 레이어에서 지역 선택을 위한 오른쪽 스크롤
+    else if (target.id === 'scroll-forward-button') {
+        categoryItemRightScroll('tabs-placesByAreasTabId', 55, 'auto');
+    }
     // 카테고리 아이템 스크롤바의 왼쪽 스크롤
     else if (target.getAttribute('data-shared-element-id') === 'previous-button') {
-        categoryItemLeftScroll();
+        categoryItemLeftScroll('category-item-scrollbar', 830, 'smooth');
     }
     // 카테고리 아이템 스크롤바의 오른쪽 스크롤
     else if (target.getAttribute('data-shared-element-id') === 'next-button') {
-        categoryItemRightScroll();
+        categoryItemRightScroll('category-item-scrollbar', 830, 'smooth');
     }
     //성인 게스트 수
     else if (closestGuestButton && closestGuestButton.getAttribute('data-testid') === 'stepper-adults-decrease-button') {
@@ -629,12 +632,15 @@ application.addEventListener('focusin', function (event) {
 });
 
 // scroll 이벤트 
-category_item_scrollbar.addEventListener('scroll', function (event) {
+categoryItemScrollbar.addEventListener('scroll', function (event) {
+    hiddenScrollButton(event);
+})
+
+tabsPlacesByAreasTabId.addEventListener('scroll', function (event) {
     hiddenScrollButton(event);
 })
 
 window.addEventListener('scroll', function (event) {
-    const target = event.target;
     windowScrollTop();
 })
 

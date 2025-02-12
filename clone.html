@@ -367,29 +367,37 @@
                                                         </div>
                                                         <!-- 지역 별 -->
                                                         <div style="padding: 0px 8px;">
-                                                            <div>
+                                                            <div class="relative">
+                                                                <!-- 왼쪽 화살표 -->
+                                                                <button style="background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255)); left: -12px; top: 1px;"
+                                                                    class="visibility-hidden opacity-0 flex-container background-color-transparent cursor-pointer height-50 justify-content-start align-items-center absolute width-36 z-index-1"
+                                                                    id="scroll-back-button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="스크롤하면 왼쪽으로 이동" role="img" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                                                                        <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                                                                    </svg>
+                                                                </button>
                                                                 <!-- 탭 -->
                                                                 <div style="padding: 0px 12px; margin: 0px -12px;"
-                                                                    class="flex-container justify-content-start travel-tab-list text-left text relative overflow-y-auto hidden-scrollbar scrollbar-width-none"
+                                                                    class="flex-container justify-content-start text-left text relative overflow-y-auto hidden-scrollbar scrollbar-width-none"
                                                                     id="tabs-placesByAreasTabId" role="tablist">
                                                                     <!-- 전 세계 -->
-                                                                    <button id="tab-placesByAreasTabId-0"
+                                                                    <button style="margin-left: -10px"
+                                                                        id="tab-placesByAreasTabId-0"
                                                                         aria-controls="panel-placesByAreasTabId-0"
                                                                         aria-selected="true" role="tab"
-                                                                        class="transparent-button relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content radius-8 area-button-highlight hover-background-color-247 font-black-34">
+                                                                        class="transparent-button relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content radius-8 hover-background-color-247 font-black-34 padding-10 margin-6-6-6-0 pointer-none">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
-                                                                            전
-                                                                            세계
+                                                                            class="text text-center font-500 font-14px">
+                                                                            전 세계
                                                                         </div>
                                                                     </button>
                                                                     <!-- 동아시아 -->
                                                                     <button id="tab-placesByAreasTabId-1"
                                                                         aria-controls="panel-placesByAreasTabId-1"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8  hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             동아시아
                                                                         </div>
                                                                     </button>
@@ -397,9 +405,9 @@
                                                                     <button id="tab-placesByAreasTabId-2"
                                                                         aria-controls="panel-placesByAreasTabId-2"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             동남아시아
                                                                         </div>
                                                                     </button>
@@ -407,9 +415,9 @@
                                                                     <button id="tab-placesByAreasTabId-3"
                                                                         aria-controls="panel-placesByAreasTabId-3"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             유럽
                                                                         </div>
                                                                     </button>
@@ -417,9 +425,9 @@
                                                                     <button id="tab-placesByAreasTabId-4"
                                                                         aria-controls="panel-placesByAreasTabId-4"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             북남미
                                                                         </div>
                                                                     </button>
@@ -427,9 +435,9 @@
                                                                     <button id="tab-placesByAreasTabId-5"
                                                                         aria-controls="panel-placesByAreasTabId-5"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             오세아니아
                                                                         </div>
                                                                     </button>
@@ -437,37 +445,32 @@
                                                                     <button id="tab-placesByAreasTabId-6"
                                                                         aria-controls="panel-placesByAreasTabId-6"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
-                                                                            기타
-                                                                            아시아 지역
+                                                                            class="text text-center font-500 font-14px">
+                                                                            기타 아시아 지역
                                                                         </div>
                                                                     </button>
                                                                     <!-- 아프리카 -->
                                                                     <button id="tab-placesByAreasTabId-7"
                                                                         aria-controls="panel-placesByAreasTabId-7"
                                                                         aria-selected="false" role="tab"
-                                                                        class="transparent-button relative radius-8 area-button-highlight hover-background-color-247 font-grey-113">
+                                                                        class="transparent-button relative radius-8 hover-background-color-247 font-grey-113 padding-10 margin-6-6-6-0">
                                                                         <div style="pointer-events: none;"
-                                                                            class="text text-center font-600 font-14px">
+                                                                            class="text text-center font-500 font-14px">
                                                                             아프리카
                                                                         </div>
                                                                     </button>
                                                                 </div>
-
-                                                                <div class="grey-border-bottom"></div>
-                                                                <div style="width: 36px; height: 50px; top: 1px; right: -12px;"
-                                                                    class="absolute">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 32 32" aria-label="스크롤하면 오른쪽으로 이동"
-                                                                        role="img" focusable="false"
-                                                                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
-                                                                        <path fill="none"
-                                                                            d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
-                                                                        </path>
+                                                                <!-- 오른쪽 화살표 -->
+                                                                <button style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255)); right: -12px; top: 1px;"
+                                                                    class="flex-container background-color-transparent cursor-pointer height-50 justify-content-end align-items-center absolute width-36 z-index-1"
+                                                                    id="scroll-forward-button">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="스크롤하면 오른쪽으로 이동" role="img" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                                                                        <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
                                                                     </svg>
-                                                                </div>
+                                                                </button>
+                                                                <div class="grey-border-bottom"></div>
                                                                 <!-- 탭 패널 -->
                                                                 <div style="padding-top: 24px;"
                                                                     id="panels-placesByAreasTabId" class="text">
@@ -1990,8 +1993,10 @@
                         <div style="margin-right: 8px;"
                             class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
                             <!-- 호스트 링크 -->
-                            <a href="https://www.airbnb.co.kr/host/homes" class="padding-12 relative pb_absolute pb_radius-22 pb_top-0 pb_bottom-0 pb_left--3 pb_right--3 pb_z-index-0 pb_hover-background-color-247 pb_content">
-                                <span class="font-black-34 font-14px font-500 relative z-index-1">당신의 공간을 에어비엔비하세요</span>
+                            <a href="https://www.airbnb.co.kr/host/homes"
+                                class="padding-12 relative pb_absolute pb_radius-22 pb_top-0 pb_bottom-0 pb_left--3 pb_right--3 pb_z-index-0 pb_hover-background-color-247 pb_content">
+                                <span class="font-black-34 font-14px font-500 relative z-index-1">당신의 공간을
+                                    에어비엔비하세요</span>
                             </a>
                             <!-- 언어 설정 -->
                             <div>
@@ -2372,7 +2377,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                                 <div style="margin-top: 12px; margin-bottom: 10px; padding: 4px 0px; transition-behavior: normal; transition-delay: 0s; transition-duration: 0.2s; transition-property: opacity; transition-timing-function: cubic-bezier(0.2, 0, 0, 1);"
                                     class="radius-8 width-max background-color-transparent font-500 font-12px line-height-16px font-black-0 opacity-6 hover-font-black-0 hover-opacity-10 pa_child_hover-background-color-0 pa_child_hover-opacity-1 pa_content">
                                     <div id="category-item--국립공원--unchecked"
@@ -2562,7 +2567,8 @@
                         <!-- 필터 -->
                         <div style="width: fit-content;">
                             <button class="background-color-transparent radius-12 grey-border-221 padding-12-0">
-                                <div style="padding: 2px 16px 0px 16px;" class="flex-container column-gap-8 align-items-center">
+                                <div style="padding: 2px 16px 0px 16px;"
+                                    class="flex-container column-gap-8 align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                         style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:3;overflow:visible"
                                         aria-hidden="true" role="presentation" focusable="false">
@@ -2991,7 +2997,8 @@
                 <span class="font-black-34 font-18px font-600">최고의 전망 카테고리 계속 검색하기</span>
             </div>
             <div style="margin-top: 16px;">
-                <button class="search-more-button radius-8 background-color-34 font-white-255 font-16px font-500 padding-14-24 border-width-0">
+                <button
+                    class="search-more-button radius-8 background-color-34 font-white-255 font-16px font-500 padding-14-24 border-width-0">
                     <span>더 보기</span>
                 </button>
             </div>
@@ -3003,35 +3010,41 @@
                 <div class="font-22px font-500">
                     <span>다음 여행을 위한 추천 여행지</span>
                 </div>
-                <div id="tabs-seo" style="margin-top: 8px;" class="flex-container justify-content-start travel-tab-list"
+                <div id="tabs-seo" style="margin-top: 8px;" class="flex-container justify-content-start"
                     role="tablist">
                     <button style="margin-left: -10px;" id="tab-seo-0"
-                        class="font-black-34 relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0 pointer-none"
+                        class="font-black-34 relative pa_absolute pa_height-2 pa_width-calc-100-20 pa_bottom--6 pa_left-10 pa_background-color-34 pa_content background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0 cursor-default"
                         role="tab" aria-controls="panel-seo-0" aria-selected="false">
                         인기
                     </button>
-                    <button id="tab-seo-1" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-1"
-                        aria-selected="false">
+                    <button id="tab-seo-1"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-1" aria-selected="false">
                         예술 및 문화
                     </button>
-                    <button id="tab-seo-2" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-2"
-                        aria-selected="false">
+                    <button id="tab-seo-2"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-2" aria-selected="false">
                         야외
                     </button>
-                    <button id="tab-seo-3" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-3"
-                        aria-selected="false">
+                    <button id="tab-seo-3"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-3" aria-selected="false">
                         산맥
                     </button>
-                    <button id="tab-seo-4" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-4"
-                        aria-selected="false">
+                    <button id="tab-seo-4"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-4" aria-selected="false">
                         해변
                     </button>
-                    <button id="tab-seo-5" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-5"
-                        aria-selected="false">
+                    <button id="tab-seo-5"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-5" aria-selected="false">
                         카테고리
                     </button>
-                    <button id="tab-seo-6" class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0" role="tab" aria-controls="panel-seo-6"
-                        aria-selected="false">
+                    <button id="tab-seo-6"
+                        class="font-grey-113 relative background-color-transparent no-border no-outline font-14px font-500 padding-10 margin-6-6-6-0"
+                        role="tab" aria-controls="panel-seo-6" aria-selected="false">
                         즐길거리
                     </button>
                 </div>
@@ -3106,7 +3119,7 @@
                                     <span>해변 근처 독채 숙소</span>
                                 </a>
                             </li>
-    
+
                             <li>
                                 <a href="https://www.airbnb.co.kr/ibiza-spain/stays">
                                     <span>이비자</span>
@@ -3778,7 +3791,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="grey-line"></div>
         <!-- footer -->
         <div class="background-color-247 page-padding max-width-2520 recommand-grid-container">
@@ -3812,7 +3825,7 @@
                                 </ul>
                             </div>
                         </section>
-        
+
                         <section>
                             <div>
                                 <div class="font-black-34 font-14px font-500 margin-bottom-12">
@@ -3842,7 +3855,7 @@
                                 </ul>
                             </div>
                         </section>
-        
+
                         <section>
                             <div>
                                 <div class="font-black-34 font-14px font-500 margin-bottom-12">
@@ -3862,7 +3875,8 @@
                                         <a href="https://investors.airbnb.com/home/default.aspx">투자자 정보</a>
                                     </li>
                                     <li>
-                                        <a href="https://ko.airbnb.org/?_set_bev_on_new_domain=1709362214_ZTZjZDY4M2QyYjFi">Airbnb
+                                        <a
+                                            href="https://ko.airbnb.org/?_set_bev_on_new_domain=1709362214_ZTZjZDY4M2QyYjFi">Airbnb
                                             긴급 숙소</a>
                                     </li>
                                 </ul>
@@ -3871,7 +3885,7 @@
                     </footer>
                     <div class="grey-line"></div>
                 </div>
-        
+
                 <div style="padding-top: 24px; padding-bottom: 24px;">
                     <div class="reactive-footer">
                         <div class="flex-container">
@@ -3887,21 +3901,24 @@
                                             </path>
                                         </svg>
                                     </span>
-                                    <span class="font-black-34 font-14px font-600 text-center hover-underline">한국어(KR)</span>
+                                    <span
+                                        class="font-black-34 font-14px font-600 text-center hover-underline">한국어(KR)</span>
                                 </button>
                                 <button class="transparent-button flex-container">
                                     <span style="margin-right: 5px;"
                                         class="font-black-34 font-16px font-600 text-center block=">₩</span>
-                                    <span class="hover-underline font-black-34 font-14px font-600 text-center block">KRW</span>
+                                    <span
+                                        class="hover-underline font-black-34 font-14px font-600 text-center block">KRW</span>
                                 </button>
                             </div>
                             <ul style="margin-left: 24px;" class="align-items-center inline-flex-container">
                                 <li style="margin-right: 16px;">
                                     <a href="https://www.facebook.com/AirbnbKorea">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="페이스북으로 이동하기"
-                                            role="img" focusable="false"
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                            aria-label="페이스북으로 이동하기" role="img" focusable="false"
                                             style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                            <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
+                                            <path
+                                                d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
                                             </path>
                                             <path fill="#fff"
                                                 d="M22.94 16H18.5v-3c0-1.27.62-2.5 2.6-2.5h2.02V6.56s-1.83-.31-3.58-.31c-3.65 0-6.04 2.21-6.04 6.22V16H9.44v4.62h4.06V32h5V20.62h3.73z">
@@ -3911,10 +3928,11 @@
                                 </li>
                                 <li style="margin-right: 16px;">
                                     <a href="https://twitter.com/airbnb">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="트위터로 이동하기"
-                                            role="img" focusable="false"
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                            aria-label="트위터로 이동하기" role="img" focusable="false"
                                             style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                            <path d="M32 4v24a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4z">
+                                            <path
+                                                d="M32 4v24a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4z">
                                             </path>
                                             <path fill="#fff"
                                                 d="M18.66 7.99a4.5 4.5 0 0 0-2.28 4.88A12.31 12.31 0 0 1 7.3 8.25a4.25 4.25 0 0 0 1.38 5.88c-.69 0-1.38-.13-2-.44a4.54 4.54 0 0 0 3.5 4.31 4.3 4.3 0 0 1-2 .06 4.64 4.64 0 0 0 4.19 3.13A8.33 8.33 0 0 1 5.8 23a12.44 12.44 0 0 0 19.32-11.19A7.72 7.72 0 0 0 27.3 9.5a8.3 8.3 0 0 1-2.5.75 4.7 4.7 0 0 0 2-2.5c-.87.5-1.81.87-2.81 1.06a4.5 4.5 0 0 0-5.34-.83z">
@@ -3924,10 +3942,11 @@
                                 </li>
                                 <li style="margin-right: 16px;">
                                     <a href="https://www.instagram.com/airbnb/">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="인스타그램으로 이동하기"
-                                            role="img" focusable="false"
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                            aria-label="인스타그램으로 이동하기" role="img" focusable="false"
                                             style="display: block; height: 18px; width: 18px; fill: currentcolor;">
-                                            <path d="M30 0H2a2 2 0 0 0-2 2v28c0 1.1.9 2 2 2h28a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
+                                            <path
+                                                d="M30 0H2a2 2 0 0 0-2 2v28c0 1.1.9 2 2 2h28a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
                                             </path>
                                             <path fill="#fff"
                                                 d="M15.71 4h1.25c2.4 0 2.85.02 3.99.07 1.28.06 2.15.26 2.91.56.79.3 1.46.72 2.13 1.38.6.6 1.08 1.33 1.38 2.13l.02.06c.28.74.48 1.58.54 2.8l.01.4c.05 1.02.06 1.63.06 4.4v.92c0 2.6-.02 3.05-.07 4.23a8.78 8.78 0 0 1-.56 2.91c-.3.8-.77 1.53-1.38 2.13a5.88 5.88 0 0 1-2.13 1.38l-.06.02c-.74.28-1.59.48-2.8.53l-.4.02c-1.02.05-1.63.06-4.4.06h-.92a73.1 73.1 0 0 1-4.23-.07 8.78 8.78 0 0 1-2.91-.56c-.8-.3-1.53-.77-2.13-1.38a5.88 5.88 0 0 1-1.38-2.13l-.02-.06a8.84 8.84 0 0 1-.54-2.8l-.01-.37A84.75 84.75 0 0 1 4 16.29v-1c0-2.62.02-3.06.07-4.24.06-1.26.26-2.13.55-2.88l.01-.03c.3-.8.77-1.53 1.38-2.13a5.88 5.88 0 0 1 2.13-1.38l.06-.02a8.84 8.84 0 0 1 2.8-.54l.37-.01C12.39 4 12.99 4 15.71 4zm.91 2.16h-1.24c-2.3 0-2.91.01-3.81.05l-.42.02c-1.17.05-1.8.25-2.23.41-.56.22-.96.48-1.38.9-.4.41-.67.8-.88 1.35l-.03.06a6.7 6.7 0 0 0-.4 2.2l-.02.45c-.04.9-.05 1.53-.05 3.94v1.08c0 2.64.02 3.05.07 4.23v.07c.06 1.13.25 1.74.42 2.16.21.56.47.96.9 1.38.4.4.8.67 1.34.88l.06.03a6.7 6.7 0 0 0 2.2.4l.45.02c.9.04 1.53.05 3.94.05h1.08c2.64 0 3.05-.02 4.23-.07h.07a6.51 6.51 0 0 0 2.16-.42c.52-.19.99-.5 1.38-.9.4-.4.67-.8.88-1.34l.03-.06a6.7 6.7 0 0 0 .4-2.2l.02-.45c.04-.9.05-1.53.05-3.94v-1.09c0-2.63-.02-3.04-.07-4.22v-.07a6.51 6.51 0 0 0-.42-2.16c-.19-.52-.5-.99-.9-1.38a3.7 3.7 0 0 0-1.34-.88l-.06-.03a6.63 6.63 0 0 0-2.16-.4l-.46-.02c-.9-.04-1.5-.05-3.8-.05zM16 9.84a6.16 6.16 0 1 1 0 12.32 6.16 6.16 0 0 1 0-12.32zM16 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.4-3.85a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z">
@@ -3937,8 +3956,8 @@
                                 </li>
                                 <li style="margin-right: 16px;">
                                     <a href="https://blog.naver.com/airbnbkr">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 블로그로 이동하기"
-                                            role="img" focusable="false"
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                            aria-label="네이버 블로그로 이동하기" role="img" focusable="false"
                                             style="display: block; height: 18px; width: 18px; fill: currentcolor;">
                                             <path fill="#222"
                                                 d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
@@ -3951,8 +3970,8 @@
                                 </li>
                                 <li>
                                     <a href="https://post.naver.com/airbnb_kr">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="네이버 포스트로 이동하기"
-                                            role="img" focusable="false"
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                            aria-label="네이버 포스트로 이동하기" role="img" focusable="false"
                                             style="display: block; height: 18px; width: 18px; fill: currentcolor;">
                                             <path fill="#222"
                                                 d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z">
@@ -3975,15 +3994,18 @@
                             </div>
                             <ul class="font-black-34 font-14px font-400 text-left">
                                 <li class="block-inline">
-                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보 처리방침</a>
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2855">개인정보
+                                        처리방침</a>
                                     <span>·</span>
                                 </li>
                                 <li class="block-inline">
-                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2866">쿠키 정책</a>
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2866">쿠키
+                                        정책</a>
                                     <span>·</span>
                                 </li>
                                 <li class="block-inline">
-                                    <a class="hover-underline" href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
+                                    <a class="hover-underline"
+                                        href="https://www.airbnb.co.kr/help/article/2908">이용약관</a>
                                     <span>·</span>
                                 </li>
                                 <li class="block-inline">
@@ -3997,13 +4019,15 @@
                                     <span>·</span>
                                 </li>
                                 <li class="block-inline">
-                                    <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사 세부정보</a>
+                                    <a class="hover-underline" href="https://www.airbnb.co.kr/about/company-details">회사
+                                        세부정보</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="grey-line margin-8-0"></div>
-                    <div style="letter-spacing: 0.2px; line-height: 12px;" class="font-10px font-grey-113">웹사이트 제공자: Airbnb Ireland UC,
+                    <div style="letter-spacing: 0.2px; line-height: 12px;" class="font-10px font-grey-113">웹사이트 제공자:
+                        Airbnb Ireland UC,
                         private unlimited company, 8 Hanover Quay Dublin 2,
                         D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호:
                         IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트,
@@ -4013,9 +4037,9 @@
                         서비스를 제공하는 호스트에게 있습니다.</div>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
     <script src="clone.js"></script>
 </body>
