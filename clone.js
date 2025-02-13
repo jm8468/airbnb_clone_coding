@@ -6,8 +6,8 @@ const categoryItemScrollbar = document.querySelector('#category-item-scrollbar')
 const tabsPlacesByAreasTabId = document.querySelector('#tabs-placesByAreasTabId');
 
 //탭 버튼 강조
-function tabButton(event) {
-    const button = event.target;
+function tabButton(target) {
+    const button = target;
     if (button.getAttribute("aria-selected") === "true") return;
     const parentButton = button.parentElement.parentElement;
     const buttons = parentButton.querySelectorAll('div[id^="tabs-"] > button[id^="tab-"]');
@@ -487,6 +487,24 @@ function detectBlackDivClicked(target) {
     travelDetailsMenu.classList.add('pa_travel-details-menu-shadow');
 }
 
+//탭 버튼 클릭 시 클릭된 탭을 스크롤 가운데에 위치시키는 함수
+function clikedTabToCenter(tabButton) {
+    //[ ] 전체 화면의 스크롤 위치 계산
+    //[ ] offsetLeft + 요소/2 가
+    if (tabButton.getAttribute("aria-selected") === "true") return;
+    const tabScroll = document.querySelector('#tabs-placesByAreasTabId')
+    const scrollWidth = tabScroll.scrollWidth;
+    const scrollLeft = tabScroll.scrollLeft;
+    const clientWidth = tabScroll.clientWidth;
+    const tabButtonWidth = tabButton.clientWidth;
+
+    console.log('scrollLeft = ' + scrollLeft);
+    document.querySelector('#tabs-placesByAreasTabId').scrollLeft = scrollLeft + clientWidth / 2;
+    console.log('scrollWidth = ' + scrollWidth);
+    console.log('clientWidth = ' + clientWidth);
+    console.log('scrollLeft = ' + document.querySelector('#tabs-placesByAreasTabId').scrollLeft);
+}
+
 windowScrollTop();
 storeInitialClasses();
 // click 이벤트
@@ -494,8 +512,12 @@ application.addEventListener('click', function (event) {
     const target = event.target;
     const closestGuestButton = target.closest('button[data-testid*="stepper"]');
     // 탭 변경
-    if (target.id.includes('tab-seo') || target.id.includes('tab-placesByAreasTabId')) {
-        tabButton(event);
+    if (target.id.includes('tab-seo')) {
+        tabButton(target);
+    }
+    else if (target.id.includes('tab-placesByAreasTabId')) {
+        clikedTabToCenter(target);
+        tabButton(target);
     }
     // 체크인 - 날짜 추가
     else if (target.id === 'structured-search-input-field-split-dates-0') {
