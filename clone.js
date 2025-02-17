@@ -30,6 +30,7 @@ function tabButton(target) {
             tab.classList.remove('pa_background-color-34');
             tab.classList.remove('pa_content');
             tab.classList.remove('cursor-default');
+            tab.classList.add('scale-96');
             panels[index].setAttribute("hidden", true);
         } else {
             tab.classList.remove("font-grey-113");
@@ -42,6 +43,7 @@ function tabButton(target) {
             tab.classList.add('pa_background-color-34');
             tab.classList.add('pa_content');
             tab.classList.add('cursor-default');
+            tab.classList.remove('scale-96');
             panels[index].removeAttribute("hidden");
         }
     });
@@ -489,20 +491,12 @@ function detectBlackDivClicked(target) {
 
 //탭 버튼 클릭 시 클릭된 탭을 스크롤 가운데에 위치시키는 함수
 function clikedTabToCenter(tabButton) {
-    //[ ] 전체 화면의 스크롤 위치 계산
-    //[ ] offsetLeft + 요소/2 가
     if (tabButton.getAttribute("aria-selected") === "true") return;
-    const tabScroll = document.querySelector('#tabs-placesByAreasTabId')
-    const scrollWidth = tabScroll.scrollWidth;
-    const scrollLeft = tabScroll.scrollLeft;
+    const tabScroll = document.querySelector('#tabs-placesByAreasTabId');
     const clientWidth = tabScroll.clientWidth;
-    const tabButtonWidth = tabButton.clientWidth;
-
-    console.log('scrollLeft = ' + scrollLeft);
-    document.querySelector('#tabs-placesByAreasTabId').scrollLeft = scrollLeft + clientWidth / 2;
-    console.log('scrollWidth = ' + scrollWidth);
-    console.log('clientWidth = ' + clientWidth);
-    console.log('scrollLeft = ' + document.querySelector('#tabs-placesByAreasTabId').scrollLeft);
+    const tabButtonoffsetLeft = tabButton.offsetLeft;
+    const tabButtonWidth = tabButton.offsetWidth;
+    document.querySelector('#tabs-placesByAreasTabId').scrollLeft = tabButtonoffsetLeft + tabButtonWidth / 2 - clientWidth / 2;
 }
 
 windowScrollTop();
