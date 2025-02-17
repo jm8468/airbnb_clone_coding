@@ -38,6 +38,9 @@
 .row-gap-8 {
     row-gap: 8px;
 }
+.row-gap-24 {
+    row-gap: 24px;
+}
 
 /* grid-column-start */
 .grid-column-start-1 {

@@ -393,6 +393,9 @@
 .overflow-y-hidden {
     overflow-y:hidden;
 }
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
 .overflow-y-clip {
     overflow-y: clip;
 }
