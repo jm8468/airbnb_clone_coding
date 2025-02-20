@@ -6,6 +6,9 @@
 .transition-opacity {
     transition-property: opacity;
 }
+.transition-box-shadow {
+    transition-property: box-shadow;
+}
 .transition-max-width {
     transition-property: max-width;
 }

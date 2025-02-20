@@ -1997,7 +1997,7 @@
                     </div>
                     <!-- 마이페이지 관련 -->
                     <div style="flex-basis: 140px;"
-                        class="height-80 flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-0 z-index-1">
+                        class="height-80 flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-0 ">
                         <div style="margin-right: 8px;"
                             class="flex-container justify-content-end align-items-center flex-grow-1 flex-shrink-1">
                             <!-- 호스트 링크 -->
@@ -2023,9 +2023,14 @@
                             </div>
                         </div>
                         <!-- 마이페이지 설정 -->
-                        <div class="flex-container justify-content-between">
+                         <!-- TODO 버튼 토글 기능 -->
+                          <!-- [ ] 버튼 토글 기능
+                          [ ] 버튼 켜지면 box-shadow 유지
+                          [ ] 레이어 말고 다른곳 클릭하면 버튼 off -->
+                        <div class="relative" data-profile-menu-open = "false">
                             <button style="padding: 8px 8px 8px 14px;"
-                                class="flex-container justify-content-between align-items-center margin-1 background-color-basic radius-30 grey-border-221 relative z-index-1">
+                                class="flex-container justify-content-between align-items-center background-color-basic radius-30 grey-border-221 relative z-index-1 hover-headernav-profile-button duration-200ms cubic-function transition-box-shadow height-48"
+                                id="headernav-profile-button">
                                 <div style="height: 16px; width: 16px;">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
                                         role="presentation" focusable="false"
@@ -2045,6 +2050,43 @@
                                     </svg>
                                 </div>
                             </button>
+
+                            <div style="margin-top: 32px; padding: 8px 0px; max-height: calc(100vh - 100px); box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 16px;"
+                                class="text-left absolute right-0 top-21 background-color-basic radius-12 min-width-240 overflow-y-auto z-index-2"
+                                id="simple-header-profile-menu">
+                                <a class="hover-background-color-247 padding-12-16 width-full overflow-visible flex-container line-height-18px text font-14px font-500"
+                                    href="https://www.airbnb.co.kr/signup_login">
+                                    <div class="flex-grow-1 flex-shrink-0 flex-basis-zero">
+                                        회원 가입
+                                    </div>
+                                </a>
+                                <a class="hover-background-color-247 padding-12-16 width-full overflow-visible flex-container line-height-18px text font-14px font-500"
+                                    href="https://www.airbnb.co.kr/login">
+                                    <div class="flex-grow-1 flex-shrink-0 flex-basis-zero">
+                                        로그인
+                                    </div>
+                                </a>
+                                <div class="background-color-221 height-1 margin-8-0">
+                                </div>
+                                <a class="hover-background-color-247 padding-12-16 width-full overflow-visible flex-container line-height-18px text font-14px font-500"
+                                    href="https://www.airbnb.co.kr/host/homes">
+                                    <div class="flex-grow-1 flex-shrink-0 flex-basis-zero">
+                                        당신의 공간을 에어비엔비하세요
+                                    </div>
+                                </a>
+                                <a class="hover-background-color-247 padding-12-16 width-full overflow-visible flex-container line-height-18px text font-14px font-500"
+                                    href="https://www.airbnb.co.kr/host/experiences?from_nav=1">
+                                    <div class="flex-grow-1 flex-shrink-0 flex-basis-zero">
+                                        체험 호스팅하기
+                                    </div>
+                                </a>
+                                <a class="hover-background-color-247 padding-12-16 width-full overflow-visible flex-container line-height-18px text font-14px font-500"
+                                    href="https://www.airbnb.co.kr/help">
+                                    <div class="flex-grow-1 flex-shrink-0 flex-basis-zero">
+                                        도움말 센터
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

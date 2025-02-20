@@ -6,6 +6,9 @@
 .block-inline {
     display: inline-block;
 }
+.inline {
+    display: inline;
+}
 
 /* background */
 .background-color-basic {
@@ -50,6 +53,9 @@
 }
 
 /* height */
+.height-1 {
+    height: 1px;
+}
 .height-24 {
     height: 24px;
 }
@@ -129,6 +135,9 @@
 .min-width-200 {
     min-width: 200px;
 }
+.min-width-240 {
+    min-width: 240px;
+}
 .min-width-348 {
     min-width: 348px;
 }
@@ -186,8 +195,14 @@
 .padding-12 {
     padding: 12px;
 }
+.padding-12-16 {
+    padding: 12px 16px;
+}
 .padding-16 {
     padding: 16px;
+}
+.padding-11-0 {
+    padding: 11px 0px;
 }
 .padding-bottom-2 {
     padding-bottom: 2px;
@@ -207,8 +222,7 @@
     margin: 1px;
 }
 .margin-8-0 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0px;
 }
 .margin-10-16 {
     margin: 10px 16px;
@@ -270,6 +284,9 @@
 }
 .top-0 {
     top: 0px;
+}
+.top-21 {
+    top: 25px;
 }
 .left-0 {
     left: 0px;

@@ -66,6 +66,9 @@
 .hover-box-shadow-category-item-scroll-button:hover{
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
+.hover-headernav-profile-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+}
 
 /* active하면 경계선 하이라이트 */
 .active-black-border-000:active {
