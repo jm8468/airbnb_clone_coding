@@ -499,6 +499,24 @@ function clikedTabToCenter(tabButton) {
     document.querySelector('#tabs-placesByAreasTabId').scrollLeft = tabButtonoffsetLeft + tabButtonWidth / 2 - clientWidth / 2;
 }
 
+function dataProfileMenuOpen(button) {
+    const simpleHeader = document.querySelector('#simple-header-profile-menu');
+    const headerNav = document.querySelector('#headernav-profile-button');
+    document.querySelector('[data-profile-menu-open]').setAttribute('data-profile-menu-open', 'true');
+    simpleHeader.classList.remove('opacity-0');
+    simpleHeader.classList.remove('visibility-hidden');
+    headerNav.classList.add('headernav-profile-button');
+}
+
+function dataProfileMenuClose() {
+    const simpleHeader = document.querySelector('#simple-header-profile-menu');
+    const headerNav = document.querySelector('#headernav-profile-button');
+    document.querySelector('[data-profile-menu-open]').setAttribute('data-profile-menu-open', 'false');
+    simpleHeader.classList.add('opacity-0');
+    simpleHeader.classList.add('visibility-hidden');
+    headerNav.classList.remove('headernav-profile-button');
+}
+
 windowScrollTop();
 storeInitialClasses();
 // click 이벤트
@@ -538,7 +556,7 @@ application.addEventListener('click', function (event) {
     else if (target.id === 'scroll-back-button') {
         categoryItemLeftScroll('tabs-placesByAreasTabId', 55, 'auto');
     }
-    // 여여행지 검색 레이어에서 지역 선택을 위한 오른쪽 스크롤
+    // 여행지 검색 레이어에서 지역 선택을 위한 오른쪽 스크롤
     else if (target.id === 'scroll-forward-button') {
         categoryItemRightScroll('tabs-placesByAreasTabId', 55, 'auto');
     }
@@ -595,6 +613,7 @@ application.addEventListener('click', function (event) {
         guestIndicator('pets');
     }
 
+    // little-searchbar의 버튼이 클릭됐을 때
     else if (target.id === 'little-search-location' || target.closest('#little-search-location')) {
         const targetLabel = document.querySelector('label[for="' + "bigsearch-query-location-input" + '"]');
         activateLittleSearchbar();
@@ -623,6 +642,12 @@ application.addEventListener('click', function (event) {
     else if (target.classList.contains('background-color-0-25')) {
         detectBlackDivClicked(target);
     }
+    else if (target.closest('#headernav-profile-button') && document.querySelector('[data-profile-menu-open]').getAttribute('data-profile-menu-open') === 'false') {
+        dataProfileMenuOpen();
+    }
+    else if (target.closest('#headernav-profile-button') && document.querySelector('[data-profile-menu-open]').getAttribute('data-profile-menu-open') === 'true') {
+        dataProfileMenuClose();
+    }
 });
 
 //mouseup 이벤트
@@ -631,6 +656,14 @@ application.addEventListener('mouseup', function (event) {
     const path = event.composedPath();
     if (path.some((element) => element.id === 'search-tabpanel') === false) {
         restoreInitialClasses();
+    }
+});
+
+//mousedown 이벤트
+application.addEventListener('mousedown', function (event) {
+    const target = event.target;
+    if (!target.closest('#headernav-profile-button') && document.querySelector('[data-profile-menu-open]').getAttribute('data-profile-menu-open') === 'true') {
+        dataProfileMenuClose();
     }
 });
 

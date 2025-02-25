@@ -12,5 +12,9 @@
     box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
 }
 
+.headernav-profile-button {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+}
+
 
 
